@@ -1,0 +1,45 @@
+{
+  "conditions": [
+    {
+      "type": "tide:time_of_day",
+      "ranges": [
+        {
+          "max": 24000,
+          "min": 13000
+        }
+      ]
+    },
+    {
+      "type": "tide:freshwater"
+    },
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    },
+    {
+      "type": "tide:above",
+      "y": 40
+    }
+  ],
+  "fish": "tide:zombie_fish",
+  "journal_profile": {
+    "description": "journal.description.tide.zombie_fish",
+    "group": "freshwater",
+    "location": "journal.info.location.freshwater",
+    "rarity": "rare"
+  },
+  "selection_weight": 9.0,
+  "size": {
+    "record_high_cm": 140.0,
+    "typical_high_cm": 80.0,
+    "typical_low_cm": 40.0
+  },
+  "speed": 0.7,
+  "strength": 0.7
+}

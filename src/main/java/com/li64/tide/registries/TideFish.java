@@ -445,6 +445,35 @@ public class TideFish {
                             .add(Attributes.MOVEMENT_SPEED, 1.0f)
             ))
             .build();
+
+    public static final Item ZOMBIE_FISH = new Builder("zombie_fish")
+            .food(TideFoods.RAW_FISH)
+            .cookedItem(TideItems.COOKED_FISH)
+            .fishData(builder -> builder
+                    .size(40.0, 80.0, 140.0)
+                    .strength(0.7f)
+                    .speed(0.7f)
+                    .selectionWeight(9)
+                    .timeOfDay(new TimeRange(TimeConstants.NIGHT, TimeConstants.DAY_ALT))
+                    .freshwater()
+                    .overworld()
+                    .water()
+                    .surface()
+                    .journalLocation("journal.info.location.freshwater")
+                    .journalGroup(JournalGroup.FRESHWATER)
+                    .journalRarity(FishRarity.RARE)
+//                    .displayData(display -> display.offsets(-0.05f, 0f, 0f))
+            )
+//            .entityData(FishEntityData.of(
+//                    TideFishEntity::new,
+//                    builder -> builder
+//                            .sized(0.6f, 0.35f)
+//                            .clientTrackingRange(4),
+//                    Mob.createMobAttributes()
+//                            .add(Attributes.MAX_HEALTH, 6.0)
+//                            .add(Attributes.MOVEMENT_SPEED, 0.8f)
+//            ))
+            .build();
     
     public static final Item ARAPAIMA = new Builder("arapaima")
             .food(TideFoods.BIG_RAW_FISH)
@@ -732,6 +761,37 @@ public class TideFish {
                             .add(Attributes.MAX_HEALTH, 2.0)
                             .add(Attributes.MOVEMENT_SPEED, 1.0f)
             ))
+            .build();
+
+    public static final Item JEWELBACK = new Builder("jewelback")
+            .food(TideFoods.RAW_FISH)
+            .cookedItem(TideItems.COOKED_FISH)
+            .fishData(builder -> builder
+                    .size(45.0, 65.0, 100.0)
+                    .strength(0.75f)
+                    .speed(1.7f)
+                    .behavior(MinigameBehavior.DARTS)
+                    .condition(BlockNearbyCondition.inRadius(TideTags.Blocks.DESERT_WELL_LOOT, 3))
+                    .selectionWeight(10)
+                    .selectionQuality(0.5)
+                    .freshwater()
+                    .overworld()
+                    .water()
+                    .surface()
+                    .journalLocation("journal.info.location.freshwater") // TODO: add desert well location
+                    .journalGroup(JournalGroup.FRESHWATER)
+                    .journalRarity(FishRarity.VERY_RARE)
+//                    .displayData(display -> display.offsets(-0.07f, 0f, 0f))
+            )
+//            .entityData(FishEntityData.of(
+//                    TideFishEntity::new,
+//                    builder -> builder
+//                            .sized(0.5f, 0.35f)
+//                            .clientTrackingRange(4),
+//                    Mob.createMobAttributes()
+//                            .add(Attributes.MAX_HEALTH, 2.0)
+//                            .add(Attributes.MOVEMENT_SPEED, 1.0f)
+//            ))
             .build();
     
     public static final Item BULL_SHARK = new Builder("bull_shark")
@@ -1892,6 +1952,33 @@ public class TideFish {
                             .add(Attributes.MAX_HEALTH, 10.0)
                             .add(Attributes.MOVEMENT_SPEED, 1.6f)
             ))
+            .build();
+
+    public static final Item RADIANT_GUPPY = new Builder("radiant_guppy")
+            .food(TideFoods.RAW_FISH)
+            .cookedItem(TideItems.COOKED_FISH)
+            .fishData(builder -> builder
+                    .size(5.0, 8.0, 10.0)
+                    .strength(0.8f)
+                    .speed(1.45f)
+                    .selectionWeight(8)
+                    .below(-32)
+                    .overworld()
+                    .water()
+                    .journalLocation("journal.info.location.underground")
+                    .journalGroup(JournalGroup.UNDERGROUND)
+                    .journalRarity(FishRarity.VERY_RARE)
+//                    .displayData(display -> display.offsets(-0.05f, 0f, 0f))
+            )
+//            .entityData(FishEntityData.of(
+//                    TideFishEntity::new,
+//                    builder -> builder
+//                            .sized(0.9f, 0.25f)
+//                            .clientTrackingRange(4),
+//                    Mob.createMobAttributes()
+//                            .add(Attributes.MAX_HEALTH, 3.0)
+//                            .add(Attributes.MOVEMENT_SPEED, 1.0f)
+//            ))
             .build();
 
     public static final Item CHASM_EEL = new Builder("chasm_eel")

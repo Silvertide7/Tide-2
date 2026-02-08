@@ -400,6 +400,14 @@
       "top_speed": 3.2,
       "up_acceleration": 0.4
     },
+    "tide:jewelback": {
+      "avg_distance": 75,
+      "down_acceleration": 0.6100001,
+      "idle_time": 8,
+      "move_variation": 14,
+      "top_speed": 5.44,
+      "up_acceleration": 0.6100001
+    },
     "tide:judgment_fish": {
       "avg_distance": 73,
       "down_acceleration": 0.58000004,
@@ -567,6 +575,14 @@
       "move_variation": 24,
       "top_speed": 2.5600002,
       "up_acceleration": 0.34
+    },
+    "tide:radiant_guppy": {
+      "avg_distance": 80,
+      "down_acceleration": 0.535,
+      "idle_time": 9,
+      "move_variation": 17,
+      "top_speed": 4.6400003,
+      "up_acceleration": 0.535
     },
     "tide:rainbow_trout": {
       "avg_distance": 30,
@@ -815,6 +831,14 @@
       "move_variation": 3,
       "top_speed": 3.04,
       "up_acceleration": 0.385
+    },
+    "tide:zombie_fish": {
+      "avg_distance": 70,
+      "down_acceleration": 0.31,
+      "idle_time": 13,
+      "move_variation": 11,
+      "top_speed": 2.24,
+      "up_acceleration": 0.31
     }
   }
 }

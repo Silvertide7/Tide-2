@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-18T19:32:28.0955182	Tide/minecraft:entity Loot Table
+// 1.21.1	2026-02-08T07:50:37.8875569	Tide/minecraft:entity Loot Table
 6d7e3dfd447aafa8f317d23c5af3774b0b3fb595 data\tide\loot_table\entities\vengeance.json
 ea7a4d9157484ea0b44d7c5f407ac6733af118ac data\tide\loot_table\entities\volcano_tuna.json
 e653045e8f4813b8da0f7218098d05c8e47df981 data\tide\loot_table\entities\smallmouth_bass.json
@@ -13,6 +13,7 @@ ece530f6a30b861d989eef70c4949a303d90635b data\tide\loot_table\entities\elytrout.
 393b3d870c1658182e096ada0d4f608f76b77b2f data\tide\loot_table\entities\crystalline_carp.json
 06f619fff3d9603705dcbecef3993e6eb363ea2d data\tide\loot_table\entities\saturn_cuttlefish.json
 7c91ddb3bd340098a2d1964c04b612468fa8b152 data\tide\loot_table\entities\uranias_pisces.json
+e8b65d0b3326dac41cb8b486a57d7c4676e96c81 data\tide\loot_table\entities\zombie_fish.json
 63723a3b433e5da7927eb717c4012fc1535e0e9a data\tide\loot_table\entities\spore_stalker.json
 c5e016dd6bf6aefa545972e4ee00c394e4471b26 data\tide\loot_table\entities\blazing_swordfish.json
 c4c007aa64a0ecfcdfbaa9d253bd39f98b76cb02 data\tide\loot_table\entities\marstilus.json
@@ -56,6 +57,8 @@ deb6ac4036981bb1770ddf1d34304c3334b0a3fc data\tide\loot_table\entities\rainbow_t
 2e48ea40fb08338f9ff17a5a225d00399a677c58 data\tide\loot_table\entities\guppy.json
 0dd824b361cd50a2a4e61bb2327b480150738867 data\tide\loot_table\entities\mackerel.json
 500690dbded88ee51083929a3be34deb03f780a0 data\tide\loot_table\entities\alpha_fish.json
+07d43066e3d95e1401562a66a010431fccce0594 data\tide\loot_table\entities\radiant_guppy.json
+23df36a15b40725abaf56ea5ad33b27dd3c79c59 data\tide\loot_table\entities\jewelback.json
 1e55252ef6409203d2b1bec2e5ac671861012ed0 data\tide\loot_table\entities\blossom_bass.json
 b025ce291d84751a4f349edab68aa373c583f598 data\tide\loot_table\entities\neptune_koi.json
 2018d83ef0f419ffd1bb9462e51447766c5c33ab data\tide\loot_table\entities\bluegill.json
