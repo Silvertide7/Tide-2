@@ -2,6 +2,7 @@ package com.li64.tide.data.rods;
 
 //? if >=1.21 {
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -14,17 +15,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaitContents {
-    public static final int MAX_STACKS = 3;
-    public static final BaitContents EMPTY = new BaitContents();
-    public static final Codec<BaitContents> CODEC;
-    public static final StreamCodec<RegistryFriendlyByteBuf, BaitContents> STREAM_CODEC;
-    private final List<ItemStack> items;
+    public static final Codec<BaitContents> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+            Codec.INT.fieldOf("max_stacks").forGetter(contents -> contents.maxStacks),
+            ItemStack.CODEC.listOf().fieldOf("items").forGetter(contents -> contents.items)
+    ).apply(instance, BaitContents::new));
+    public static final StreamCodec<RegistryFriendlyByteBuf, BaitContents> STREAM_CODEC = StreamCodec.composite(
+            ByteBufCodecs.INT, contents -> contents.maxStacks,
+            ItemStack.STREAM_CODEC.apply(ByteBufCodecs.list()), contents -> contents.items,
+            BaitContents::new
+    );
 
-    public BaitContents() {
-        this(List.of());
+    private final List<ItemStack> items;
+    private final int maxStacks;
+
+    public BaitContents(int maxStacks) {
+        this(maxStacks, List.of());
     }
 
-    public BaitContents(List<ItemStack> items) {
+    public BaitContents(int maxStacks, List<ItemStack> items) {
+        this.maxStacks = maxStacks;
         this.items = items;
     }
 
@@ -46,13 +55,10 @@ public class BaitContents {
 
     @SuppressWarnings("deprecation")
     public boolean equals(Object other) {
-        if (this == other) {
-            return true;
-        } else {
-            if (other instanceof BaitContents contents)
-                return ItemStack.listMatches(this.items, contents.items);
-            else return false;
-        }
+        if (this == other) return true;
+        if (other instanceof BaitContents contents)
+            return ItemStack.listMatches(this.items, contents.items);
+        return false;
     }
 
     @SuppressWarnings("deprecation")
@@ -64,24 +70,24 @@ public class BaitContents {
         return "BaitContents" + this.items;
     }
 
-    static {
-        CODEC = ItemStack.CODEC.listOf().xmap(BaitContents::new, contents -> contents.items);
-        STREAM_CODEC = ItemStack.STREAM_CODEC.apply(ByteBufCodecs.list()).map(BaitContents::new, contents -> contents.items);
-    }
-
     public static class Mutable {
         private final List<ItemStack> items;
+        private final int maxStacks;
 
         public Mutable(BaitContents contents) {
-            if (contents == null) this.items = new ArrayList<>();
-            else this.items = new ArrayList<>(contents.items);
+            if (contents == null) {
+                this.items = new ArrayList<>();
+                this.maxStacks = 0;
+            }
+            else {
+                this.items = new ArrayList<>(contents.items);
+                this.maxStacks = contents.maxStacks;
+            }
         }
 
         private int findStackIndex(ItemStack stack) {
             for (int i = 0; i < this.items.size(); ++i) {
-                if (ItemStack.isSameItemSameComponents(this.items.get(i), stack)) {
-                    return i;
-                }
+                if (ItemStack.isSameItemSameComponents(this.items.get(i), stack)) return i;
             }
             return -1;
         }
@@ -102,9 +108,8 @@ public class BaitContents {
                     stack.shrink(amountToAdd);
 
                     this.items.set(index, added);
-                } else {
-                    if (items.size() < MAX_STACKS) this.items.add(stack.split(count));
                 }
+                else if (items.size() < this.maxStacks) this.items.add(stack.split(count));
             }
         }
 
@@ -117,11 +122,8 @@ public class BaitContents {
 
         @Nullable
         public ItemStack removeStack() {
-            if (this.items.isEmpty()) {
-                return null;
-            } else {
-                return this.items.removeFirst().copy();
-            }
+            if (this.items.isEmpty()) return null;
+            return this.items.removeFirst().copy();
         }
 
         public void shrinkStack(ItemStack stack) {
@@ -132,7 +134,7 @@ public class BaitContents {
         }
 
         public BaitContents toImmutable() {
-            return new BaitContents(List.copyOf(this.items));
+            return new BaitContents(this.maxStacks, List.copyOf(this.items));
         }
 
         public boolean isEmpty() {

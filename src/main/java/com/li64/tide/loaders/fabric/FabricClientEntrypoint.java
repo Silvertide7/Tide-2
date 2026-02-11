@@ -69,7 +69,8 @@ public class FabricClientEntrypoint implements ClientModInitializer {
 
         TooltipComponentCallback.EVENT.register((component) -> {
             //noinspection DeconstructionCanBeUsed
-            if (component instanceof FishingRodTooltip tooltip) return new ClientFishingRodTooltip(tooltip.contents());
+            if (component instanceof FishingRodTooltip tooltip)
+                return new ClientFishingRodTooltip(tooltip.slots(), tooltip.contents());
             return null;
         });
 

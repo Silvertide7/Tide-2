@@ -5,11 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "tide:bait",
-              "tide:magnetic_bait",
-              "tide:lucky_bait"
-            ]
+            "items": "#tide:bait_items"
           }
         ]
       },

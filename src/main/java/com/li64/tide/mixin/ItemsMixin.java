@@ -16,6 +16,6 @@ public abstract class ItemsMixin {
     private static FishingRodItem fishingRod(Item.Properties properties) {
         if (Tide.CONFIG == null) Tide.setupConfig();
         if (!Tide.CONFIG.general.overrideVanillaRod) return new FishingRodItem(properties);
-        return new TideFishingRodItem(32, properties);
+        return new TideFishingRodItem(1, 32, properties);
     }
 }

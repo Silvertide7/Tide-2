@@ -112,51 +112,54 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add(TideItems.DIAMOND_FISHING_ROD, "Diamond Fishing Rod");
         builder.add(TideItems.NETHERITE_FISHING_ROD, "Netherite Fishing Rod");
 
-        builder.add(TideItems.WHITE_FISHING_BOBBER, "White Fishing Bobber");
-        builder.add(TideItems.ORANGE_FISHING_BOBBER, "Orange Fishing Bobber");
-        builder.add(TideItems.MAGENTA_FISHING_BOBBER, "Magenta Fishing Bobber");
-        builder.add(TideItems.LIGHT_BLUE_FISHING_BOBBER, "Light Blue Fishing Bobber");
-        builder.add(TideItems.YELLOW_FISHING_BOBBER, "Yellow Fishing Bobber");
-        builder.add(TideItems.LIME_FISHING_BOBBER, "Lime Fishing Bobber");
-        builder.add(TideItems.PINK_FISHING_BOBBER, "Pink Fishing Bobber");
-        builder.add(TideItems.GRAY_FISHING_BOBBER, "Gray Fishing Bobber");
-        builder.add(TideItems.LIGHT_GRAY_FISHING_BOBBER, "Light Gray Fishing Bobber");
-        builder.add(TideItems.CYAN_FISHING_BOBBER, "Cyan Fishing Bobber");
-        builder.add(TideItems.PURPLE_FISHING_BOBBER, "Purple Fishing Bobber");
-        builder.add(TideItems.BLUE_FISHING_BOBBER, "Blue Fishing Bobber");
-        builder.add(TideItems.BROWN_FISHING_BOBBER, "Brown Fishing Bobber");
-        builder.add(TideItems.GREEN_FISHING_BOBBER, "Green Fishing Bobber");
-        builder.add(TideItems.RED_FISHING_BOBBER, "Red Fishing Bobber");
-        builder.add(TideItems.BLACK_FISHING_BOBBER, "Black Fishing Bobber");
+        builder.add(TideItems.WHITE_BOBBER, "White Bobber");
+        builder.add(TideItems.ORANGE_BOBBER, "Orange Bobber");
+        builder.add(TideItems.MAGENTA_BOBBER, "Magenta Bobber");
+        builder.add(TideItems.LIGHT_BLUE_BOBBER, "Light Blue Bobber");
+        builder.add(TideItems.YELLOW_BOBBER, "Yellow Bobber");
+        builder.add(TideItems.LIME_BOBBER, "Lime Bobber");
+        builder.add(TideItems.PINK_BOBBER, "Pink Bobber");
+        builder.add(TideItems.GRAY_BOBBER, "Gray Bobber");
+        builder.add(TideItems.LIGHT_GRAY_BOBBER, "Light Gray Bobber");
+        builder.add(TideItems.CYAN_BOBBER, "Cyan Bobber");
+        builder.add(TideItems.PURPLE_BOBBER, "Purple Bobber");
+        builder.add(TideItems.BLUE_BOBBER, "Blue Bobber");
+        builder.add(TideItems.BROWN_BOBBER, "Brown Bobber");
+        builder.add(TideItems.GREEN_BOBBER, "Green Bobber");
+        builder.add(TideItems.RED_BOBBER, "Red Bobber");
+        builder.add(TideItems.BLACK_BOBBER, "Black Bobber");
 
-        builder.add(TideItems.APPLE_FISHING_BOBBER, "Apple Fishing Bobber");
-        builder.add(TideItems.GOLDEN_APPLE_FISHING_BOBBER, "Golden Apple Fishing Bobber");
-        builder.add(TideItems.ENCHANTED_GOLDEN_APPLE_FISHING_BOBBER, "Enchanted Golden Apple Fishing Bobber");
+        builder.add(TideItems.APPLE_BOBBER, "Apple Bobber");
+        builder.add(TideItems.GOLDEN_APPLE_BOBBER, "Golden Apple Bobber");
+        builder.add(TideItems.ENCHANTED_GOLDEN_APPLE_BOBBER, "Enchanted Golden Apple Bobber");
 
-        builder.add(TideItems.IRON_FISHING_BOBBER, "Iron Fishing Bobber");
-        builder.add(TideItems.GOLDEN_FISHING_BOBBER, "Golden Fishing Bobber");
-        builder.add(TideItems.DIAMOND_FISHING_BOBBER, "Diamond Fishing Bobber");
-        builder.add(TideItems.NETHERITE_FISHING_BOBBER, "Netherite Fishing Bobber");
-        builder.add(TideItems.AMETHYST_FISHING_BOBBER, "Amethyst Fishing Bobber");
-        builder.add(TideItems.ECHO_FISHING_BOBBER, "Echo Fishing Bobber");
-        builder.add(TideItems.CHORUS_FISHING_BOBBER, "Chorus Fishing Bobber");
-        builder.add(TideItems.FEATHER_FISHING_BOBBER, "Feather Fishing Bobber");
-        builder.add(TideItems.LICHEN_FISHING_BOBBER, "Lichen Fishing Bobber");
-        builder.add(TideItems.NAUTILUS_FISHING_BOBBER, "Nautilus Fishing Bobber");
-        builder.add(TideItems.PEARL_FISHING_BOBBER, "Pearl Fishing Bobber");
-        builder.add(TideItems.HEART_FISHING_BOBBER, "Heart Fishing Bobber");
-        builder.add(TideItems.GRASSY_FISHING_BOBBER, "Grassy Fishing Bobber");
-        builder.add(TideItems.DUCK_FISHING_BOBBER, "Duck Fishing Bobber");
+        builder.add(TideItems.IRON_BOBBER, "Iron Bobber");
+        builder.add(TideItems.GOLDEN_BOBBER, "Golden Bobber");
+        builder.add(TideItems.DIAMOND_BOBBER, "Diamond Bobber");
+        builder.add(TideItems.NETHERITE_BOBBER, "Netherite Bobber");
+        builder.add(TideItems.AMETHYST_BOBBER, "Amethyst Bobber");
+        builder.add(TideItems.ECHO_BOBBER, "Echo Bobber");
+        builder.add(TideItems.CHORUS_BOBBER, "Chorus Bobber");
+        builder.add(TideItems.FEATHER_BOBBER, "Feather Bobber");
+        builder.add(TideItems.LICHEN_BOBBER, "Lichen Bobber");
+        builder.add(TideItems.NAUTILUS_BOBBER, "Nautilus Bobber");
+        builder.add(TideItems.PEARL_BOBBER, "Pearl Bobber");
+        builder.add(TideItems.HEART_BOBBER, "Heart Bobber");
+        builder.add(TideItems.GRASSY_BOBBER, "Grassy Bobber");
+        builder.add(TideItems.DUCK_BOBBER, "Duck Bobber");
 
         builder.add(TideItems.FISHING_HOOK, "Fishing Hook");
-        builder.add(TideItems.IRON_FISHING_HOOK, "Iron Fishing Hook");
-        builder.add(TideItems.LAVAPROOF_FISHING_HOOK, "Lavaproof Fishing Hook");
-        builder.add(TideItems.VOID_FISHING_HOOK, "Hook of the Depths");
+        builder.add(TideItems.IRON_HOOK, "Iron Hook");
+        builder.add(TideItems.FIERY_HOOK, "Fiery Hook");
+        builder.add(TideItems.PERMAFROST_HOOK, "Permafrost Hook");
+        builder.add(TideItems.TWILIGHT_HOOK, "Twilight Hook");
+        builder.add(TideItems.LAVAPROOF_HOOK, "Lavaproof Hook");
+        builder.add(TideItems.VOID_HOOK, "Hook of the Depths");
 
         builder.add(TideItems.FISHING_LINE, "Fishing Line");
-        builder.add(TideItems.BRAIDED_LINE, "Braided Fishing Line");
-        builder.add(TideItems.REINFORCED_LINE, "Reinforced Fishing Line");
-        builder.add(TideItems.GOLDEN_LINE, "Golden Fishing Line");
+        builder.add(TideItems.BRAIDED_LINE, "Braided Line");
+        builder.add(TideItems.REINFORCED_LINE, "Reinforced Line");
+        builder.add(TideItems.GOLDEN_LINE, "Golden Line");
 
         builder.add(TideItems.FISHING_JOURNAL, "Fishing Journal");
         builder.add(TideItems.FISH_SATCHEL, "Fish Satchel");
@@ -179,6 +182,9 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add(TideItems.BAIT, "Bait");
         builder.add(TideItems.LUCKY_BAIT, "Lucky Bait");
         builder.add(TideItems.MAGNETIC_BAIT, "Magnetic Bait");
+        builder.add(TideItems.INCANDESCENT_BAIT, "Incandescent Bait");
+        builder.add(TideItems.ABYSS_BAIT, "Abyss Bait");
+        builder.add(TideItems.SHINY_BAIT, "Shiny Bait");
 
         fishTranslation(TideFish.CARP, "Carp", builder);
         fishTranslation(TideFish.RAINBOW_TROUT, "Rainbow Trout", builder);
@@ -365,6 +371,9 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add("item.tide.golden_line.desc", "Increases fishing luck");
 
         builder.add("item.tide.iron_hook.desc", "-15% catch difficulty");
+        builder.add("item.tide.fiery_hook.desc", "TBD");
+        builder.add("item.tide.permafrost_hook.desc", "TBD");
+        builder.add("item.tide.twilight_hook.desc", "TBD");
         builder.add("item.tide.lavaproof_hook.desc", "Allows fishing in lava");
         builder.add("item.tide.void_hook.desc", "Allows fishing in the void");
 
@@ -588,58 +597,6 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add("journal.info.stats.day", "Day %s");
         builder.add("journal.info.stats.largest", "Largest catch: %s");
         builder.add("journal.info.stats.smallest", "Smallest catch: %s");
-
-        // Accessories
-
-        builder.add("accessory.item.tide.red_fishing_bobber", "Red Bobber");
-        builder.add("accessory.item.tide.orange_fishing_bobber", "Orange Bobber");
-        builder.add("accessory.item.tide.yellow_fishing_bobber", "Yellow Bobber");
-        builder.add("accessory.item.tide.lime_fishing_bobber", "Lime Bobber");
-        builder.add("accessory.item.tide.green_fishing_bobber", "Green Bobber");
-        builder.add("accessory.item.tide.light_blue_fishing_bobber", "Light Blue Bobber");
-        builder.add("accessory.item.tide.cyan_fishing_bobber", "Cyan Bobber");
-        builder.add("accessory.item.tide.blue_fishing_bobber", "Blue Bobber");
-        builder.add("accessory.item.tide.purple_fishing_bobber", "Purple Bobber");
-        builder.add("accessory.item.tide.magenta_fishing_bobber", "Magenta Bobber");
-        builder.add("accessory.item.tide.pink_fishing_bobber", "Pink Bobber");
-        builder.add("accessory.item.tide.white_fishing_bobber", "White Bobber");
-        builder.add("accessory.item.tide.light_gray_fishing_bobber", "Light Gray Bobber");
-        builder.add("accessory.item.tide.gray_fishing_bobber", "Gray Bobber");
-        builder.add("accessory.item.tide.black_fishing_bobber", "Black Bobber");
-        builder.add("accessory.item.tide.brown_fishing_bobber", "Brown Bobber");
-        builder.add("accessory.item.tide.apple_fishing_bobber", "Apple Bobber");
-        builder.add("accessory.item.tide.golden_apple_fishing_bobber", "Golden Apple Bobber");
-        builder.add("accessory.item.tide.enchanted_golden_apple_fishing_bobber", "Enchanted Apple Bobber");
-        builder.add("accessory.item.tide.iron_fishing_bobber", "Iron Bobber");
-        builder.add("accessory.item.tide.golden_fishing_bobber", "Golden Bobber");
-        builder.add("accessory.item.tide.diamond_fishing_bobber", "Diamond Bobber");
-        builder.add("accessory.item.tide.netherite_fishing_bobber", "Netherite Bobber");
-        builder.add("accessory.item.tide.amethyst_fishing_bobber", "Amethyst Bobber");
-        builder.add("accessory.item.tide.echo_fishing_bobber", "Echo Bobber");
-        builder.add("accessory.item.tide.chorus_fishing_bobber", "Chorus Bobber");
-        builder.add("accessory.item.tide.feather_fishing_bobber", "Feather Bobber");
-        builder.add("accessory.item.tide.lichen_fishing_bobber", "Lichen Bobber");
-        builder.add("accessory.item.tide.nautilus_fishing_bobber", "Nautilus Bobber");
-        builder.add("accessory.item.tide.pearl_fishing_bobber", "Pearl Bobber");
-        builder.add("accessory.item.tide.heart_fishing_bobber", "Heart Bobber");
-        builder.add("accessory.item.tide.grassy_fishing_bobber", "Grassy Bobber");
-        builder.add("accessory.item.tide.duck_fishing_bobber", "Duck Bobber");
-
-        builder.add("accessory.item.tide.fishing_hook", "Normal Hook");
-        builder.add("accessory.item.tide.iron_fishing_hook", "Iron Hook");
-        builder.add("accessory.item.tide.lavaproof_fishing_hook", "Lavaproof Hook");
-        builder.add("accessory.item.tide.void_fishing_hook", "Hook of the Depths");
-
-        builder.add("accessory.item.tide.fishing_line", "Normal Line");
-        builder.add("accessory.item.tide.braided_line", "Braided Line");
-        builder.add("accessory.item.tide.reinforced_line", "Reinforced Line");
-        builder.add("accessory.item.tide.golden_line", "Golden Line");
-
-        builder.add("accessory.item.hybrid-aquatic.barbed_hook", "Barbed Hook");
-        builder.add("accessory.item.hybrid-aquatic.glowing_hook", "Glowing Hook");
-        builder.add("accessory.item.hybrid-aquatic.magnetic_hook", "Magnetic Hook");
-        builder.add("accessory.item.hybrid-aquatic.creepermagnet_hook", "CreeperMagnet Hook");
-        builder.add("accessory.item.hybrid-aquatic.ominous_hook", "Ominous Hook");
 
         // Command responses
 

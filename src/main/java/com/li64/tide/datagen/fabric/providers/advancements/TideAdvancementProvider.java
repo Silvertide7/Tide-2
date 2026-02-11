@@ -70,13 +70,13 @@ public class TideAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .addCriterion("bait_items", InventoryChangeTrigger.TriggerInstance.hasItems(
-                        ItemPredicate.Builder.item().of(TideItems.BAIT, TideItems.MAGNETIC_BAIT, TideItems.LUCKY_BAIT).build()))
+                        ItemPredicate.Builder.item().of(TideTags.Items.BAIT_ITEMS).build()))
                 .save(output, Tide.resource("get_bait").toString());
 
         var lava = Advancement.Builder.advancement()
                 .parent(root)
                 .display(
-                        TideItems.LAVAPROOF_FISHING_HOOK,
+                        TideItems.LAVAPROOF_HOOK,
                         Component.translatable("advancements.tide.fish_in_lava.title"),
                         Component.translatable("advancements.tide.fish_in_lava.description"),
                         null,
@@ -91,7 +91,7 @@ public class TideAdvancementProvider extends FabricAdvancementProvider {
         Advancement.Builder.advancement()
                 .parent(lava)
                 .display(
-                        TideItems.VOID_FISHING_HOOK,
+                        TideItems.VOID_HOOK,
                         Component.translatable("advancements.tide.fish_in_void.title"),
                         Component.translatable("advancements.tide.fish_in_void.description"),
                         null,

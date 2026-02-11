@@ -54,12 +54,14 @@ import net.minecraft.core.component.DataComponents;
 //?}
 
 public class TideFishingRodItem extends FishingRodItem {
+    private final int baitSlots;
 
-    public TideFishingRodItem(double baseDurability, Properties properties) {
+    public TideFishingRodItem(int baitSlots, double baseDurability, Properties properties) {
         super(properties
                 .durability((int) (baseDurability * (Tide.CONFIG == null ? 1.0 : Tide.CONFIG.general.rodDurabilityMultiplier)))
-                /*? if >=1.21*/.component(TideDataComponents.BAIT_CONTENTS, BaitContents.EMPTY)
+                /*? if >=1.21*/.component(TideDataComponents.BAIT_CONTENTS, new BaitContents(baitSlots))
         );
+        this.baitSlots = baitSlots;
     }
 
     public static List<Component> getDescriptionLines(ItemStack stack) {
@@ -103,20 +105,21 @@ public class TideFishingRodItem extends FishingRodItem {
     @Override
     public @NotNull Optional<TooltipComponent> getTooltipImage(ItemStack stack) {
         return !stack.has(DataComponents.HIDE_TOOLTIP) && !stack.has(DataComponents.HIDE_ADDITIONAL_TOOLTIP)
-                ? Optional.ofNullable(TideItemData.BAIT_CONTENTS.get(stack)).map(FishingRodTooltip::new)
+                ? Optional.ofNullable(TideItemData.BAIT_CONTENTS.get(stack))
+                        .map(contents -> new FishingRodTooltip(this.baitSlots, contents))
                 : Optional.empty();
     }
     //?} else {
     /*@Override
     public @NotNull Optional<TooltipComponent> getTooltipImage(@NotNull ItemStack stack) {
-        return Optional.of(new FishingRodTooltip(TideItemData.BAIT_CONTENTS.getOrDefault(stack, new BaitContents())));
+        return Optional.of(new FishingRodTooltip(this.baitSlots, TideItemData.BAIT_CONTENTS.getOrDefault(stack, new BaitContents())));
     }
     *///?}
 
     @Override
     public boolean overrideStackedOnOther(@NotNull ItemStack stack, @NotNull Slot slot, @NotNull ClickAction action, @NotNull Player player) {
         if (action != ClickAction.SECONDARY) return false;
-        BaitContents contents = TideItemData.BAIT_CONTENTS.getOrDefault(stack, new BaitContents());
+        BaitContents contents = TideItemData.BAIT_CONTENTS.getOrDefault(stack, new BaitContents(this.baitSlots));
         BaitContents.Mutable mutable = new BaitContents.Mutable(contents);
         ItemStack slotStack = slot.getItem();
 
@@ -139,7 +142,7 @@ public class TideFishingRodItem extends FishingRodItem {
     @Override
     public boolean overrideOtherStackedOnMe(@NotNull ItemStack stack, @NotNull ItemStack other, @NotNull Slot slot, @NotNull ClickAction action, @NotNull Player player, @NotNull SlotAccess access) {
         if (action != ClickAction.SECONDARY || !slot.allowModification(player)) return false;
-        BaitContents contents = TideItemData.BAIT_CONTENTS.getOrDefault(stack, new BaitContents());
+        BaitContents contents = TideItemData.BAIT_CONTENTS.getOrDefault(stack, new BaitContents(this.baitSlots));
         BaitContents.Mutable mutable = new BaitContents.Mutable(contents);
 
         if (other.isEmpty()) {
@@ -157,12 +160,12 @@ public class TideFishingRodItem extends FishingRodItem {
     }
 
     public boolean isLavaproof(ItemStack stack) {
-        return CustomRodManager.getHook(stack).is(TideItems.LAVAPROOF_FISHING_HOOK)
+        return CustomRodManager.getHook(stack).is(TideItems.LAVAPROOF_HOOK)
                 || (this == TideItems.NETHERITE_FISHING_ROD);
     }
 
     public boolean isVoidproof(ItemStack stack) {
-        return CustomRodManager.getHook(stack).is(TideItems.VOID_FISHING_HOOK);
+        return CustomRodManager.getHook(stack).is(TideItems.VOID_HOOK);
     }
 
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class CustomRodManager {
-    private static final ItemStack DEFAULT_BOBBER = TideItems.RED_FISHING_BOBBER.getDefaultInstance();
+    private static final ItemStack DEFAULT_BOBBER = TideItems.RED_BOBBER.getDefaultInstance();
     private static final ItemStack DEFAULT_HOOK = TideItems.FISHING_HOOK.getDefaultInstance();
     private static final ItemStack DEFAULT_LINE = TideItems.FISHING_LINE.getDefaultInstance();
 

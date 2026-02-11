@@ -1,3 +1,10 @@
+# Tide v2.1 - idk/idk/26
+
+---
+### Changes
+- Removed `accessory.item.tide` translations
+
+
 ## Tide v2.0.3 - 2/06/26
 
 ---

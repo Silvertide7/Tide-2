@@ -54,11 +54,17 @@ public class TideModelProvider extends FabricModelProvider {
         generator.generateFlatItem(TideItems.BAIT, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.LUCKY_BAIT, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.MAGNETIC_BAIT, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.INCANDESCENT_BAIT, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.ABYSS_BAIT, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.SHINY_BAIT, ModelTemplates.FLAT_ITEM);
 
         generator.generateFlatItem(TideItems.FISHING_HOOK, ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(TideItems.IRON_FISHING_HOOK, ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(TideItems.LAVAPROOF_FISHING_HOOK, ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(TideItems.VOID_FISHING_HOOK, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.IRON_HOOK, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.FIERY_HOOK, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.PERMAFROST_HOOK, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.TWILIGHT_HOOK, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.LAVAPROOF_HOOK, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.VOID_HOOK, ModelTemplates.FLAT_ITEM);
 
         generator.generateFlatItem(TideItems.FISHING_LINE, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.BRAIDED_LINE, ModelTemplates.FLAT_ITEM);

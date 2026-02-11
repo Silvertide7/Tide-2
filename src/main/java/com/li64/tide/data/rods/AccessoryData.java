@@ -27,6 +27,6 @@ public record AccessoryData(Holder<Item> item, Optional<String> modelPath, Optio
     }
 
     public static MutableComponent getTranslation(ItemStack stack) {
-        return Component.translatable("accessory." + stack.getItem().getDescriptionId());
+        return Component.translatable(stack.getItem().getDescriptionId());
     }
 }

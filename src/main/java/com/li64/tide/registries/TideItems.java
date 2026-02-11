@@ -27,57 +27,63 @@ public class TideItems {
     public static final HashMap<ResourceKey<Item>, Item> ITEMS = new HashMap<>();
     private static final ArrayList<ItemStack> DISPLAY_ITEMS = new ArrayList<>();
 
-    public static final Item STONE_FISHING_ROD = register("stone_fishing_rod", properties -> new TideFishingRodItem(48, properties));//, new Item.Properties().repairable(Items.STRING));
-    public static final Item IRON_FISHING_ROD = register("iron_fishing_rod", properties -> new TideFishingRodItem(64, properties));//, new Item.Properties().repairable(Items.STRING));
-    public static final Item GOLDEN_FISHING_ROD = register("golden_fishing_rod", properties -> new TideFishingRodItem(36, properties));//, new Item.Properties().repairable(Items.STRING));
-    public static final Item CRYSTAL_FISHING_ROD = register("crystal_fishing_rod", properties -> new TideFishingRodItem(80, properties));//, new Item.Properties().repairable(Items.STRING));
-    public static final Item DIAMOND_FISHING_ROD = register("diamond_fishing_rod", properties -> new TideFishingRodItem(128, properties));//, new Item.Properties().repairable(Items.STRING));
-    public static final Item NETHERITE_FISHING_ROD = register("netherite_fishing_rod", properties -> new TideFishingRodItem(512, properties));//, new Item.Properties().repairable(Items.STRING));
+    public static final Item STONE_FISHING_ROD = register("stone_fishing_rod", properties -> new TideFishingRodItem(1, 48, properties));
+    public static final Item IRON_FISHING_ROD = register("iron_fishing_rod", properties -> new TideFishingRodItem(1, 64, properties));
+    public static final Item GOLDEN_FISHING_ROD = register("golden_fishing_rod", properties -> new TideFishingRodItem(2, 36, properties));
+    public static final Item CRYSTAL_FISHING_ROD = register("crystal_fishing_rod", properties -> new TideFishingRodItem(2, 80, properties));
+    public static final Item DIAMOND_FISHING_ROD = register("diamond_fishing_rod", properties -> new TideFishingRodItem(2, 128, properties));
+    public static final Item NETHERITE_FISHING_ROD = register("netherite_fishing_rod", properties -> new TideFishingRodItem(2, 512, properties));
 
     public static final Item BAIT = register("bait", Item::new);
     public static final Item LUCKY_BAIT = register("lucky_bait", Item::new);
     public static final Item MAGNETIC_BAIT = register("magnetic_bait", Item::new);
+    public static final Item INCANDESCENT_BAIT = register("incandescent_bait", Item::new);
+    public static final Item ABYSS_BAIT = register("abyss_bait", Item::new);
+    public static final Item SHINY_BAIT = register("shiny_bait", Item::new);
 
-    public static final Item RED_FISHING_BOBBER = register("red_fishing_bobber", FishingBobberItem::new);
-    public static final Item ORANGE_FISHING_BOBBER = register("orange_fishing_bobber", FishingBobberItem::new);
-    public static final Item YELLOW_FISHING_BOBBER = register("yellow_fishing_bobber", FishingBobberItem::new);
-    public static final Item LIME_FISHING_BOBBER = register("lime_fishing_bobber", FishingBobberItem::new);
-    public static final Item GREEN_FISHING_BOBBER = register("green_fishing_bobber", FishingBobberItem::new);
-    public static final Item CYAN_FISHING_BOBBER = register("cyan_fishing_bobber", FishingBobberItem::new);
-    public static final Item LIGHT_BLUE_FISHING_BOBBER = register("light_blue_fishing_bobber", FishingBobberItem::new);
-    public static final Item BLUE_FISHING_BOBBER = register("blue_fishing_bobber", FishingBobberItem::new);
-    public static final Item PURPLE_FISHING_BOBBER = register("purple_fishing_bobber", FishingBobberItem::new);
-    public static final Item MAGENTA_FISHING_BOBBER = register("magenta_fishing_bobber", FishingBobberItem::new);
-    public static final Item PINK_FISHING_BOBBER = register("pink_fishing_bobber", FishingBobberItem::new);
-    public static final Item WHITE_FISHING_BOBBER = register("white_fishing_bobber", FishingBobberItem::new);
-    public static final Item LIGHT_GRAY_FISHING_BOBBER = register("light_gray_fishing_bobber", FishingBobberItem::new);
-    public static final Item GRAY_FISHING_BOBBER = register("gray_fishing_bobber", FishingBobberItem::new);
-    public static final Item BLACK_FISHING_BOBBER = register("black_fishing_bobber", FishingBobberItem::new);
-    public static final Item BROWN_FISHING_BOBBER = register("brown_fishing_bobber", FishingBobberItem::new);
-    public static final Item APPLE_FISHING_BOBBER = register("apple_fishing_bobber", FishingBobberItem::new, new Item.Properties().food(Foods.APPLE));
-    public static final Item GOLDEN_APPLE_FISHING_BOBBER = register("golden_apple_fishing_bobber", FishingBobberItem::new, new Item.Properties().food(Foods.GOLDEN_APPLE));
-    public static final Item ENCHANTED_GOLDEN_APPLE_FISHING_BOBBER = register("enchanted_golden_apple_fishing_bobber", EnchantedFishingBobberItem::new, new Item.Properties()
+    public static final Item RED_BOBBER = register("red_bobber", FishingBobberItem::new);
+    public static final Item ORANGE_BOBBER = register("orange_bobber", FishingBobberItem::new);
+    public static final Item YELLOW_BOBBER = register("yellow_bobber", FishingBobberItem::new);
+    public static final Item LIME_BOBBER = register("lime_bobber", FishingBobberItem::new);
+    public static final Item GREEN_BOBBER = register("green_bobber", FishingBobberItem::new);
+    public static final Item CYAN_BOBBER = register("cyan_bobber", FishingBobberItem::new);
+    public static final Item LIGHT_BLUE_BOBBER = register("light_blue_bobber", FishingBobberItem::new);
+    public static final Item BLUE_BOBBER = register("blue_bobber", FishingBobberItem::new);
+    public static final Item PURPLE_BOBBER = register("purple_bobber", FishingBobberItem::new);
+    public static final Item MAGENTA_BOBBER = register("magenta_bobber", FishingBobberItem::new);
+    public static final Item PINK_BOBBER = register("pink_bobber", FishingBobberItem::new);
+    public static final Item WHITE_BOBBER = register("white_bobber", FishingBobberItem::new);
+    public static final Item LIGHT_GRAY_BOBBER = register("light_gray_bobber", FishingBobberItem::new);
+    public static final Item GRAY_BOBBER = register("gray_bobber", FishingBobberItem::new);
+    public static final Item BLACK_BOBBER = register("black_bobber", FishingBobberItem::new);
+    public static final Item BROWN_BOBBER = register("brown_bobber", FishingBobberItem::new);
+    public static final Item APPLE_BOBBER = register("apple_bobber", FishingBobberItem::new, new Item.Properties().food(Foods.APPLE));
+    public static final Item GOLDEN_APPLE_BOBBER = register("golden_apple_bobber", FishingBobberItem::new, new Item.Properties().food(Foods.GOLDEN_APPLE));
+    public static final Item ENCHANTED_GOLDEN_APPLE_BOBBER = register("enchanted_golden_apple_bobber", EnchantedFishingBobberItem::new, new Item.Properties()
             /*? if >=1.21*/.component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
             .food(Foods.ENCHANTED_GOLDEN_APPLE));
-    public static final Item IRON_FISHING_BOBBER = register("iron_fishing_bobber", FishingBobberItem::new);
-    public static final Item GOLDEN_FISHING_BOBBER = register("golden_fishing_bobber", FishingBobberItem::new);
-    public static final Item DIAMOND_FISHING_BOBBER = register("diamond_fishing_bobber", FishingBobberItem::new);
-    public static final Item NETHERITE_FISHING_BOBBER = register("netherite_fishing_bobber", FishingBobberItem::new);
-    public static final Item AMETHYST_FISHING_BOBBER = register("amethyst_fishing_bobber", FishingBobberItem::new);
-    public static final Item ECHO_FISHING_BOBBER = register("echo_fishing_bobber", FishingBobberItem::new);
-    public static final Item CHORUS_FISHING_BOBBER = register("chorus_fishing_bobber", FishingBobberItem::new);
-    public static final Item FEATHER_FISHING_BOBBER = register("feather_fishing_bobber", FishingBobberItem::new);
-    public static final Item LICHEN_FISHING_BOBBER = register("lichen_fishing_bobber", FishingBobberItem::new);
-    public static final Item NAUTILUS_FISHING_BOBBER = register("nautilus_fishing_bobber", FishingBobberItem::new);
-    public static final Item PEARL_FISHING_BOBBER = register("pearl_fishing_bobber", FishingBobberItem::new);
-    public static final Item HEART_FISHING_BOBBER = register("heart_fishing_bobber", FishingBobberItem::new);
-    public static final Item GRASSY_FISHING_BOBBER = register("grassy_fishing_bobber", FishingBobberItem::new);
-    public static final Item DUCK_FISHING_BOBBER = register("duck_fishing_bobber", FishingBobberItem::new);
+    public static final Item IRON_BOBBER = register("iron_bobber", FishingBobberItem::new);
+    public static final Item GOLDEN_BOBBER = register("golden_bobber", FishingBobberItem::new);
+    public static final Item DIAMOND_BOBBER = register("diamond_bobber", FishingBobberItem::new);
+    public static final Item NETHERITE_BOBBER = register("netherite_bobber", FishingBobberItem::new);
+    public static final Item AMETHYST_BOBBER = register("amethyst_bobber", FishingBobberItem::new);
+    public static final Item ECHO_BOBBER = register("echo_bobber", FishingBobberItem::new);
+    public static final Item CHORUS_BOBBER = register("chorus_bobber", FishingBobberItem::new);
+    public static final Item FEATHER_BOBBER = register("feather_bobber", FishingBobberItem::new);
+    public static final Item LICHEN_BOBBER = register("lichen_bobber", FishingBobberItem::new);
+    public static final Item NAUTILUS_BOBBER = register("nautilus_bobber", FishingBobberItem::new);
+    public static final Item PEARL_BOBBER = register("pearl_bobber", FishingBobberItem::new);
+    public static final Item HEART_BOBBER = register("heart_bobber", FishingBobberItem::new);
+    public static final Item GRASSY_BOBBER = register("grassy_bobber", FishingBobberItem::new);
+    public static final Item DUCK_BOBBER = register("duck_bobber", FishingBobberItem::new);
 
     public static final Item FISHING_HOOK = register("fishing_hook", FishingHookItem::new);
-    public static final Item IRON_FISHING_HOOK = register("iron_fishing_hook", properties -> new FishingHookItem(properties, "item.tide.iron_hook.desc"));
-    public static final Item LAVAPROOF_FISHING_HOOK = register("lavaproof_fishing_hook", properties -> new FishingHookItem(properties, "item.tide.lavaproof_hook.desc"));
-    public static final Item VOID_FISHING_HOOK = register("void_fishing_hook", properties -> new FishingHookItem(properties, "item.tide.void_hook.desc"));
+    public static final Item IRON_HOOK = register("iron_hook", properties -> new FishingHookItem(properties, "item.tide.iron_hook.desc"));
+    public static final Item FIERY_HOOK = register("fiery_hook", properties -> new FishingHookItem(properties, "item.tide.fiery_hook.desc"));
+    public static final Item PERMAFROST_HOOK = register("permafrost_hook", properties -> new FishingHookItem(properties, "item.tide.permafrost_hook.desc"));
+    public static final Item TWILIGHT_HOOK = register("twilight_hook", properties -> new FishingHookItem(properties, "item.tide.twilight_hook.desc"));
+    public static final Item LAVAPROOF_HOOK = register("lavaproof_hook", properties -> new FishingHookItem(properties, "item.tide.lavaproof_hook.desc"));
+    public static final Item VOID_HOOK = register("void_hook", properties -> new FishingHookItem(properties, "item.tide.void_hook.desc"));
 
     public static final Item FISHING_LINE = register("fishing_line", FishingLineItem::new);
     public static final Item BRAIDED_LINE = register("braided_line", properties -> new FishingLineItem(properties, "item.tide.braided_line.desc"));
@@ -101,7 +107,7 @@ public class TideItems {
             .rarity(Rarity.EPIC));
     public static final Item STARLIGHT_BOW = register("starlight_bow", StarlightBowItem::new,
             new Item.Properties().rarity(Rarity.EPIC).durability(750));
-    public static final Item MIDAS_FISHING_ROD = register("midas_fishing_rod", properties -> new TideFishingRodItem(256, properties));
+    public static final Item MIDAS_FISHING_ROD = register("midas_fishing_rod", properties -> new TideFishingRodItem(2, 256, properties));
     public static final Item DRAGONFIN_BOOTS = register("dragonfin_boots", DragonfinBootsItem::new, new Item.Properties()
             /*? if >=1.21*/.durability(ArmorItem.Type.BOOTS.getDurability(37))
             .rarity(Rarity.EPIC));
@@ -155,7 +161,7 @@ public class TideItems {
                     STONE_FISHING_ROD, IRON_FISHING_ROD, GOLDEN_FISHING_ROD,
                     CRYSTAL_FISHING_ROD, DIAMOND_FISHING_ROD, NETHERITE_FISHING_ROD,
 
-                    BAIT, LUCKY_BAIT, MAGNETIC_BAIT,
+                    BAIT, LUCKY_BAIT, MAGNETIC_BAIT, INCANDESCENT_BAIT, ABYSS_BAIT, SHINY_BAIT,
 
                     POCKET_WATCH, LUNAR_CALENDAR, CLIMATE_GAUGE, DEPTH_METER, WEATHER_RADIO,
 
@@ -187,27 +193,28 @@ public class TideItems {
 
                     JELLY_TORCH,
 
-                    FISHING_HOOK, IRON_FISHING_HOOK, LAVAPROOF_FISHING_HOOK, VOID_FISHING_HOOK,
+                    FISHING_HOOK, IRON_HOOK, FIERY_HOOK, PERMAFROST_HOOK,
+                    TWILIGHT_HOOK, LAVAPROOF_HOOK, VOID_HOOK,
 
                     FISHING_LINE, BRAIDED_LINE, REINFORCED_LINE, GOLDEN_LINE,
 
-                    RED_FISHING_BOBBER, ORANGE_FISHING_BOBBER,
-                    YELLOW_FISHING_BOBBER, LIME_FISHING_BOBBER,
-                    GREEN_FISHING_BOBBER, CYAN_FISHING_BOBBER,
-                    LIGHT_BLUE_FISHING_BOBBER, BLUE_FISHING_BOBBER,
-                    PURPLE_FISHING_BOBBER, MAGENTA_FISHING_BOBBER,
-                    PINK_FISHING_BOBBER, WHITE_FISHING_BOBBER,
-                    LIGHT_GRAY_FISHING_BOBBER, GRAY_FISHING_BOBBER,
-                    BLACK_FISHING_BOBBER, BROWN_FISHING_BOBBER,
-                    APPLE_FISHING_BOBBER, GOLDEN_APPLE_FISHING_BOBBER,
-                    ENCHANTED_GOLDEN_APPLE_FISHING_BOBBER, IRON_FISHING_BOBBER,
-                    GOLDEN_FISHING_BOBBER, DIAMOND_FISHING_BOBBER,
-                    NETHERITE_FISHING_BOBBER, AMETHYST_FISHING_BOBBER,
-                    ECHO_FISHING_BOBBER, CHORUS_FISHING_BOBBER,
-                    FEATHER_FISHING_BOBBER, LICHEN_FISHING_BOBBER,
-                    NAUTILUS_FISHING_BOBBER, PEARL_FISHING_BOBBER,
-                    HEART_FISHING_BOBBER, GRASSY_FISHING_BOBBER,
-                    DUCK_FISHING_BOBBER
+                    RED_BOBBER, ORANGE_BOBBER,
+                    YELLOW_BOBBER, LIME_BOBBER,
+                    GREEN_BOBBER, CYAN_BOBBER,
+                    LIGHT_BLUE_BOBBER, BLUE_BOBBER,
+                    PURPLE_BOBBER, MAGENTA_BOBBER,
+                    PINK_BOBBER, WHITE_BOBBER,
+                    LIGHT_GRAY_BOBBER, GRAY_BOBBER,
+                    BLACK_BOBBER, BROWN_BOBBER,
+                    APPLE_BOBBER, GOLDEN_APPLE_BOBBER,
+                    ENCHANTED_GOLDEN_APPLE_BOBBER, IRON_BOBBER,
+                    GOLDEN_BOBBER, DIAMOND_BOBBER,
+                    NETHERITE_BOBBER, AMETHYST_BOBBER,
+                    ECHO_BOBBER, CHORUS_BOBBER,
+                    FEATHER_BOBBER, LICHEN_BOBBER,
+                    NAUTILUS_BOBBER, PEARL_BOBBER,
+                    HEART_BOBBER, GRASSY_BOBBER,
+                    DUCK_BOBBER
             );
         }
         return DISPLAY_ITEMS;

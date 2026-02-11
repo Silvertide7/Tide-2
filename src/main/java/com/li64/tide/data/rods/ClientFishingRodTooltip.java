@@ -11,7 +11,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-public record ClientFishingRodTooltip(BaitContents contents) implements ClientTooltipComponent {
+public record ClientFishingRodTooltip(int slots, BaitContents contents) implements ClientTooltipComponent {
     private static final ResourceLocation SLOT_BACKGROUND_SPRITE = TideUtils.sprite("bait/slot_background");
     private static final ResourceLocation SLOT_HIGHLIGHT_FRONT_SPRITE = TideUtils.sprite("bait/slot_highlight_front");
     private static final Component MESSAGE = Component.translatable("text.tide.rod_tooltip.bait_desc");
@@ -69,6 +69,6 @@ public record ClientFishingRodTooltip(BaitContents contents) implements ClientTo
     }
 
     private int gridWidth() {
-        return Math.max(3, (int) Math.ceil(Math.sqrt((double) this.contents.size() + 1.0)));
+        return Math.max(this.slots, this.contents.size());
     }
 }

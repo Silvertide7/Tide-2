@@ -32,22 +32,22 @@ import static net.minecraft.data.recipes.ShapelessRecipeBuilder.shapeless;
 
 public class TideRecipeProvider extends FabricRecipeProvider {
     static final List<Item> BOBBERS = List.of(
-            TideItems.WHITE_FISHING_BOBBER,
-            TideItems.ORANGE_FISHING_BOBBER,
-            TideItems.MAGENTA_FISHING_BOBBER,
-            TideItems.LIGHT_BLUE_FISHING_BOBBER,
-            TideItems.YELLOW_FISHING_BOBBER,
-            TideItems.LIME_FISHING_BOBBER,
-            TideItems.PINK_FISHING_BOBBER,
-            TideItems.GRAY_FISHING_BOBBER,
-            TideItems.LIGHT_GRAY_FISHING_BOBBER,
-            TideItems.CYAN_FISHING_BOBBER,
-            TideItems.PURPLE_FISHING_BOBBER,
-            TideItems.BLUE_FISHING_BOBBER,
-            TideItems.BROWN_FISHING_BOBBER,
-            TideItems.GREEN_FISHING_BOBBER,
-            TideItems.RED_FISHING_BOBBER,
-            TideItems.BLACK_FISHING_BOBBER
+            TideItems.WHITE_BOBBER,
+            TideItems.ORANGE_BOBBER,
+            TideItems.MAGENTA_BOBBER,
+            TideItems.LIGHT_BLUE_BOBBER,
+            TideItems.YELLOW_BOBBER,
+            TideItems.LIME_BOBBER,
+            TideItems.PINK_BOBBER,
+            TideItems.GRAY_BOBBER,
+            TideItems.LIGHT_GRAY_BOBBER,
+            TideItems.CYAN_BOBBER,
+            TideItems.PURPLE_BOBBER,
+            TideItems.BLUE_BOBBER,
+            TideItems.BROWN_BOBBER,
+            TideItems.GREEN_BOBBER,
+            TideItems.RED_BOBBER,
+            TideItems.BLACK_BOBBER
     );
 
     @SuppressWarnings("unused")
@@ -169,23 +169,23 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .save(output, "tide:jelly_torch_from_sun_emblem");
 
         createColoredBobberRecipes(output);
-        createSimpleBobberRecipe(output, TideItems.APPLE_FISHING_BOBBER, Items.APPLE);
-        createSimpleBobberRecipe(output, TideItems.GOLDEN_APPLE_FISHING_BOBBER, Items.GOLDEN_APPLE);
-        createSimpleBobberRecipe(output, TideItems.ENCHANTED_GOLDEN_APPLE_FISHING_BOBBER, Items.ENCHANTED_GOLDEN_APPLE);
-        createSimpleBobberRecipe(output, TideItems.IRON_FISHING_BOBBER, Items.IRON_INGOT);
-        createSimpleBobberRecipe(output, TideItems.GOLDEN_FISHING_BOBBER, Items.GOLD_INGOT);
-        createSimpleBobberRecipe(output, TideItems.DIAMOND_FISHING_BOBBER, Items.DIAMOND);
-        createSimpleBobberRecipe(output, TideItems.NETHERITE_FISHING_BOBBER, Items.NETHERITE_INGOT);
-        createSimpleBobberRecipe(output, TideItems.AMETHYST_FISHING_BOBBER, Items.AMETHYST_SHARD);
-        createSimpleBobberRecipe(output, TideItems.ECHO_FISHING_BOBBER, Items.ECHO_SHARD);
-        createSimpleBobberRecipe(output, TideItems.CHORUS_FISHING_BOBBER, Items.CHORUS_FRUIT);
-        createSimpleBobberRecipe(output, TideItems.FEATHER_FISHING_BOBBER, Items.FEATHER);
-        createSimpleBobberRecipe(output, TideItems.LICHEN_FISHING_BOBBER, Items.GLOW_LICHEN);
-        createSimpleBobberRecipe(output, TideItems.NAUTILUS_FISHING_BOBBER, Items.NAUTILUS_SHELL);
-        createSimpleBobberRecipe(output, TideItems.PEARL_FISHING_BOBBER, Items.ENDER_PEARL);
-        createSimpleBobberRecipe(output, TideItems.HEART_FISHING_BOBBER, Items.HEART_OF_THE_SEA);
-        createSimpleBobberRecipe(output, TideItems.GRASSY_FISHING_BOBBER, Items.GRASS_BLOCK);
-        createSimpleBobberRecipe(output, TideItems.DUCK_FISHING_BOBBER, Items.CHICKEN);
+        createSimpleBobberRecipe(output, TideItems.APPLE_BOBBER, Items.APPLE);
+        createSimpleBobberRecipe(output, TideItems.GOLDEN_APPLE_BOBBER, Items.GOLDEN_APPLE);
+        createSimpleBobberRecipe(output, TideItems.ENCHANTED_GOLDEN_APPLE_BOBBER, Items.ENCHANTED_GOLDEN_APPLE);
+        createSimpleBobberRecipe(output, TideItems.IRON_BOBBER, Items.IRON_INGOT);
+        createSimpleBobberRecipe(output, TideItems.GOLDEN_BOBBER, Items.GOLD_INGOT);
+        createSimpleBobberRecipe(output, TideItems.DIAMOND_BOBBER, Items.DIAMOND);
+        createSimpleBobberRecipe(output, TideItems.NETHERITE_BOBBER, Items.NETHERITE_INGOT);
+        createSimpleBobberRecipe(output, TideItems.AMETHYST_BOBBER, Items.AMETHYST_SHARD);
+        createSimpleBobberRecipe(output, TideItems.ECHO_BOBBER, Items.ECHO_SHARD);
+        createSimpleBobberRecipe(output, TideItems.CHORUS_BOBBER, Items.CHORUS_FRUIT);
+        createSimpleBobberRecipe(output, TideItems.FEATHER_BOBBER, Items.FEATHER);
+        createSimpleBobberRecipe(output, TideItems.LICHEN_BOBBER, Items.GLOW_LICHEN);
+        createSimpleBobberRecipe(output, TideItems.NAUTILUS_BOBBER, Items.NAUTILUS_SHELL);
+        createSimpleBobberRecipe(output, TideItems.PEARL_BOBBER, Items.ENDER_PEARL);
+        createSimpleBobberRecipe(output, TideItems.HEART_BOBBER, Items.HEART_OF_THE_SEA);
+        createSimpleBobberRecipe(output, TideItems.GRASSY_BOBBER, Items.GRASS_BLOCK);
+        createSimpleBobberRecipe(output, TideItems.DUCK_BOBBER, Items.CHICKEN);
 
         // -- Shaped --
 
@@ -342,7 +342,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
                 .save(output);
 
-        shaped(RecipeCategory.TOOLS, TideItems.IRON_FISHING_HOOK)
+        shaped(RecipeCategory.TOOLS, TideItems.IRON_HOOK)
                 .pattern("  #")
                 .pattern("I I")
                 .pattern(" I ")
@@ -352,7 +352,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_iron_nugget", has(TideTags.Convention.IRON_NUGGETS))
                 .save(output);
 
-        shaped(RecipeCategory.TOOLS, TideItems.LAVAPROOF_FISHING_HOOK)
+        shaped(RecipeCategory.TOOLS, TideItems.LAVAPROOF_HOOK)
                 .pattern("  #")
                 .pattern("O O")
                 .pattern(" O ")
@@ -362,7 +362,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_copper", has(TideTags.Convention.GOLD_INGOTS))
                 .save(output);
 
-        shaped(RecipeCategory.TOOLS, TideItems.VOID_FISHING_HOOK)
+        shaped(RecipeCategory.TOOLS, TideItems.VOID_HOOK)
                 .pattern("  #")
                 .pattern("#D#")
                 .pattern(" # ")
@@ -509,7 +509,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
     private void createSimpleBobberRecipe(/*? if >=1.21 {*/RecipeOutput/*?} else {*//*Consumer<FinishedRecipe>*//*?}*/ output,
                                           Item bobber, Item addition) {
         String identifier = BuiltInRegistries.ITEM.getKey(bobber).getPath()
-                .replace("_fishing_bobber", "");
+                .replace("_BOBBER", "");
         String additionPath = BuiltInRegistries.ITEM.getKey(addition).getPath();
         shapeless(RecipeCategory.MISC, bobber)
                 .requires(TideTags.Convention.SLIME_BALLS)
@@ -522,7 +522,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
 
     private void createColoredBobberRecipes(/*? if >=1.21 {*/RecipeOutput/*?} else {*//*Consumer<FinishedRecipe>*//*?}*/ output) {
         BOBBERS.forEach(bobber -> {
-            String dyeId = BuiltInRegistries.ITEM.getKey(bobber).getPath().replace("_fishing_bobber", "");
+            String dyeId = BuiltInRegistries.ITEM.getKey(bobber).getPath().replace("_bobber", "");
             TagKey<Item> dyeTag = TideTags.Convention.create("dyes/" + dyeId, Registries.ITEM);
 
             shapeless(RecipeCategory.MISC, bobber)
