@@ -495,7 +495,7 @@ public class TideFishingHook extends Projectile {
         }
         else {
             this.timeUntilLured = (int) (Mth.nextInt(this.random, 200, 600) * this.medium.biteTimeMultiplier());
-            this.timeUntilLured -= (int) (1200.0 / (1.0 + Math.exp(-0.3 * this.lureSpeed)) - 600.0);
+            this.timeUntilLured -= (int) (2000.0 / (1.0 + Math.exp(-0.2 * this.lureSpeed)) - 1000.0);
             double globalBiteTimeMultiplier = Tide.PLATFORM.isModLoaded("stardew_fishing") ? CompatHelper.stardewFishingBiteTimeMultiplier() : 1.0;
             this.timeUntilLured = Math.max((int) (this.timeUntilLured * globalBiteTimeMultiplier), 10);
         }

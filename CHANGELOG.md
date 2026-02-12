@@ -23,6 +23,7 @@
 - Instead of applying the affects of only the bait item in the first slot, bait effects for all bait equipped in a fishing rod will be applied at once. This allows for bait "stacking", where you can combine the effects of multiple bait items.
 - Multiple stacks of the same bait type cannot be equipped in the same fishing rod
 - One bait item from each slot will be consumed upon catching a fish
+- The effectiveness of higher levels of fishing speed has been slightly increased to counteract the `biteTimeMultiplier` of different fishing mediums
 
 **Shinies**
 - Similar to the Pokémon games, each fish in the mod now has a "shiny" variant that can be caught very rarely
@@ -35,7 +36,9 @@
   - Fiery Hook
   - Permafrost Hook
   - Twilight Hook
-- Added 1 new fishing line:
+- Added 3 new fishing lines:
+  - Iron Line
+  - Copper Line
   - Diamond Line
 - Added 8 new themed fishing rods:
   - Sculk Fishing Rod
@@ -58,7 +61,8 @@
 
 ---
 ### Fixes
-- Items crafted from netherite will no longer be destroyed when dropped in fire or lava
+- Items crafted from netherite will no longer be destroyed when dropped in fire or lava [(#18)](https://github.com/Lightning-64/Tide-2/issues/18)
+- Fixed a bug where removing a fish from a fish display wouldn't update for other players in the world [(#25)](https://github.com/Lightning-64/Tide-2/issues/25)
 
 ## Tide v2.0.3 - 2/06/26
 

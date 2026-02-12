@@ -1,7 +1,6 @@
 package com.li64.tide.data.rods;
 
 import com.li64.tide.util.TideUtils;
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
@@ -13,7 +12,6 @@ import org.jetbrains.annotations.NotNull;
 
 public record ClientFishingRodTooltip(int slots, BaitContents contents) implements ClientTooltipComponent {
     private static final ResourceLocation SLOT_BACKGROUND_SPRITE = TideUtils.sprite("bait/slot_background");
-    private static final ResourceLocation SLOT_HIGHLIGHT_FRONT_SPRITE = TideUtils.sprite("bait/slot_highlight_front");
     private static final Component MESSAGE = Component.translatable("text.tide.rod_tooltip.bait_desc");
     private static final int OFFSET_Y = 10;
     private static final int MARGIN_Y = 4;
@@ -61,11 +59,6 @@ public record ClientFishingRodTooltip(int slots, BaitContents contents) implemen
 
         graphics.renderItem(stack, x + BG_BORDER, y + BG_BORDER, index);
         graphics.renderItemDecorations(font, stack, x + BG_BORDER, y + BG_BORDER);
-
-        RenderSystem.enableBlend();
-        /*? if >=1.21 {*/if (index == 0) graphics.blitSprite(SLOT_HIGHLIGHT_FRONT_SPRITE, x - 4 + BG_BORDER, y - 4 + BG_BORDER, 24, 24);
-        /*?} else*//*if (index == 0) graphics.blit(SLOT_HIGHLIGHT_FRONT_SPRITE, x - 4 + BG_BORDER, y - 4 + BG_BORDER, 0, 0, 24, 24, 24, 24);*/
-        RenderSystem.disableBlend();
     }
 
     private int gridWidth() {
