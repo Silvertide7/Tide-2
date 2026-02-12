@@ -59,6 +59,9 @@
 - Their information will be displayed when held in the player's mainhand, offhand, or equipped in a Curios slot.
 - Informational items can be combined via crafting recipes, allowing multiple stats to be viewed at once
 
+**Miscellaneous**
+- The Midas Fishing Rod can now reel in a bonus golden apple, golden carrot, and _very rarely_ an enchanted golden apple or totem of undying (in addition to the regular gold ingots and blocks)
+
 ---
 ### Fixes
 - Items crafted from netherite will no longer be destroyed when dropped in fire or lava [(#18)](https://github.com/Lightning-64/Tide-2/issues/18)

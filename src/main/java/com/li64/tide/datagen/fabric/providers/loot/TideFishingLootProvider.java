@@ -120,8 +120,14 @@ public class TideFishingLootProvider extends TideAbstractLootProvider {
         output.accept(
                 TideLootTables.Fishing.BONUS_GOLD,
                 LootTable.lootTable().withPool(LootPool.lootPool()
-                        .add(LootItem.lootTableItem(Items.GOLD_INGOT).setWeight(5))
-                        .add(LootItem.lootTableItem(Items.GOLD_BLOCK).setWeight(1))
+                        .add(LootItem.lootTableItem(Items.GOLD_INGOT).setWeight(140))
+                        .add(LootItem.lootTableItem(Items.GOLDEN_CARROT)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
+                                .setWeight(30))
+                        .add(LootItem.lootTableItem(Items.GOLDEN_APPLE).setWeight(30))
+                        .add(LootItem.lootTableItem(Items.GOLD_BLOCK).setWeight(30))
+                        .add(LootItem.lootTableItem(Items.ENCHANTED_GOLDEN_APPLE).setWeight(1))
+                        .add(LootItem.lootTableItem(Items.TOTEM_OF_UNDYING).setWeight(1))
                 )
         );
     }
