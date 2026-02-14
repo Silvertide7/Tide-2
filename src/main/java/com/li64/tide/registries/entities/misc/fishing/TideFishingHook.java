@@ -761,6 +761,13 @@ public class TideFishingHook extends Projectile {
     }
 
     public FishingContext getContext() {
+        boolean netherOverride = rod.is(TideItems.BLAZING_FISHING_ROD) && medium == FishingMedium.LAVA;
+
+        float temperatureAddition = 0f;
+        ItemStack hook = this.getHook();
+        if (hook.is(TideItems.FIERY_HOOK)) temperatureAddition = 0.25f;
+        if (hook.is(TideItems.PERMAFROST_HOOK)) temperatureAddition = -0.25f;
+
         return new FishingContext(
                 (ServerLevel) level(),
                 this, this.rod,
@@ -771,8 +778,8 @@ public class TideFishingHook extends Projectile {
                 Optional.ofNullable(medium).orElse(FishingMedium.WATER).id().getPath(),
                 getBiome(),
                 TideUtils.findClosestNonWaterBiome(level(), blockPosition(), 12, 2).orElse(getBiome()),
-                level().dimension(),
-                sampleTemperature(),
+                netherOverride ? Level.NETHER : level().dimension(),
+                Math.clamp(sampleTemperature() + temperatureAddition, -1.0f, 1.0f),
                 level().getMoonPhase(),
                 SeasonsCompat.getSeason(level())
         );
@@ -783,11 +790,7 @@ public class TideFishingHook extends Projectile {
             Tide.LOG.error("Tried to sample temperature on the client");
             return 0f;
         }
-        float addition = 0f;
-        ItemStack hook = this.getHook();
-        if (hook.is(TideItems.FIERY_HOOK)) addition = 0.25f;
-        if (hook.is(TideItems.PERMAFROST_HOOK)) addition = -0.25f;
-        return Math.clamp(TideUtils.getTemperatureAt(blockPosition(), level) + addition, -1.0f, 1.0f);
+        return TideUtils.getTemperatureAt(blockPosition(), level);
     }
 
     protected @NotNull MovementEmission getMovementEmission() {
