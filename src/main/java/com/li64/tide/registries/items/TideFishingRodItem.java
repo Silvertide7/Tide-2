@@ -299,7 +299,7 @@ public class TideFishingRodItem extends FishingRodItem {
                 // sunflower rod perk
                 if (rod.is(TideItems.SUNFLOWER_FISHING_ROD)) {
                     boolean canSeeSky = level.canSeeSky(player.blockPosition());
-                    boolean isSunny = level.isDay() && level.dimensionType().hasSkyLight();
+                    boolean isSunny = level.isDay() && level.dimensionType().hasSkyLight() && !level.isRaining();
                     if (canSeeSky && isSunny) luck += 1;
                 }
 

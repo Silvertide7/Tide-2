@@ -341,7 +341,7 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add("text.tide.rod_tooltip.midas_bonus", "Catch additional gold items");
         builder.add("text.tide.rod_tooltip.echo_bonus", "Detects which fish is hooked");
         builder.add("text.tide.rod_tooltip.prismarine_bonus", "+1 speed and luck while in the rain");
-        builder.add("text.tide.rod_tooltip.sunflower_bonus", "+1 luck when in sunlight");
+        builder.add("text.tide.rod_tooltip.sunflower_bonus", "+1 luck while in sunlight");
         builder.add("text.tide.rod_tooltip.village_bonus", "Catch additional village loot");
         builder.add("text.tide.rod_tooltip.ammonite_bonus", "TBD");
         builder.add("text.tide.rod_tooltip.blazing_bonus", "Can catch nether fish in any lava");
