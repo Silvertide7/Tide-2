@@ -285,15 +285,25 @@ public class TideFishingRodItem extends FishingRodItem {
                     luck += BaitUtils.getCombinedLuck(rod);
                 }
 
+                // golden and midas rod perk
                 if (rod.is(TideTags.Items.LUCK_BOOSTING_RODS)) luck += 1;
-                if (rod.is(TideItems.SUNFLOWER_FISHING_ROD)) {
-                    boolean canSeeSky = level.canSeeSky(player.blockPosition());
-                    boolean isSunny = level.isDay() && level.dimensionType().hasSkyLight();
-                    if (canSeeSky && isSunny) {
+
+                // prismarine rod perk
+                if (rod.is(TideItems.PRISMARINE_FISHING_ROD)) {
+                    if (level.isRainingAt(player.blockPosition())) {
                         speed += 1;
                         luck += 1;
                     }
                 }
+
+                // sunflower rod perk
+                if (rod.is(TideItems.SUNFLOWER_FISHING_ROD)) {
+                    boolean canSeeSky = level.canSeeSky(player.blockPosition());
+                    boolean isSunny = level.isDay() && level.dimensionType().hasSkyLight();
+                    if (canSeeSky && isSunny) luck += 1;
+                }
+
+                // hybrid aquatic hook perks
                 if (CompatHelper.isHybridAquaticLoaded()) {
                     if (CustomRodManager.getHook(rod).getItem().toString().matches("barbed_hook") && level.isDay()) speed += 1;
                     if (CustomRodManager.getHook(rod).getItem().toString().matches("glowing_hook") && level.isNight()) speed += 1;
