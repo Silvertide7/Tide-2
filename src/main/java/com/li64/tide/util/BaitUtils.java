@@ -18,7 +18,7 @@ import java.util.Optional;
 public class BaitUtils {
     public static boolean hasBait(ItemStack rod) {
         if (rod == null) return false;
-        return getBaitItems(rod).isEmpty();
+        return !getBaitItems(rod).isEmpty();
     }
 
     public static boolean hasBait(Item bait, ItemStack rod) {

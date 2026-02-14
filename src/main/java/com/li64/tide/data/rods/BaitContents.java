@@ -94,23 +94,22 @@ public class BaitContents {
 
         // inserts stack to the contents
         public void tryInsert(ItemStack stack) {
-            if (!stack.isEmpty() && stack.getItem().canFitInsideContainerItems()) {
-                int index = this.findStackIndex(stack);
-                int count = stack.getCount();
+            if (stack.isEmpty() || !stack.getItem().canFitInsideContainerItems()) return;
+            int index = this.findStackIndex(stack);
+            int count = stack.getCount();
 
-                if (index != -1 && stack.isStackable()) {
-                    ItemStack current = this.items.get(index);
+            if (index != -1 && stack.isStackable()) {
+                ItemStack current = this.items.get(index);
 
-                    int stackSize = stack.getMaxStackSize();
-                    int amountToAdd = Math.min(stackSize - current.getCount(), stack.getCount());
+                int stackSize = stack.getMaxStackSize();
+                int amountToAdd = Math.min(stackSize - current.getCount(), stack.getCount());
 
-                    ItemStack added = current.copyWithCount(current.getCount() + amountToAdd);
-                    stack.shrink(amountToAdd);
+                ItemStack added = current.copyWithCount(current.getCount() + amountToAdd);
+                stack.shrink(amountToAdd);
 
-                    this.items.set(index, added);
-                }
-                else if (items.size() < this.maxStacks) this.items.add(stack.split(count));
+                this.items.set(index, added);
             }
+            else if (items.size() < this.maxStacks) this.items.add(stack.split(count));
         }
 
         // transfer items from slot to contents
