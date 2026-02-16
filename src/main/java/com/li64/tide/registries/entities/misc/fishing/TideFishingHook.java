@@ -14,6 +14,7 @@ import com.li64.tide.data.item.TideItemData;
 import com.li64.tide.data.loot.LootTableRef;
 import com.li64.tide.data.rods.BaitContents;
 import com.li64.tide.data.rods.CustomRodManager;
+import com.li64.tide.network.messages.EchoRodHookedMsg;
 import com.li64.tide.registries.TideItems;
 import com.li64.tide.registries.entities.misc.LootCrateEntity;
 import com.li64.tide.registries.items.TideFishingRodItem;
@@ -181,6 +182,10 @@ public class TideFishingHook extends Projectile {
         return this.openWater;
     }
 
+    public boolean isFishHooked() {
+        return this.biting;
+    }
+
     public enum CatchType {
         FISH, CRATE,
         ITEM, NOTHING
@@ -230,9 +235,7 @@ public class TideFishingHook extends Projectile {
 
         if (DATA_MINIGAME_ACTIVE.equals(data)) {
             minigameActive = this.getEntityData().get(DATA_MINIGAME_ACTIVE);
-            if (!level().isClientSide() && !minigameActive) {
-                restartFishingSequence();
-            }
+            if (!level().isClientSide() && !minigameActive) restartFishingSequence();
         }
 
         super.onSyncedDataUpdated(data);
@@ -455,7 +458,18 @@ public class TideFishingHook extends Projectile {
             else {
                 // When a fish first touches the hook
                 if (rod.is(TideItems.CRYSTAL_FISHING_ROD)) {
-                    this.level().playSound(null, getPlayerOwner().blockPosition(), SoundEvents.AMETHYST_BLOCK_RESONATE, SoundSource.MASTER, 1.5F, 1.0F - (this.random.nextFloat() - this.random.nextFloat()) * 0.1F);
+                    this.level().playSound(
+                            null, getPlayerOwner().blockPosition(),
+                            SoundEvents.AMETHYST_BLOCK_RESONATE, SoundSource.MASTER, 1.5f,
+                            1.0f - (this.random.nextFloat() - this.random.nextFloat()) * 0.1f
+                    );
+                }
+                if (rod.is(TideItems.ECHO_FISHING_ROD)) {
+                    this.level().playSound(
+                            null, getPlayerOwner().blockPosition(),
+                            SoundEvents.SCULK_CLICKING, SoundSource.MASTER, 1.0f,
+                            1.0f - (this.random.nextFloat() - this.random.nextFloat()) * 0.1f
+                    );
                 }
 
                 medium.onFishBite(this);
@@ -463,7 +477,11 @@ public class TideFishingHook extends Projectile {
                 // Select a catch
                 this.nibble = Mth.nextInt(this.random, 20, 40);
                 this.getEntityData().set(DATA_BITING, true);
-                if (getPlayerOwner() != null) selectCatch(rod);
+                if (getPlayerOwner() != null) {
+                    selectCatch(rod);
+                    if (rod.is(TideItems.ECHO_FISHING_ROD) && !hookedItems.isEmpty() && !hookedItems.get(0).isEmpty())
+                        Tide.NETWORK.sendToPlayer(new EchoRodHookedMsg(hookedItems.get(0)), (ServerPlayer) getPlayerOwner());
+                }
                 else {
                     catchType = CatchType.NOTHING;
                     getEntityData().set(DATA_CATCH_TYPE, catchType.ordinal());
