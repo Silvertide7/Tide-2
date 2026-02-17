@@ -3,7 +3,7 @@
   "conditions": [
     {
       "type": "tide:luck",
-      "min": 7
+      "min": 6
     },
     {
       "type": "tide:below",
