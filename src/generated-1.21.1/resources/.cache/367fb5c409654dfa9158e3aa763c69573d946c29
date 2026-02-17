@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-16T19:48:05.9329599	Tide/Recipes
+// 1.21.1	2026-02-16T19:52:03.7960763	Tide/Recipes
 15cb9cab91a3f89dc8ffc0c1aba9a24731e97dd0 data\tide\recipe\bobbers\enchanted_golden_apple_bobber.json
 bdb27aae3b862c4e58a3f15ac55557a931e56b28 data\tide\advancement\recipes\tools\reinforced_line.json
 ae988c13300ceb4a6ca079042a6e2496aed4d306 data\tide\advancement\recipes\tools\lavaproof_hook.json
@@ -42,7 +42,6 @@ e310caab4fc17b21a94b8a694ea1ea549524387f data\tide\advancement\recipes\misc\bobb
 881ea1074f5815d4b55bdb620eed62e9ae5c3e65 data\tide\recipe\fish_satchel.json
 d45129e073a204435e2a2f3ef69189be68cce0ff data\tide\advancement\recipes\combat\starlight_bow.json
 f760fa523194d27820b28f5cac16de22fd6eb76d data\tide\advancement\recipes\misc\bobbers\duck_bobber.json
-e060a259763ca18b91ef17b75aa34b8c5b65c58e data\tide\advancement\recipes\tools\iron_hook.json
 61d9bbf59f89c292a16644835acfae4c13e97209 data\tide\advancement\recipes\tools\lunar_calendar.json
 a3da308686d75dd5268b9ce634eddf4da829622c data\tide\recipe\bobbers\yellow.json
 be8825d5af0ff6cd8274e7d73c5076f731378aeb data\tide\advancement\recipes\misc\bobbers\purple.json
@@ -162,7 +161,6 @@ dcdd55296a8d30856d445f68633038bbdd692f69 data\tide\recipe\bobbers\amethyst_bobbe
 ce4444fdf8e36eb1700d534b15320f6179b72825 data\tide\recipe\bobbers\light_blue.json
 c70f385f618044a8bf3283143e5457ead9d282a9 data\tide\advancement\recipes\misc\bobbers\green.json
 d3679babcd63a93fa4423043149d7894d7a63cac data\tide\advancement\recipes\food\cooked_fish_campfire_cooking.json
-ee92af83b5bf5cbcfef50e2c2e89a10db6d8188f data\tide\recipe\iron_hook.json
 124d2cf3ae4db9005f607297455fc4dcc642d08c data\tide\advancement\recipes\misc\bobbers\black.json
 109db98d0a56c99e79dcd7d8a70e4625d95a7526 data\tide\recipe\bobbers\apple_bobber.json
 1c42673b2643893dbe269f12c8f6b985d04009a1 data\tide\advancement\recipes\misc\bobbers\orange.json

@@ -87,7 +87,6 @@ public class TideItems {
     public static final Item DUCK_BOBBER = register("duck_bobber", FishingBobberItem::new);
 
     public static final Item FISHING_HOOK = register("fishing_hook", FishingHookItem::new);
-    public static final Item IRON_HOOK = register("iron_hook", properties -> new FishingHookItem(properties, "item.tide.iron_hook.desc"));
     public static final Item FIERY_HOOK = register("fiery_hook", properties -> new FishingHookItem(properties, "item.tide.fiery_hook.desc"));
     public static final Item PERMAFROST_HOOK = register("permafrost_hook", properties -> new FishingHookItem(properties, "item.tide.permafrost_hook.desc"));
     public static final Item TWILIGHT_HOOK = register("twilight_hook", properties -> new FishingHookItem(properties, "item.tide.twilight_hook.desc"));
@@ -187,7 +186,7 @@ public class TideItems {
 
                     JELLY_TORCH,
 
-                    FISHING_HOOK, IRON_HOOK, FIERY_HOOK, PERMAFROST_HOOK,
+                    FISHING_HOOK, FIERY_HOOK, PERMAFROST_HOOK,
                     TWILIGHT_HOOK, LAVAPROOF_HOOK, VOID_HOOK,
 
                     FISHING_LINE, BRAIDED_LINE, REINFORCED_LINE, GOLDEN_LINE,

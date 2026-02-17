@@ -93,7 +93,6 @@ public class TideItemTagsProvider extends FabricTagProvider<Item> {
 
         getOrCreateTagBuilder(TideTags.Items.HOOKS)
                 .add(TideItems.FISHING_HOOK)
-                .add(TideItems.IRON_HOOK)
                 .add(TideItems.FIERY_HOOK)
                 .add(TideItems.PERMAFROST_HOOK)
                 .add(TideItems.TWILIGHT_HOOK)

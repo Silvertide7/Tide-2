@@ -157,7 +157,6 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add(TideItems.DUCK_BOBBER, "Duck Bobber");
 
         builder.add(TideItems.FISHING_HOOK, "Fishing Hook");
-        builder.add(TideItems.IRON_HOOK, "Iron Hook");
         builder.add(TideItems.FIERY_HOOK, "Fiery Hook");
         builder.add(TideItems.PERMAFROST_HOOK, "Permafrost Hook");
         builder.add(TideItems.TWILIGHT_HOOK, "Twilight Hook");
@@ -389,7 +388,6 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add("item.tide.reinforced_line.desc", "Increases rod durability");
         builder.add("item.tide.golden_line.desc", "Increases fishing luck");
 
-        builder.add("item.tide.iron_hook.desc", "-15% catch difficulty");
         builder.add("item.tide.fiery_hook.desc", "Raises water temperature");
         builder.add("item.tide.permafrost_hook.desc", "Lowers water temperature");
         builder.add("item.tide.twilight_hook.desc", "Inverts fish time preferences");

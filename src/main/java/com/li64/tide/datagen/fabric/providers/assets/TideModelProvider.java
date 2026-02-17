@@ -77,7 +77,6 @@ public class TideModelProvider extends FabricModelProvider {
         generator.generateFlatItem(TideItems.SHINY_BAIT, ModelTemplates.FLAT_ITEM);
 
         generator.generateFlatItem(TideItems.FISHING_HOOK, ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(TideItems.IRON_HOOK, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.FIERY_HOOK, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.PERMAFROST_HOOK, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.TWILIGHT_HOOK, ModelTemplates.FLAT_ITEM);

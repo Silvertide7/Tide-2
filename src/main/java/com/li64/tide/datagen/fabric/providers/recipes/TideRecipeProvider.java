@@ -352,16 +352,6 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
                 .save(output);
 
-        shaped(RecipeCategory.TOOLS, TideItems.IRON_HOOK)
-                .pattern("  #")
-                .pattern("I I")
-                .pattern(" I ")
-                .define('I', TideTags.Convention.IRON_INGOTS)
-                .define('#', TideTags.Convention.IRON_NUGGETS)
-                .unlockedBy("has_iron_ingot", has(TideTags.Convention.IRON_INGOTS))
-                .unlockedBy("has_iron_nugget", has(TideTags.Convention.IRON_NUGGETS))
-                .save(output);
-
         shaped(RecipeCategory.TOOLS, TideItems.LAVAPROOF_HOOK)
                 .pattern("  #")
                 .pattern("O O")
