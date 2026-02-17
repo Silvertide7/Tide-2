@@ -16,6 +16,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.NbtOps;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
@@ -101,7 +102,11 @@ public class TidePlayerData {
 
     public boolean unlockFish(Holder<Item> fish, ServerPlayer player) {
         if (!fishPlayerData.containsKey(fish)) {
-            fishPlayerData.put(fish, new FishPlayerData(true, true, Optional.empty()));
+            fishPlayerData.put(fish, new FishPlayerData(
+                    true, true,
+                    false, false,
+                    Optional.empty()
+            ));
             this.checkJournalCompletion(player);
             return true;
         }
@@ -124,6 +129,12 @@ public class TidePlayerData {
         Holder<Item> fish = stack.getItemHolder();
         if (!fishPlayerData.containsKey(fish)) return false;
         return fishPlayerData.get(fish).isUnlocked && fishPlayerData.get(fish).isUnread;
+    }
+
+    public boolean hasNote(ItemStack stack) {
+        Holder<Item> fish = stack.getItemHolder();
+        if (!fishPlayerData.containsKey(fish)) return false;
+        return fishPlayerData.get(fish).hasNote;
     }
 
     public void logCatch(ItemStack stack, ServerPlayer player, Level level) {
@@ -149,6 +160,19 @@ public class TidePlayerData {
         else fishPlayerData.get(fish).stats = Optional.of(stats);
     }
 
+    public void markNoteUnlocked(Item item) {
+        Holder<Item> holder = BuiltInRegistries.ITEM.wrapAsHolder(item);
+        FishPlayerData playerData = fishPlayerData.get(holder);
+
+        if (playerData == null) {
+            Tide.LOG.info("Creating new player data entry for {}", item);
+            playerData = new FishPlayerData();
+            playerData.hasNote = true;
+            fishPlayerData.put(holder, playerData);
+        }
+        else playerData.hasNote = true;
+    }
+
     private void checkJournalCompletion(ServerPlayer player) {
         int amountCompleted = fishPlayerData.size();
         int total = TideData.FISH.journalEntryCount();
@@ -161,24 +185,30 @@ public class TidePlayerData {
         public static final Codec<FishPlayerData> CODEC = RecordCodecBuilder.create(instance -> instance.group(
                 Codec.BOOL.fieldOf("is_unlocked").forGetter(data -> data.isUnlocked),
                 Codec.BOOL.fieldOf("is_unread").forGetter(data -> data.isUnread),
+                Codec.BOOL.optionalFieldOf("has_note", false).forGetter(data -> data.hasNote),
+                Codec.BOOL.optionalFieldOf("has_shiny", false).forGetter(data -> data.hasShiny),
                 FishStats.CODEC.optionalFieldOf("stats").forGetter(data -> data.stats)
         ).apply(instance, FishPlayerData::new));
 
         public boolean isUnlocked;
         public boolean isUnread;
+        public boolean hasNote;
+        public boolean hasShiny;
         public Optional<FishStats> stats;
 
         public FishPlayerData() {
-            this(false, false, Optional.empty());
+            this(false, false, false, false, Optional.empty());
         }
 
         public FishPlayerData(FishStats stats) {
-            this(false, false, Optional.of(stats));
+            this(false, false, false, false, Optional.of(stats));
         }
 
-        public FishPlayerData(boolean isUnlocked, boolean isUnread, Optional<FishStats> stats) {
+        public FishPlayerData(boolean isUnlocked, boolean isUnread, boolean hasNote, boolean hasShiny, Optional<FishStats> stats) {
             this.isUnlocked = isUnlocked;
             this.isUnread = isUnread;
+            this.hasNote = hasNote;
+            this.hasShiny = hasShiny;
             this.stats = stats;
         }
 
@@ -193,6 +223,17 @@ public class TidePlayerData {
                 Tide.LOG.error("Error reading fish player data! Journal data may be lost.", e);
                 return Optional.empty();
             }
+        }
+
+        @Override
+        public String toString() {
+            return "FishPlayerData{" +
+                    "isUnlocked=" + isUnlocked +
+                    ", isUnread=" + isUnread +
+                    ", hasNote=" + hasNote +
+                    ", hasShiny=" + hasShiny +
+                    ", stats=" + stats +
+                    '}';
         }
     }
 }

@@ -43,7 +43,7 @@ public class FishyNoteItem extends Item {
         TidePlayerData data = TidePlayerData.getOrCreate(player);
         for (int i = 0; i < MAX_REROLLS; i++) {
             ItemStack fish = FishData.randomFish();
-            if (!data.isFishUnlocked(fish)) return fish;
+            if (!data.isFishUnlocked(fish) && !data.hasNote(fish)) return fish;
         }
         return FishData.randomFish();
     }
@@ -69,6 +69,13 @@ public class FishyNoteItem extends Item {
             int slot = player.getInventory().findSlotMatchingItem(note);
             player.getInventory().setItem(slot, note);
             Tide.NETWORK.sendToPlayer(new ViewNoteMsg(getFish(note)), serverPlayer);
+
+            TidePlayerData data = TidePlayerData.getOrCreate(serverPlayer);
+            Item fish = BuiltInRegistries.ITEM.get(getFishKey(note));
+            if (fish != null) {
+                data.markNoteUnlocked(fish);
+                data.syncTo(serverPlayer);
+            }
         }
         return InteractionResultHolder.success(note);
     }

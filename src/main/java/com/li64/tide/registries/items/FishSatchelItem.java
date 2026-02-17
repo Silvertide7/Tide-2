@@ -37,7 +37,6 @@ public class FishSatchelItem extends SimpleTooltipItem {
         super(properties);
     }
 
-    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     public static boolean canPutInSatchel(ItemStack stack) {
         return stack.is(TideTags.Items.FISH) || FishData.get(stack).isPresent();
     }

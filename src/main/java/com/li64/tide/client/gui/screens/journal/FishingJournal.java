@@ -3,6 +3,7 @@ package com.li64.tide.client.gui.screens.journal;
 import com.li64.tide.Tide;
 import com.li64.tide.client.TideCoreShaders;
 import com.li64.tide.client.TideRenderTypes;
+import com.li64.tide.client.gui.screens.FishyNoteScreen;
 import com.li64.tide.data.TideData;
 import com.li64.tide.data.fishing.FishData;
 import com.li64.tide.data.journal.JournalGroup;
@@ -46,6 +47,9 @@ public class FishingJournal extends Screen {
     static final ResourceLocation LINE_TOP = TideUtils.sprite("journal/line_top");
     static final ResourceLocation LINE_BOTTOM = TideUtils.sprite("journal/line_bottom");
 
+    static final ResourceLocation FISHY_NOTE_ICON = Tide.resource("textures/gui/journal/fishy_note_icon.png");
+    static final ResourceLocation FISHY_NOTE_ICON_SELECTED = Tide.resource("textures/gui/journal/fishy_note_icon_selected.png");
+
     private static final int AREA_HEIGHT = 190;
     private static final int CELL_SIZE = 22;
     private static final int GROUP_SPACING = 10;
@@ -56,6 +60,7 @@ public class FishingJournal extends Screen {
     private int page = 0;
 
     private @Nullable ItemStack activeFish = null;
+    private @Nullable FishyNoteScreen activeNote = null;
     private @Nullable FishProfile profile = null;
     private @Nullable Button xButton = null;
     private @Nullable Button leftButton = null;
@@ -136,9 +141,19 @@ public class FishingJournal extends Screen {
         int leftX = Math.max(3, (width - BG_WIDTH) / 2 + 11);
         int rightX = Math.min(this.width - 19, (width + BG_WIDTH) / 2 - 27);
         if (activeFish != null) {
+            this.activeNote = null;
             this.profile = new FishProfile(activeFish, this);
             this.xButton = Button.builder(Component.literal("X"), button -> {
                 this.activeFish = null;
+                this.pageChanged();
+            }).bounds(xX, xY, 16, 16).build();
+        }
+        else if (activeNote != null) {
+            this.profile = null;
+            xX = Math.min(width - 19, (width + FishyNoteScreen.WIDTH) / 2 - 16);
+            xY = Math.max(3, (height - FishyNoteScreen.HEIGHT) / 2);
+            this.xButton = Button.builder(Component.literal("X"), button -> {
+                this.activeNote = null;
                 this.pageChanged();
             }).bounds(xX, xY, 16, 16).build();
         }
@@ -181,13 +196,17 @@ public class FishingJournal extends Screen {
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         return switch (keyCode) {
-            // escape
+            // escape/e
             case 256, 69 -> {
-                if (this.activeFish == null) this.onClose();
-                else {
+                if (this.activeFish != null) {
                     this.activeFish = null;
                     this.pageChanged();
                 }
+                else if (this.activeNote != null) {
+                    this.activeNote = null;
+                    this.pageChanged();
+                }
+                else this.onClose();
                 yield true;
             }
             // right arrow
@@ -237,9 +256,10 @@ public class FishingJournal extends Screen {
 
         int tlX = (width - BG_WIDTH) / 2;
         int tlY = (height - BG_HEIGHT) / 2;
-        graphics.blit(BACKGROUND, tlX, tlY, 0, 0, BG_WIDTH, BG_HEIGHT, BG_WIDTH, BG_HEIGHT);
+        if (activeNote == null) graphics.blit(BACKGROUND, tlX, tlY, 0, 0, BG_WIDTH, BG_HEIGHT, BG_WIDTH, BG_HEIGHT);
 
         if (profile != null) profile.render(graphics, mouseX, mouseY, partialTick);
+        else if (activeNote != null) activeNote.render(graphics, mouseX, mouseY, partialTick);
         else {
             // render fish grid
             final int hoverTolerance = 3;
@@ -259,6 +279,7 @@ public class FishingJournal extends Screen {
                     ItemStack stack = new ItemStack(fishItem);
                     boolean isUnlocked = TidePlayerData.CLIENT_DATA.isFishUnlocked(fishItem);
                     boolean isUnread = TidePlayerData.CLIENT_DATA.isUnread(stack);
+                    boolean hasNote = TidePlayerData.CLIENT_DATA.hasNote(stack);
                     boolean isHovering = false;
 
                     if (mouseX > x - hoverTolerance && mouseY > y - hoverTolerance
@@ -270,8 +291,21 @@ public class FishingJournal extends Screen {
                         }
                         if (isUnlocked) {
                             graphics.renderTooltip(this.font, stack.getHoverName(), mouseX, mouseY);
-                            if (didClick) {
+                            if (didClick && !updatePage) {
                                 activeFish = stack;
+                                updatePage = true;
+                            }
+                        }
+                        else {
+                            FishData data = FishData.get(stack).orElse(null);
+                            if (data != null) {
+                                // TODO: render rarity in a tooltip
+                                int numStars = data.profile().rarity().getNumStars();
+                                Component stars = Component.literal("* ".repeat(numStars).stripTrailing());
+                                //graphics.renderTooltip(this.font, stars, mouseX, mouseY);
+                            }
+                            if (hasNote && didClick && !updatePage) {
+                                activeNote = new FishyNoteScreen(stack, true);
                                 updatePage = true;
                             }
                         }
@@ -301,11 +335,23 @@ public class FishingJournal extends Screen {
                     if (isUnlocked) {
                         RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
                         graphics.renderItem(stack, x, y);
-                    } else {
+                    }
+                    else {
                         RenderSystem.setShaderColor(0f, 0f, 0f, 1f);
                         graphics.renderItem(stack, x, y);
                         graphics.flush();
                         RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
+                    }
+
+                    // render fishy note icon
+                    if (!isUnlocked && hasNote) {
+                        graphics.pose().pushPose();
+                        graphics.pose().translate(0f, 0f, 200f);
+                        if (isHovering) graphics.blit(FISHY_NOTE_ICON_SELECTED, x -2, y - 2,
+                                0f, 0f, 9, 9, 9, 9);
+                        else graphics.blit(FISHY_NOTE_ICON, x - 2, y - 2,
+                                0f, 0f, 9, 9, 9, 9);
+                        graphics.pose().popPose();
                     }
 
                     i++;
