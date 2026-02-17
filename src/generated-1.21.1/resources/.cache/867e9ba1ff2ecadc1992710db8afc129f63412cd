@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-16T19:27:08.4477737	Tide/minecraft:entity Loot Table
+// 1.21.1	2026-02-16T19:32:59.5722937	Tide/minecraft:entity Loot Table
 6d7e3dfd447aafa8f317d23c5af3774b0b3fb595 data\tide\loot_table\entities\vengeance.json
 ea7a4d9157484ea0b44d7c5f407ac6733af118ac data\tide\loot_table\entities\volcano_tuna.json
 e653045e8f4813b8da0f7218098d05c8e47df981 data\tide\loot_table\entities\smallmouth_bass.json
@@ -80,6 +80,7 @@ eb9aa7cca2437f1e6e6527fbfa526145ddccc781 data\tide\loot_table\entities\endergaze
 91aaa628d59a1e1de7ff09052c39b6bd96a963cb data\tide\loot_table\entities\nephrosilu.json
 d673b1fd82c09ca719958d13bd4086374687f442 data\tide\loot_table\entities\black_crappie.json
 c8290169131d2ceeb31ae52550e835637b04f6ac data\tide\loot_table\entities\crystal_shrimp.json
+80d0808f88b4eb46d11a13fee19c253d08230478 data\tide\loot_table\entities\rock_stonefish.json
 4f5f42d0074f9bec7c749a10413412d1a58b4e09 data\tide\loot_table\entities\chorus_cod.json
 0692a25f786ebd7a7ee37abcc1eabf5bf7dd021e data\tide\loot_table\entities\sailfish.json
 a1190686e08e950c9486abd7f81c286437cd57da data\tide\loot_table\entities\glowfish.json

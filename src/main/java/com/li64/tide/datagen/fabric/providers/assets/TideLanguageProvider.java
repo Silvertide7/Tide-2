@@ -309,6 +309,7 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         fishTranslation(TideFish.RADIANT_GUPPY, "Radiant Guppy", builder);
         fishTranslation(TideFish.DOG_FISH, "Dog Fish", builder);
         fishTranslation(TideFish.STONE_ROCKFISH, "Stone Rockfish", builder);
+        fishTranslation(TideFish.ROCK_STONEFISH, "Rock Stonefish", builder);
         fishTranslation(TideFish.MAGIC_CARP, "Magic Carp", builder);
 
         builder.add(TideItems.COOKED_FISH, "Cooked Fish");

@@ -5,13 +5,13 @@
 **Fish**
 - Added 8 new fish and their corresponding entities:
   - Zombie Fish
-  - Stone Rockfish (TODO)
-  - Rock Stonefish (TODO)
-  - Jewelback
+  - Flopper
+  - Dog Fish
+  - Stone Rockfish
+  - Rock Stonefish
   - Radiant Guppy
-  - Dog Fish (TODO)
-  - Flopper (TODO)
-  - Magic Carp (TODO)
+  - Jewelback
+  - Magic Carp
 
 **Accessories**
 - Accessories and other items that modify fishing have been reworked to fill designated categories. The general rule of thumb is that hooks modify fish availability, lines modify the minigame, bobbers are cosmetic, bait modifies fishing stats, and fishing rods apply miscellaneous bonuses.
@@ -66,6 +66,7 @@
 
 **Miscellaneous**
 - The Midas Fishing Rod can now reel in a bonus golden apple, golden carrot, and _very rarely_ an enchanted golden apple or totem of undying (in addition to the regular gold ingots and blocks)
+- Removed the temperature condition from the Sand Tiger Shark, now only requiring a desert biome
 
 ---
 ### Fixes

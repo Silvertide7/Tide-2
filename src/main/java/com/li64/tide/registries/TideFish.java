@@ -470,6 +470,29 @@ public class TideFish {
             )
             .build();
 
+    public static final Item ROCK_STONEFISH = new Builder("rock_stonefish")
+            .food(TideFoods.RAW_FISH)
+            .cookedItem(TideItems.COOKED_FISH)
+            .fishData(builder -> builder
+                    .size(25.0, 40.0, 80.0)
+                    .strength(0.65f)
+                    .speed(1.62f)
+                    .selectionWeight(20)
+                    .inBiomes(List.of(TideTags.Biomes.HAS_MOUNTAIN_FISH))
+                    .condition(MoonPhaseCondition.anyOf(
+                            MoonPhases.WANING_GIBBOUS, MoonPhases.THIRD_QUARTER,
+                            MoonPhases.WANING_CRESCENT, MoonPhases.NEW_MOON
+                    ))
+                    .freshwater()
+                    .overworld()
+                    .water()
+                    .surface()
+                    .journalLocation("journal.info.location.mountain")
+                    .journalGroup(JournalGroup.FRESHWATER)
+                    .journalRarity(FishRarity.UNCOMMON)
+            )
+            .build();
+
     public static final Item ZOMBIE_FISH = new Builder("zombie_fish")
             .food(TideFoods.RAW_FISH)
             .cookedItem(TideItems.COOKED_FISH)

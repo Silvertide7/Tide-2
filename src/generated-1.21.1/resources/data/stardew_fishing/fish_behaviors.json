@@ -632,6 +632,14 @@
       "top_speed": 3.2,
       "up_acceleration": 0.4
     },
+    "tide:rock_stonefish": {
+      "avg_distance": 65,
+      "down_acceleration": 0.586,
+      "idle_time": 8,
+      "move_variation": 9,
+      "top_speed": 5.184,
+      "up_acceleration": 0.586
+    },
     "tide:sailfish": {
       "avg_distance": 80,
       "down_acceleration": 0.52000004,
