@@ -920,7 +920,7 @@ public class TideFish {
                     .size(60.0, 85.0, 125.0)
                     .strength(0.85f)
                     .speed(2.0f)
-                    .selectionWeight(2)
+                    .selectionWeight(1.2)
                     .selectionQuality(0.5)
                     .freshwater()
                     .overworld()

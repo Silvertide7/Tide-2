@@ -37,7 +37,7 @@
     "rarity": "legendary"
   },
   "selection_quality": 0.5,
-  "selection_weight": 2.0,
+  "selection_weight": 1.2,
   "shiny_data": {
     "sprite": "tide:item/magic_carp_shiny"
   },

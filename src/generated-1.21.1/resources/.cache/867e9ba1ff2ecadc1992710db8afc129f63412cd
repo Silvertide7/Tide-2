@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-16T19:32:59.5722937	Tide/minecraft:entity Loot Table
+// 1.21.1	2026-02-16T19:48:05.9339634	Tide/minecraft:entity Loot Table
 6d7e3dfd447aafa8f317d23c5af3774b0b3fb595 data\tide\loot_table\entities\vengeance.json
 ea7a4d9157484ea0b44d7c5f407ac6733af118ac data\tide\loot_table\entities\volcano_tuna.json
 e653045e8f4813b8da0f7218098d05c8e47df981 data\tide\loot_table\entities\smallmouth_bass.json
@@ -93,8 +93,8 @@ c92cc72be084ee0569ef3fe19d936c4762241ef7 data\tide\loot_table\entities\bedrock_b
 21211b2ca3ef22a4cb20f40bc0eca6a5825cce1d data\tide\loot_table\entities\dog_fish.json
 17a503151d5c012badbcfe0eb5766d3ed3076851 data\tide\loot_table\entities\darkness_eater.json
 1d738d6ace6e5b79419ee2a08c7ca0fd4d7f52a9 data\tide\loot_table\entities\iron_tetra.json
-22982ca45cfbeab68f3a34e36e0ba4c095586cfa data\tide\loot_table\entities\catfish.json
 45ae7521b39c4b0fc6d12e496bb5ce346ff3a83d data\tide\loot_table\entities\bull_shark.json
+22982ca45cfbeab68f3a34e36e0ba4c095586cfa data\tide\loot_table\entities\catfish.json
 1cf14a89e97cfd1835a1e883d0aa378a39a2c093 data\tide\loot_table\entities\mooneye.json
 33b610dd4e463128755821a747ced433d1c4dd02 data\tide\loot_table\entities\aquathorn.json
 7c364866b31cca5a90893f92a8cbc2f27ecd02df data\tide\loot_table\entities\pale_clubfish.json
