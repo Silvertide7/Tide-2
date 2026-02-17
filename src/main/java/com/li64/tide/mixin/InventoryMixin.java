@@ -26,17 +26,20 @@ public class InventoryMixin {
         for (ItemStack checked : this.items) {
             if (!(checked.getItem() instanceof FishSatchelItem satchelItem)) continue;
             if (!TideItemData.FISH_SATCHEL_OPENED.getOrDefault(checked, false)) continue;
-            if (satchelItem.overrideOtherStackedOnMe(checked, stack, player, new SlotAccess() {
-                @Override
-                public @NotNull ItemStack get() {
-                    return checked;
-                }
-
-                @Override
-                public boolean set(ItemStack carried) {
-                    return false;
-                }
-            })) cir.setReturnValue(true);
+            if (FishSatchelItem.getRemainingSlots(stack) < stack.getCount()) continue;
+            int i = 0;
+            boolean continueAdding = true;
+            while (continueAdding && stack.getCount() > 0 && i < 64) {
+                continueAdding = satchelItem.overrideOtherStackedOnMe(checked, stack, player, new SlotAccess() {
+                    @Override public @NotNull ItemStack get() { return checked; }
+                    @Override public boolean set(ItemStack carried) { return false; }
+                }, i == 0);
+                if (continueAdding) i++;
+            }
+            if (i > 0) {
+                cir.setReturnValue(true);
+                return;
+            }
         }
     }
 }

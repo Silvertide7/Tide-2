@@ -73,6 +73,9 @@
 ### Fixes
 - Items crafted from netherite will no longer be destroyed when dropped in fire or lava [(#18)](https://github.com/Lightning-64/Tide-2/issues/18)
 - Fixed a bug where removing a fish from a fish display wouldn't update for other players in the world [(#25)](https://github.com/Lightning-64/Tide-2/issues/25)
+- Fixed many bugs related to the Fish Satchel
+
+---
 
 ## Tide v2.0.3 - 2/06/26
 

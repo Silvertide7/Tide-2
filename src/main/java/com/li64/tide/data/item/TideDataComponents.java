@@ -58,6 +58,12 @@ public class TideDataComponents {
                     .persistent(ResourceKey.codec(Registries.ITEM))
                     .networkSynchronized(ResourceKey.streamCodec(Registries.ITEM)).build());
 
+    public static final DataComponentType<SatchelContents> SATCHEL_CONTENTS = register(
+            "satchel_contents", DataComponentType.<SatchelContents>builder()
+                    .persistent(SatchelContents.CODEC)
+                    .networkSynchronized(SatchelContents.STREAM_CODEC)
+                    .cacheEncoding().build());
+
     public static final DataComponentType<Boolean> FISH_SATCHEL_OPENED = register(
             "fish_satchel_opened", DataComponentType.<Boolean>builder()
                     .persistent(Codec.BOOL)
