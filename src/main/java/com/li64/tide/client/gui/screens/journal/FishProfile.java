@@ -93,7 +93,7 @@ public class FishProfile implements Renderable {
                 .filter(cond -> cond instanceof DimensionsCondition)
                 .findFirst().map(cond -> (DimensionsCondition) cond);
         dimensionsCondition.ifPresent(condition -> {
-            if (!DimensionsComponent.shouldCreate(condition)) return;
+            if (!DimensionsComponent.shouldCreate(condition, data.conditions())) return;
             builder.add(new DimensionsComponent(condition.getDimensions()));
         });
 

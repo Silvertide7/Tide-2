@@ -2,7 +2,10 @@ package com.li64.tide.client.gui.screens.journal.components;
 
 import com.li64.tide.Tide;
 import com.li64.tide.client.gui.screens.journal.ProfileComponent;
+import com.li64.tide.data.fishing.conditions.FishingCondition;
 import com.li64.tide.data.fishing.conditions.types.DimensionsCondition;
+import com.li64.tide.data.fishing.conditions.types.FishingMediumCondition;
+import com.li64.tide.data.fishing.mediums.FishingMedium;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
@@ -19,8 +22,11 @@ public class DimensionsComponent extends ProfileComponent {
 
     public List<ResourceKey<Level>> dimensions;
 
-    public static boolean shouldCreate(DimensionsCondition condition) {
-        if (condition.isOverworldOnly()) return false;
+    public static boolean shouldCreate(DimensionsCondition condition, List<FishingCondition> others) {
+        boolean isWater = others.stream().filter(cond -> cond instanceof FishingMediumCondition)
+                .findFirst().map(cond -> ((FishingMediumCondition)cond).getMediumId()
+                        .equals(FishingMedium.WATER.id().getPath())).orElse(false);
+        if (isWater && condition.isOverworldOnly()) return false;
         return condition.getDimensions().stream().anyMatch(DimensionsComponent::isKnown);
     }
 

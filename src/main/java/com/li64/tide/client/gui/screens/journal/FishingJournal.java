@@ -282,8 +282,6 @@ public class FishingJournal extends Screen {
                     boolean hasNote = TidePlayerData.CLIENT_DATA.hasNote(stack);
                     boolean isHovering = false;
 
-                    if (isUnread) Tide.LOG.info("Fish {} is unread", stack);
-
                     if (mouseX > x - hoverTolerance && mouseY > y - hoverTolerance
                             && mouseX < x + 16 + hoverTolerance && mouseY < y + 16 + hoverTolerance) {
                         isHovering = true;
