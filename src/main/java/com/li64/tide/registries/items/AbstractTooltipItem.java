@@ -4,13 +4,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public abstract class SimpleTooltipItem extends Item implements TooltipItem {
-    public SimpleTooltipItem(Properties properties) {
+public abstract class AbstractTooltipItem extends Item implements TooltipItem {
+    public AbstractTooltipItem(Properties properties) {
         super(properties);
     }
 

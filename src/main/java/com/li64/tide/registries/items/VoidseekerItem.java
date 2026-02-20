@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-public class VoidseekerItem extends SimpleTooltipItem {
+public class VoidseekerItem extends AbstractTooltipItem {
     public VoidseekerItem(Properties properties) {
         super(properties);
     }

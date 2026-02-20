@@ -6,14 +6,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 
-import java.util.List;
 import java.util.function.Consumer;
 
-public class FishingHookItem extends SimpleTooltipItem {
+public class FishingHookItem extends AbstractTooltipItem {
     private final String description;
 
     public FishingHookItem(Properties properties) {

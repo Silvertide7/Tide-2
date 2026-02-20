@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public class ChasmEelItem extends SimpleTooltipItem {
+public class ChasmEelItem extends AbstractTooltipItem {
     public ChasmEelItem(Properties properties) {
         super(properties);
     }

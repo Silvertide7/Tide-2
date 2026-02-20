@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-public class FishSatchelItem extends SimpleTooltipItem {
+public class FishSatchelItem extends AbstractTooltipItem {
     private static final int BAR_COLOR = Mth.color(0.4f, 0.4f, 1.0f);
 
     public FishSatchelItem(Item.Properties properties) {

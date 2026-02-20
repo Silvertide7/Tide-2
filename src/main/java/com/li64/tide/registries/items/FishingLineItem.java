@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.function.Consumer;
 
-public class FishingLineItem extends SimpleTooltipItem {
+public class FishingLineItem extends AbstractTooltipItem {
     private final String description;
 
     public FishingLineItem(Properties properties) {
