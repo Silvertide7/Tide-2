@@ -21,10 +21,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public abstract class AbstractProfilingItem extends AbstractTooltipItem {
+public abstract class AbstractSurveyingItem extends AbstractTooltipItem {
     private final List<MutableComponent> description;
 
-    public AbstractProfilingItem(Properties properties, MutableComponent... description) {
+    public AbstractSurveyingItem(Properties properties, MutableComponent... description) {
         super(properties);
         this.description = Arrays.asList(description);
     }

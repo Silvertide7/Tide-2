@@ -6,7 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 
-public class PocketWatchItem extends AbstractProfilingItem {
+public class PocketWatchItem extends AbstractSurveyingItem {
     public PocketWatchItem(Properties properties) {
         super(properties, Component.translatable("item.tide.pocket_watch.desc"));
     }

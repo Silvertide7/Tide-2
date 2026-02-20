@@ -6,7 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 
-public class ClimateGaugeItem extends AbstractProfilingItem {
+public class ClimateGaugeItem extends AbstractSurveyingItem {
     public ClimateGaugeItem(Properties properties) {
         super(properties,
                 Component.translatable("item.tide.climate_gauge.desc_0"),

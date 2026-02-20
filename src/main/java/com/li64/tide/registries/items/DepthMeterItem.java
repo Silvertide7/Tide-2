@@ -4,7 +4,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 
-public class DepthMeterItem extends AbstractProfilingItem {
+public class DepthMeterItem extends AbstractSurveyingItem {
     public DepthMeterItem(Properties properties) {
         super(properties, Component.translatable("item.tide.depth_meter.desc"));
     }

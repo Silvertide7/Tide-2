@@ -4,7 +4,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 
-public class LunarCalendarItem extends AbstractProfilingItem {
+public class LunarCalendarItem extends AbstractSurveyingItem {
     public LunarCalendarItem(Properties properties) {
         super(properties, Component.translatable("item.tide.lunar_calendar.desc"));
     }

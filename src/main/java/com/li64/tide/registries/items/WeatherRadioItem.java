@@ -7,7 +7,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.storage.ServerLevelData;
 
-public class WeatherRadioItem extends AbstractProfilingItem {
+public class WeatherRadioItem extends AbstractSurveyingItem {
     public WeatherRadioItem(Properties properties) {
         super(properties, Component.translatable("item.tide.weather_radio.desc"));
     }
