@@ -15,9 +15,19 @@ public class ClimateGaugeItem extends AbstractSurveyingItem {
     }
 
     @Override
-    public Component getDisplayedInfo(ServerLevel level, ServerPlayer player) {
+    public String getSurveyResult(ServerLevel level, ServerPlayer player) {
         float temp = TideUtils.getTemperatureAt(player.blockPosition(), level);
         float degrees = Math.round(TideUtils.mcTempToRealTemp(temp) * 10) / 10.0f;
-        return Component.literal(degrees + (Tide.CONFIG.journal.useFahrenheit ? "°F" : "°C"));
+        return Float.toString(degrees);
+    }
+
+    @Override
+    public Component parseSurveyResult(String result) {
+        return Component.literal(Float.parseFloat(result) + (Tide.CONFIG.journal.useFahrenheit ? "°F" : "°C"));
+    }
+
+    @Override
+    public int updatePeriod() {
+        return 5;
     }
 }

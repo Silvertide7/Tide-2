@@ -10,7 +10,17 @@ public class DepthMeterItem extends AbstractSurveyingItem {
     }
 
     @Override
-    public Component getDisplayedInfo(ServerLevel level, ServerPlayer player) {
-        return Component.literal((level.getSeaLevel() - player.blockPosition().getY() + " m").replace("-", "+"));
+    public String getSurveyResult(ServerLevel level, ServerPlayer player) {
+        return Integer.toString(level.getSeaLevel() - player.blockPosition().getY());
+    }
+
+    @Override
+    public Component parseSurveyResult(String result) {
+        return Component.literal((Integer.parseInt(result) + " m").replace("-", "+"));
+    }
+
+    @Override
+    public int updatePeriod() {
+        return 5;
     }
 }

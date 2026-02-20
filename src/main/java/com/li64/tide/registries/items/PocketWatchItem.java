@@ -12,7 +12,17 @@ public class PocketWatchItem extends AbstractSurveyingItem {
     }
 
     @Override
-    public Component getDisplayedInfo(ServerLevel level, ServerPlayer player) {
-        return Component.literal(TideUtils.ticksToRealTime(TideUtils.getTimeOfDay(level), Tide.CONFIG.journal.useAmPm));
+    public String getSurveyResult(ServerLevel level, ServerPlayer player) {
+        return Long.toString(TideUtils.getTimeOfDay(level));
+    }
+
+    @Override
+    public Component parseSurveyResult(String result) {
+        return Component.literal(TideUtils.ticksToRealTime(Long.parseLong(result), Tide.CONFIG.journal.useAmPm));
+    }
+
+    @Override
+    public int updatePeriod() {
+        return 10;
     }
 }

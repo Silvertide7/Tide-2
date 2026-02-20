@@ -21,15 +21,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public abstract class AbstractSurveyingItem extends AbstractTooltipItem {
+public abstract class AbstractSurveyingItem extends AbstractTooltipItem implements SurveyingItem {
     private final List<MutableComponent> description;
 
     public AbstractSurveyingItem(Properties properties, MutableComponent... description) {
         super(properties);
         this.description = Arrays.asList(description);
     }
-
-    public abstract Component getDisplayedInfo(ServerLevel level, ServerPlayer player);
 
     public SoundEvent useItemSound() {
         return SoundEvents.STONE_BUTTON_CLICK_ON;
@@ -39,7 +37,7 @@ public abstract class AbstractSurveyingItem extends AbstractTooltipItem {
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
         if (level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                    this.getDisplayedInfo(serverLevel, serverPlayer)));
+                    this.parseSurveyResult(this.getSurveyResult(serverLevel, serverPlayer))));
             serverPlayer.level().playSound(null, serverPlayer.blockPosition(),
                     useItemSound(), SoundSource.PLAYERS, 1.0f, 2.0f);
         }

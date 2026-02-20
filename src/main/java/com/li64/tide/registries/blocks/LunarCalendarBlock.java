@@ -49,7 +49,15 @@ public class LunarCalendarBlock extends HorizontalDirectionalBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        BlockState state = this.defaultBlockState();
+        for (Direction dir : context.getNearestLookingDirections()) {
+            if (dir.getAxis().isHorizontal()) {
+                Direction opposite = dir.getOpposite();
+                state = state.setValue(FACING, opposite);
+                if (state.canSurvive(context.getLevel(), context.getClickedPos())) return state;
+            }
+        }
+        return null;
     }
 
     @Override

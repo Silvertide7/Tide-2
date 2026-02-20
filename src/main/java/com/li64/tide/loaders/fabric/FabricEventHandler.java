@@ -10,6 +10,7 @@ import com.li64.tide.registries.TideItems;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
@@ -35,6 +36,8 @@ public class FabricEventHandler {
         });
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> TideEventHandler.serverStarted());
+
+        ServerTickEvents.END_SERVER_TICK.register(TideEventHandler::endServerTick);
 
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) ->
                 TideEventHandler.onPlayerJoinWorld(handler.getPlayer()));
