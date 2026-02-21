@@ -23,6 +23,6 @@ public class PocketWatchItem extends AbstractSurveyingItem {
 
     @Override
     public int updatePeriod() {
-        return 10;
+        return 5;
     }
 }
