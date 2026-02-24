@@ -1,16 +1,6 @@
 {
   "parent": "tide:root",
   "criteria": {
-    "ammonite": {
-      "conditions": {
-        "items": [
-          {
-            "items": "tide:ammonite_fishing_rod"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "blazing": {
       "conditions": {
         "items": [
@@ -211,9 +201,6 @@
     ],
     [
       "village"
-    ],
-    [
-      "ammonite"
     ],
     [
       "blazing"

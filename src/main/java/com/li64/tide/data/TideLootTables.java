@@ -8,6 +8,7 @@ public class TideLootTables {
         /*? if >=1.21*/public static final LootTableRef TRIAL_CHAMBER_TREASURE = create("gameplay/fishing/trial_chamber");
         public static final LootTableRef OCEAN_MONUMENT_TREASURE = create("gameplay/fishing/ocean_monument");
         public static final LootTableRef DESERT_WELL_TREASURE = create("gameplay/fishing/desert_well");
+        public static final LootTableRef SUNFLOWER_ROD = create("gameplay/fishing/sunflower_rod");
 
         public static final LootTableRef JUNK_UNDERGROUND = create("gameplay/fishing/junk_underground");
         public static final LootTableRef JUNK_LAVA = create("gameplay/fishing/junk_lava");

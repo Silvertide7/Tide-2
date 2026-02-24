@@ -15,6 +15,7 @@
    ],
    "mixins": [
       "AbstractFishMixin",
+      "BeehiveBlockMixin",
       "CatMixin",
       "HookPredicateMixin",
       "InventoryMixin",

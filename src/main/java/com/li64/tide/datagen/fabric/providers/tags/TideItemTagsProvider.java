@@ -47,7 +47,6 @@ public class TideItemTagsProvider extends FabricTagProvider<Item> {
                 .add(TideItems.PRISMARINE_FISHING_ROD)
                 .add(TideItems.SUNFLOWER_FISHING_ROD)
                 .add(TideItems.VILLAGE_FISHING_ROD)
-                .add(TideItems.AMMONITE_FISHING_ROD)
                 .add(TideItems.BLAZING_FISHING_ROD)
                 .add(TideItems.HONEYCOMB_FISHING_ROD)
                 .add(TideItems.BREEZE_FISHING_ROD);

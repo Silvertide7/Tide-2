@@ -67,7 +67,6 @@ public class TideModelProvider extends FabricModelProvider {
         generateFishingRod(generator, TideItems.PRISMARINE_FISHING_ROD);
         generateFishingRod(generator, TideItems.SUNFLOWER_FISHING_ROD);
         generateFishingRod(generator, TideItems.VILLAGE_FISHING_ROD);
-        generateFishingRod(generator, TideItems.AMMONITE_FISHING_ROD);
         generateFishingRod(generator, TideItems.BLAZING_FISHING_ROD);
         generateFishingRod(generator, TideItems.HONEYCOMB_FISHING_ROD);
         generateFishingRod(generator, TideItems.BREEZE_FISHING_ROD);

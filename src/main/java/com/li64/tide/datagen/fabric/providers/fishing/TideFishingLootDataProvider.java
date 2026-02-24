@@ -4,6 +4,7 @@ package com.li64.tide.datagen.fabric.providers.fishing;
 import com.li64.tide.data.TideLootTables;
 import com.li64.tide.data.TideTags;
 import com.li64.tide.data.fishing.FishingLootData;
+import com.li64.tide.data.fishing.conditions.types.BiomeWhitelistCondition;
 import com.li64.tide.data.fishing.conditions.types.BlockNearbyCondition;
 import com.li64.tide.data.fishing.conditions.types.StructuresCondition;
 import com.li64.tide.datagen.fabric.providers.SimpleDataOutput;
@@ -102,6 +103,13 @@ public class TideFishingLootDataProvider extends SimpleDataProvider<FishingLootD
                 .selectionQuality(1)
                 .condition(BlockNearbyCondition.inRadius(TideTags.Blocks.DESERT_WELL_LOOT, 3))
                 .build("desert_well_treasure", output);
+
+        FishingLootData.builder()
+                .lootTable(TideLootTables.Fishing.SUNFLOWER_ROD)
+                .selectionWeight(1.5)
+                .selectionQuality(1)
+                .condition(BiomeWhitelistCondition.fromTag(TideTags.Biomes.HAS_PLAINS_FISH))
+                .build("sunflower_rod", output);
     }
 
     @Override

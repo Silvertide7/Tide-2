@@ -142,7 +142,6 @@ public class TideAdvancementProvider extends FabricAdvancementProvider {
                 .addCriterion("prismarine", InventoryChangeTrigger.TriggerInstance.hasItems(TideItems.PRISMARINE_FISHING_ROD))
                 .addCriterion("sunflower", InventoryChangeTrigger.TriggerInstance.hasItems(TideItems.SUNFLOWER_FISHING_ROD))
                 .addCriterion("village", InventoryChangeTrigger.TriggerInstance.hasItems(TideItems.VILLAGE_FISHING_ROD))
-                .addCriterion("ammonite", InventoryChangeTrigger.TriggerInstance.hasItems(TideItems.AMMONITE_FISHING_ROD))
                 .addCriterion("blazing", InventoryChangeTrigger.TriggerInstance.hasItems(TideItems.BLAZING_FISHING_ROD))
                 .addCriterion("honeycomb", InventoryChangeTrigger.TriggerInstance.hasItems(TideItems.HONEYCOMB_FISHING_ROD))
                 .addCriterion("breeze", InventoryChangeTrigger.TriggerInstance.hasItems(TideItems.BREEZE_FISHING_ROD))

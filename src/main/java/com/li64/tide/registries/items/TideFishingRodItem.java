@@ -113,7 +113,6 @@ public class TideFishingRodItem extends FishingRodItem {
         if (stack.is(TideItems.PRISMARINE_FISHING_ROD)) builder.add(Component.translatable("text.tide.rod_tooltip.prismarine_bonus").withStyle(ChatFormatting.GOLD));
         if (stack.is(TideItems.SUNFLOWER_FISHING_ROD)) builder.add(Component.translatable("text.tide.rod_tooltip.sunflower_bonus").withStyle(ChatFormatting.GOLD));
         if (stack.is(TideItems.VILLAGE_FISHING_ROD)) builder.add(Component.translatable("text.tide.rod_tooltip.village_bonus").withStyle(ChatFormatting.GOLD));
-        if (stack.is(TideItems.AMMONITE_FISHING_ROD)) builder.add(Component.translatable("text.tide.rod_tooltip.ammonite_bonus").withStyle(ChatFormatting.GOLD));
         if (stack.is(TideItems.BLAZING_FISHING_ROD)) builder.add(Component.translatable("text.tide.rod_tooltip.blazing_bonus").withStyle(ChatFormatting.GOLD));
 
         return ImmutableList.copyOf(builder);

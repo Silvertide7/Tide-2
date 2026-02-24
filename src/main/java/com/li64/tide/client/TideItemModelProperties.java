@@ -53,7 +53,6 @@ public class TideItemModelProperties {
         ItemProperties.register(TideItems.PRISMARINE_FISHING_ROD, CAST_PROPERTY, CAST_FUNCTION);
         ItemProperties.register(TideItems.SUNFLOWER_FISHING_ROD, CAST_PROPERTY, CAST_FUNCTION);
         ItemProperties.register(TideItems.VILLAGE_FISHING_ROD, CAST_PROPERTY, CAST_FUNCTION);
-        ItemProperties.register(TideItems.AMMONITE_FISHING_ROD, CAST_PROPERTY, CAST_FUNCTION);
         ItemProperties.register(TideItems.BLAZING_FISHING_ROD, CAST_PROPERTY, CAST_FUNCTION);
         ItemProperties.register(TideItems.HONEYCOMB_FISHING_ROD, CAST_PROPERTY, CAST_FUNCTION);
         ItemProperties.register(TideItems.BREEZE_FISHING_ROD, CAST_PROPERTY, CAST_FUNCTION);

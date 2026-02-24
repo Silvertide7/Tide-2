@@ -12,11 +12,19 @@ import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
@@ -76,6 +84,43 @@ public class FabricEventHandler {
                         .build()
                 );
             }
+
+            if (key == BuiltInLootTables.ANCIENT_CITY) {
+                tableBuilder.pool(new LootPool.Builder().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(TideItems.ECHO_FISHING_ROD))
+                                .when(LootItemRandomChanceCondition.randomChance(0.1f))
+                        .build()
+                );
+            }
+
+            if (key == BuiltInLootTables.NETHER_BRIDGE) {
+                tableBuilder.pool(new LootPool.Builder().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(TideItems.BLAZING_FISHING_ROD))
+                        .when(LootItemRandomChanceCondition.randomChance(0.2f))
+                        .build()
+                );
+            }
+
+            if (key == BuiltInLootTables.TRIAL_CHAMBERS_REWARD_UNIQUE || key == BuiltInLootTables.TRIAL_CHAMBERS_REWARD_OMINOUS_UNIQUE) {
+                tableBuilder.modifyPools(builder -> builder
+                        .add(LootItem.lootTableItem(TideItems.BREEZE_FISHING_ROD).setWeight(3)));
+            }
+
+            if (key == EntityType.ELDER_GUARDIAN.getDefaultLootTable()) {
+                tableBuilder.pool(new LootPool.Builder().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(TideItems.PRISMARINE_FISHING_ROD))
+                        .when(LootItemRandomChanceCondition.randomChance(0.4f))
+                        .build()
+                );
+            }
+        });
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FISHERMAN, 4, (factories) -> {
+            factories.add((entity, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 15),
+                    new ItemStack(TideItems.VILLAGE_FISHING_ROD, 1),
+                    1, 15, 0.05f
+            ));
         });
 
         //? if >=1.21 {

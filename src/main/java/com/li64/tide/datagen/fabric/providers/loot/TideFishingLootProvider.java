@@ -118,6 +118,12 @@ public class TideFishingLootProvider extends TideAbstractLootProvider {
         );
 
         output.accept(
+                TideLootTables.Fishing.SUNFLOWER_ROD,
+                LootTable.lootTable().withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(TideItems.SUNFLOWER_FISHING_ROD)))
+        );
+
+        output.accept(
                 TideLootTables.Fishing.BONUS_GOLD,
                 LootTable.lootTable().withPool(LootPool.lootPool()
                         .add(LootItem.lootTableItem(Items.GOLD_INGOT).setWeight(140))

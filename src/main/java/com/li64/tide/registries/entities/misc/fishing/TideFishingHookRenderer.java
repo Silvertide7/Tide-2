@@ -106,7 +106,8 @@ public class TideFishingHookRenderer extends EntityRenderer<TideFishingHook> imp
         int i = player.getMainArm() == HumanoidArm.RIGHT ? 1 : -1;
         ItemStack stack = player.getMainHandItem();
         if (!(stack.getItem() instanceof FishingRodItem)) i = -i;
-        Vec2 stringOffset = stack.getItem() == TideItems.STONE_FISHING_ROD ? new Vec2(0.05f, -0.1f)
+        Vec2 stringOffset = (stack.getItem() == TideItems.STONE_FISHING_ROD || stack.getItem() == TideItems.HONEYCOMB_FISHING_ROD)
+                ? new Vec2(0.05f, -0.1f)
                 : (stack.getItem() == TideItems.IRON_FISHING_ROD ? new Vec2(0.05f, -0.02f) : new Vec2(0.0f, 0.0f));
 
         if (!Tide.PLATFORM.isModLoaded("firstperson") && this.entityRenderDispatcher.options.getCameraType().isFirstPerson() && player == Minecraft.getInstance().player) {
