@@ -179,5 +179,8 @@ public final class TideConfig implements ConfigData {
 
         @ConfigEntry.Gui.Tooltip
         public float minigameDifficulty = 1.0f;
+
+        @ConfigEntry.Gui.Tooltip
+        public boolean useThirdPartyMinigames = true;
     }
 }

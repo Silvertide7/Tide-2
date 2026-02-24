@@ -1,4 +1,5 @@
-package com.li64.tide.compat.starcatcher;
+//? if neoforge || forge {
+/*package com.li64.tide.compat.starcatcher;
 
 import com.li64.tide.Tide;
 import com.li64.tide.network.messages.MinigameServerMsg;
@@ -19,3 +20,4 @@ public class TideStarcatcherMinigameScreen extends FishingMinigameScreen {
         else Tide.NETWORK.sendToServer(new MinigameServerMsg((byte) 1));
     }
 }
+*///?}

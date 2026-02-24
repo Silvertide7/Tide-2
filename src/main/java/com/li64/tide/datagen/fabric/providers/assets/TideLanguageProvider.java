@@ -102,6 +102,8 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add("text.autoconfig.tide.option.minigame.doFailSound.@Tooltip", "Enables the sound played when you lose the minigame");
         builder.add("text.autoconfig.tide.option.minigame.minigameDifficulty", "Minigame Difficulty");
         builder.add("text.autoconfig.tide.option.minigame.minigameDifficulty.@Tooltip", "A multiplier that increases or decreases the speed of the minigame");
+        builder.add("text.autoconfig.tide.option.minigame.useThirdPartyMinigames", "Use Third-Party Minigames");
+        builder.add("text.autoconfig.tide.option.minigame.useThirdPartyMinigames.@Tooltip", "If enabled, minigames from other mods like starcatcher or stardew fishing will be used");
 
         // Items
 
