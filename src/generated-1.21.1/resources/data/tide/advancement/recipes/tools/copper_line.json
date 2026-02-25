@@ -1,31 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gold_ingot": {
+    "has_copper": {
       "conditions": {
         "items": [
           {
-            "items": "#c:ingots/gold"
+            "items": "#c:ingots/copper"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stone_fishing_rod": {
+    "has_fishing_line": {
       "conditions": {
         "items": [
           {
-            "items": "tide:stone_fishing_rod"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_string": {
-      "conditions": {
-        "items": [
-          {
-            "items": "#c:strings"
+            "items": "tide:fishing_line"
           }
         ]
       },
@@ -33,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tide:gold_rod_smithing"
+        "recipe": "tide:copper_line"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,14 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_string",
-      "has_stone_fishing_rod",
-      "has_gold_ingot"
+      "has_fishing_line",
+      "has_copper"
     ]
   ],
   "rewards": {
     "recipes": [
-      "tide:gold_rod_smithing"
+      "tide:copper_line"
     ]
   }
 }

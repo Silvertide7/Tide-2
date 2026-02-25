@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "tag": "c:nuggets/iron"
+      "tag": "c:ingots/iron"
     },
     "L": {
       "item": "tide:fishing_line"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "tide:reinforced_line"
+    "id": "tide:iron_line"
   }
 }

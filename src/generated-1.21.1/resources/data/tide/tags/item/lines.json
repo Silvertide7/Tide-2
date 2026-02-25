@@ -1,8 +1,9 @@
 {
   "values": [
     "tide:fishing_line",
-    "tide:braided_line",
-    "tide:reinforced_line",
-    "tide:golden_line"
+    "tide:copper_line",
+    "tide:iron_line",
+    "tide:golden_line",
+    "tide:diamond_line"
   ]
 }

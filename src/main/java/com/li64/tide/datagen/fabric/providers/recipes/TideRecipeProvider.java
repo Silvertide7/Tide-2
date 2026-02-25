@@ -313,24 +313,24 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_string", has(TideTags.Convention.STRINGS))
                 .save(output);
 
-        shaped(RecipeCategory.TOOLS, TideItems.BRAIDED_LINE)
+        shaped(RecipeCategory.TOOLS, TideItems.COPPER_LINE)
                 .pattern("#")
                 .pattern("L")
                 .pattern("#")
                 .define('L', TideItems.FISHING_LINE)
-                .define('#', TideTags.Convention.SLIME_BALLS)
+                .define('#', TideTags.Convention.COPPER_INGOTS)
                 .unlockedBy("has_fishing_line", has(TideItems.FISHING_LINE))
-                .unlockedBy("has_slimeball", has(TideTags.Convention.SLIME_BALLS))
+                .unlockedBy("has_copper", has(TideTags.Convention.COPPER_INGOTS))
                 .save(output);
 
-        shaped(RecipeCategory.TOOLS, TideItems.REINFORCED_LINE)
+        shaped(RecipeCategory.TOOLS, TideItems.IRON_LINE)
                 .pattern("#")
                 .pattern("L")
                 .pattern("#")
                 .define('L', TideItems.FISHING_LINE)
-                .define('#', TideTags.Convention.IRON_NUGGETS)
+                .define('#', TideTags.Convention.IRON_INGOTS)
                 .unlockedBy("has_fishing_line", has(TideItems.FISHING_LINE))
-                .unlockedBy("has_iron_nuggets", has(TideTags.Convention.IRON_NUGGETS))
+                .unlockedBy("has_iron_ingot", has(TideTags.Convention.IRON_INGOTS))
                 .save(output);
 
         shaped(RecipeCategory.TOOLS, TideItems.GOLDEN_LINE)
@@ -340,6 +340,17 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .define('L', TideItems.FISHING_LINE)
                 .define('#', TideTags.Convention.GOLD_INGOTS)
                 .unlockedBy("has_fishing_line", has(TideItems.FISHING_LINE))
+                .unlockedBy("has_gold_ingot", has(TideTags.Convention.GOLD_INGOTS))
+                .save(output);
+
+        shaped(RecipeCategory.TOOLS, TideItems.DIAMOND_LINE)
+                .pattern("#")
+                .pattern("L")
+                .pattern("#")
+                .define('L', TideItems.FISHING_LINE)
+                .define('#', TideTags.Convention.DIAMOND_GEMS)
+                .unlockedBy("has_fishing_line", has(TideItems.FISHING_LINE))
+                .unlockedBy("has_diamond", has(TideTags.Convention.DIAMOND_GEMS))
                 .save(output);
 
         shaped(RecipeCategory.TOOLS, TideItems.FISHING_HOOK)
@@ -359,7 +370,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .define('O', TideTags.Convention.OBSIDIANS)
                 .define('#', TideTags.Convention.GOLD_INGOTS)
                 .unlockedBy("has_obsidian", has(TideTags.Convention.OBSIDIANS))
-                .unlockedBy("has_copper", has(TideTags.Convention.GOLD_INGOTS))
+                .unlockedBy("has_gold_ingot", has(TideTags.Convention.GOLD_INGOTS))
                 .save(output);
 
         shaped(RecipeCategory.TOOLS, TideItems.VOID_HOOK)
@@ -393,7 +404,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                         TideItems.GOLDEN_FISHING_ROD)
                 .unlocks("has_string", has(TideTags.Convention.STRINGS))
                 .unlocks("has_stone_fishing_rod", has(TideItems.STONE_FISHING_ROD))
-                .unlocks("has_gold", has(TideTags.Convention.GOLD_INGOTS))
+                .unlocks("has_gold_ingot", has(TideTags.Convention.GOLD_INGOTS))
                 .save(output, "tide:gold_rod_smithing");
 
         SmithingTransformRecipeBuilder.smithing(
@@ -429,7 +440,7 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                         TideItems.NETHERITE_FISHING_ROD)
                 .unlocks("has_netherite_upgrade_template", has(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
                 .unlocks("has_diamond_fishing_rod", has(TideItems.DIAMOND_FISHING_ROD))
-                .unlocks("has_netherite", has(TideTags.Convention.NETHERITE_INGOTS))
+                .unlocks("has_netherite_ingot", has(TideTags.Convention.NETHERITE_INGOTS))
                 .save(output, "tide:netherite_rod_smithing");
 
         SmithingTransformRecipeBuilder.smithing(

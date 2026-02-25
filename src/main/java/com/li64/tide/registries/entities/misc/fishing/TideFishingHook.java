@@ -724,11 +724,6 @@ public class TideFishingHook extends Projectile {
         if (this.onGround()) i = 2;
         this.startRetrieving();
 
-        if (getLine().is(TideItems.REINFORCED_LINE)) {
-            i -= (new Random().nextFloat() > 0.7f ? 1 : 0);
-            if (i < 0) i = 0;
-        }
-
         return i;
     }
 

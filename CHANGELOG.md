@@ -32,37 +32,40 @@
 - These chances can be further modified by using a Shiny Fishing Rod, or by equipping Shiny Bait
 - Catching a shiny will allow you to view it in the fishing journal (TODO)
 
-**Fishy Notes** (TODO)
-- The GUI and layout of Fishy Notes has been reworked
-- Reading a Fishy Note will unlock it in the fishing journal under its corresponding fish
+**Fishy Notes**
+- Fish silhouettes are now shown in the fishy note GUI, helping you to identify which fish it might be
+- Reading a Fishy Note will now unlock it in the fishing journal under its corresponding fish
 
 **Items**
 - Added 3 new fishing hooks:
   - Fiery Hook
   - Permafrost Hook
   - Twilight Hook
-- Added 3 new fishing lines: (TODO)
-  - Iron Line
+- Added 3 new fishing lines:
   - Copper Line
+  - Iron Line
   - Diamond Line
 - Added 8 new themed fishing rods:
-  - Sculk Fishing Rod
-  - Sunflower Fishing Rod
-  - Honeycomb Fishing Rod (TODO)
-  - Village Fishing Rod
-  - Breeze Fishing Rod (TODO)
-  - Ammonite Fishing Rod
+  - Rod of Resonance
   - Prismarine Fishing Rod
+  - The Suncatcher
+  - Rod of the Hero
+  - Beeline
+  - Gale Fishing Rod
   - Shiny Fishing Rod
 - Added 3 new bait items:
   - Incandescent Bait
   - Abyss Bait
   - Shiny Bait
 
-**Informational Items** (TODO)
+**Informational Items**
 - Informational items such as the pocket watch and climate gauge now display their stats as a GUI overlay instead of requiring the player to right-click them
-- Their information will be displayed when held in the player's mainhand, offhand, or equipped in a Curios slot.
-- Informational items can be combined via crafting recipes, allowing multiple stats to be viewed at once
+- The Lunar Calendar and Weather Radio can now be placed, showing their info when nearby the player
+- Their information will be displayed when held in the player's mainhand, offhand, or equipped in a Curios/Trinkets slot.
+- Informational items can be combined via crafting recipes, allowing multiple stats to be viewed at once (TODO)
+
+**Compatibility**
+- The Starcatcher minigame will be used instead of the Tide minigame if it's installed
 
 **Miscellaneous**
 - The Midas Fishing Rod can now reel in a bonus golden apple, golden carrot, and _very rarely_ an enchanted golden apple or totem of undying (in addition to the regular gold ingots and blocks)

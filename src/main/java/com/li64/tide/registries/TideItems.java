@@ -93,9 +93,10 @@ public class TideItems {
     public static final Item VOID_HOOK = register("void_hook", properties -> new FishingHookItem(properties, "item.tide.void_hook.desc"));
 
     public static final Item FISHING_LINE = register("fishing_line", FishingLineItem::new);
-    public static final Item BRAIDED_LINE = register("braided_line", properties -> new FishingLineItem(properties, "item.tide.braided_line.desc"));
-    public static final Item REINFORCED_LINE = register("reinforced_line", properties -> new FishingLineItem(properties, "item.tide.reinforced_line.desc"));
-    public static final Item GOLDEN_LINE = register("golden_line", properties -> new FishingLineItem(properties, "item.tide.golden_line.desc"));
+    public static final Item COPPER_LINE = register("copper_line", properties -> new FishingLineItem(properties, "item.tide.copper_line.desc"));
+    public static final Item IRON_LINE = register("iron_line", properties -> new FishingLineItem(properties, "item.tide.iron_line.desc"));
+    public static final Item GOLDEN_LINE = register("golden_line", GoldenLineItem::new);
+    public static final Item DIAMOND_LINE = register("diamond_line", properties -> new FishingLineItem(properties, "item.tide.diamond_line.desc"));
 
     public static final Item FISHING_JOURNAL = register("fishing_journal", FishingJournalItem::new);
     public static final Item FISHY_NOTE = register("fishy_note", FishyNoteItem::new, new Item.Properties().stacksTo(1));
@@ -188,7 +189,7 @@ public class TideItems {
                     FISHING_HOOK, FIERY_HOOK, PERMAFROST_HOOK,
                     TWILIGHT_HOOK, LAVAPROOF_HOOK, VOID_HOOK,
 
-                    FISHING_LINE, BRAIDED_LINE, REINFORCED_LINE, GOLDEN_LINE,
+                    FISHING_LINE, COPPER_LINE, IRON_LINE, GOLDEN_LINE, DIAMOND_LINE,
 
                     RED_BOBBER, ORANGE_BOBBER,
                     YELLOW_BOBBER, LIME_BOBBER,

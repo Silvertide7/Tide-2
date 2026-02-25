@@ -11,7 +11,7 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_netherite": {
+    "has_netherite_ingot": {
       "conditions": {
         "items": [
           {
@@ -43,7 +43,7 @@
       "has_the_recipe",
       "has_netherite_upgrade_template",
       "has_diamond_fishing_rod",
-      "has_netherite"
+      "has_netherite_ingot"
     ]
   ],
   "rewards": {

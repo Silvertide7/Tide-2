@@ -53,9 +53,10 @@ public class TideItemTagsProvider extends FabricTagProvider<Item> {
 
         getOrCreateTagBuilder(TideTags.Items.LINES)
                 .add(TideItems.FISHING_LINE)
-                .add(TideItems.BRAIDED_LINE)
-                .add(TideItems.REINFORCED_LINE)
-                .add(TideItems.GOLDEN_LINE);
+                .add(TideItems.COPPER_LINE)
+                .add(TideItems.IRON_LINE)
+                .add(TideItems.GOLDEN_LINE)
+                .add(TideItems.DIAMOND_LINE);
 
         getOrCreateTagBuilder(TideTags.Items.BOBBERS)
                 .add(TideItems.RED_BOBBER)

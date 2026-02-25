@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper": {
+    "has_gold_ingot": {
       "conditions": {
         "items": [
           {
@@ -32,7 +32,7 @@
     [
       "has_the_recipe",
       "has_obsidian",
-      "has_copper"
+      "has_gold_ingot"
     ]
   ],
   "rewards": {

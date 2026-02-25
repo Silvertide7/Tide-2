@@ -165,9 +165,10 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add(TideItems.VOID_HOOK, "Hook of the Depths");
 
         builder.add(TideItems.FISHING_LINE, "Fishing Line");
-        builder.add(TideItems.BRAIDED_LINE, "Braided Line");
-        builder.add(TideItems.REINFORCED_LINE, "Reinforced Line");
+        builder.add(TideItems.COPPER_LINE, "Copper Line");
+        builder.add(TideItems.IRON_LINE, "Iron Line");
         builder.add(TideItems.GOLDEN_LINE, "Golden Line");
+        builder.add(TideItems.DIAMOND_LINE, "Diamond Line");
 
         builder.add(TideItems.FISHING_JOURNAL, "Fishing Journal");
         builder.add(TideItems.FISH_SATCHEL, "Fish Satchel");
@@ -384,9 +385,11 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add("item.tide.weather_radio.forecast.minutes", "%s minutes");
         builder.add("item.tide.weather_radio.forecast.hours", "%s hours");
 
-        builder.add("item.tide.braided_line.desc", "Increases rod charge speed");
-        builder.add("item.tide.reinforced_line.desc", "Increases rod durability");
-        builder.add("item.tide.golden_line.desc", "Increases fishing luck");
+        builder.add("item.tide.copper_line.desc", "-10% fish speed");
+        builder.add("item.tide.iron_line.desc", "-15% catch difficulty");
+        builder.add("item.tide.golden_line.desc_0", "-5% fish speed");
+        builder.add("item.tide.golden_line.desc_1", "+1 fishing luck");
+        builder.add("item.tide.diamond_line.desc", "-25% catch difficulty");
 
         builder.add("item.tide.fiery_hook.desc", "Raises water temperature");
         builder.add("item.tide.permafrost_hook.desc", "Lowers water temperature");

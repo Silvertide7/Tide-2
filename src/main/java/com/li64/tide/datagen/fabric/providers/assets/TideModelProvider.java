@@ -86,9 +86,10 @@ public class TideModelProvider extends FabricModelProvider {
         generator.generateFlatItem(TideItems.VOID_HOOK, ModelTemplates.FLAT_ITEM);
 
         generator.generateFlatItem(TideItems.FISHING_LINE, ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(TideItems.BRAIDED_LINE, ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(TideItems.REINFORCED_LINE, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.COPPER_LINE, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.IRON_LINE, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.GOLDEN_LINE, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(TideItems.DIAMOND_LINE, ModelTemplates.FLAT_ITEM);
 
         generator.generateFlatItem(TideItems.FISHING_JOURNAL, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(TideItems.FISHY_NOTE, ModelTemplates.FLAT_ITEM);

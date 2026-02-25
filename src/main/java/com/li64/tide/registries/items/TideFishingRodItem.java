@@ -391,7 +391,8 @@ public class TideFishingRodItem extends FishingRodItem {
     *///?}
 
     public int getChargeDuration(ItemStack rod, LivingEntity entity) {
-        return CustomRodManager.getLine(rod).is(TideItems.BRAIDED_LINE) ? 15 : 25;
+        return 25;
+        // return CustomRodManager.getLine(rod).is(TideItems.BRAIDED_LINE) ? 15 : 25;
     }
 
     public @NotNull UseAnim getUseAnimation(@NotNull ItemStack stack) {
