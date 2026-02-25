@@ -179,6 +179,7 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add(TideItems.CLIMATE_GAUGE, "Climate Gauge");
         builder.add(TideItems.DEPTH_METER, "Depth Meter");
         builder.add(TideItems.WEATHER_RADIO, "Weather Radio");
+        builder.add(TideItems.FISH_FINDER, "Fish Finder");
 
         builder.add(TideItems.ENCHANTED_POCKET_WATCH, "Enchanted Pocket Watch");
         builder.add(TideItems.STARLIGHT_BOW, "Starlight Bow");
@@ -384,6 +385,7 @@ public class TideLanguageProvider extends FabricLanguageProvider {
         builder.add("item.tide.weather_radio.forecast.seconds", "%s seconds");
         builder.add("item.tide.weather_radio.forecast.minutes", "%s minutes");
         builder.add("item.tide.weather_radio.forecast.hours", "%s hours");
+        builder.add("item.tide.fish_finder.desc", "Displays fishing information");
 
         builder.add("item.tide.copper_line.desc", "-10% fish speed");
         builder.add("item.tide.iron_line.desc", "-15% catch difficulty");

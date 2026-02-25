@@ -181,7 +181,8 @@ public class TideItemTagsProvider extends FabricTagProvider<Item> {
                 .add(TideItems.LUNAR_CALENDAR)
                 .add(TideItems.DEPTH_METER)
                 .add(TideItems.CLIMATE_GAUGE)
-                .add(TideItems.WEATHER_RADIO);
+                .add(TideItems.WEATHER_RADIO)
+                .add(TideItems.FISH_FINDER);
 
         getOrCreateTagBuilder(TideTags.Items.TRINKETS_INFORMATIONAL)
                 .forceAddTag(TideTags.Items.INFORMATIONAL);

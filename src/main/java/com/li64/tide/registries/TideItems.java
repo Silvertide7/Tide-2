@@ -109,6 +109,7 @@ public class TideItems {
     public static final Item CLIMATE_GAUGE = register("climate_gauge", ClimateGaugeItem::new);
     public static final Item DEPTH_METER = register("depth_meter", DepthMeterItem::new);
     public static final Item WEATHER_RADIO = register("weather_radio", WeatherRadioItem::new);
+    public static final Item FISH_FINDER = register("fish_finder", FishFinderItem::new, new Item.Properties().rarity(Rarity.RARE));
 
     public static final Item ENCHANTED_POCKET_WATCH = register("enchanted_pocket_watch", EnchantedPocketWatchItem::new, new Item.Properties()
             /*? if >=1.21*/.component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
@@ -173,7 +174,8 @@ public class TideItems {
 
                     BAIT, LUCKY_BAIT, MAGNETIC_BAIT, INCANDESCENT_BAIT, ABYSS_BAIT, SHINY_BAIT,
 
-                    POCKET_WATCH, LUNAR_CALENDAR, CLIMATE_GAUGE, DEPTH_METER, WEATHER_RADIO,
+                    POCKET_WATCH, LUNAR_CALENDAR, CLIMATE_GAUGE,
+                    DEPTH_METER, WEATHER_RADIO, FISH_FINDER,
 
                     ENCHANTED_POCKET_WATCH, STARLIGHT_BOW, DRAGONFIN_BOOTS,
 

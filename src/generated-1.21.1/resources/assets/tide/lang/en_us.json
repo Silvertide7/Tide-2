@@ -327,6 +327,8 @@
   "item.tide.fiery_hook": "Fiery Hook",
   "item.tide.fiery_hook.desc": "Raises water temperature",
   "item.tide.fish_bone": "Fish Bone",
+  "item.tide.fish_finder": "Fish Finder",
+  "item.tide.fish_finder.desc": "Displays fishing information",
   "item.tide.fish_satchel": "Fish Satchel",
   "item.tide.fish_satchel.desc_0": "Right-click while held to open",
   "item.tide.fish_satchel.desc_1": "Collects fish automatically while open",

@@ -57,12 +57,13 @@
   - Incandescent Bait
   - Abyss Bait
   - Shiny Bait
+- Added Fish Finder
 
 **Informational Items**
 - Informational items such as the pocket watch and climate gauge now display their stats as a GUI overlay instead of requiring the player to right-click them
 - The Lunar Calendar and Weather Radio can now be placed, showing their info when nearby the player
 - Their information will be displayed when held in the player's mainhand, offhand, or equipped in a Curios/Trinkets slot.
-- Informational items can be combined via crafting recipes, allowing multiple stats to be viewed at once (TODO)
+- The Fish Finder can be created via a crafting recipe, allowing multiple stats to be viewed at once
 
 **Compatibility**
 - The Starcatcher minigame will be used instead of the Tide minigame if it's installed

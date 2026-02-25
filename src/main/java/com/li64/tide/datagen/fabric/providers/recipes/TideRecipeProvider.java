@@ -101,6 +101,19 @@ public class TideRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_spyglass", has(Items.SPYGLASS))
                 .save(output);
 
+        shapeless(RecipeCategory.TOOLS, TideItems.FISH_FINDER, 1)
+                .requires(TideItems.POCKET_WATCH)
+                .requires(TideItems.LUNAR_CALENDAR)
+                .requires(TideItems.DEPTH_METER)
+                .requires(TideItems.CLIMATE_GAUGE)
+                .requires(TideItems.WEATHER_RADIO)
+                .unlockedBy("has_watch", has(TideItems.POCKET_WATCH))
+                .unlockedBy("has_calendar", has(TideItems.LUNAR_CALENDAR))
+                .unlockedBy("has_depth_meter", has(TideItems.DEPTH_METER))
+                .unlockedBy("has_climate_gauge", has(TideItems.CLIMATE_GAUGE))
+                .unlockedBy("has_radio", has(TideItems.WEATHER_RADIO))
+                .save(output);
+
         shapeless(RecipeCategory.TOOLS, TideItems.ENCHANTED_POCKET_WATCH, 1)
                 .requires(TideItems.POCKET_WATCH)
                 .requires(TideFish.COELACANTH)

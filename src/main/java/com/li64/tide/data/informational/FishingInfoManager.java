@@ -3,7 +3,8 @@ package com.li64.tide.data.informational;
 import com.li64.tide.Tide;
 import com.li64.tide.compat.CompatHelper;
 import com.li64.tide.data.TideTags;
-import com.li64.tide.network.messages.SurveyDataMsg;
+import com.li64.tide.network.messages.InfoDataMsg;
+import com.li64.tide.registries.items.InfoItemContainer;
 import com.li64.tide.registries.items.InformationalItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -14,7 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.*;
 
-public class InformationalManager {
+public class FishingInfoManager {
     private static final Map<UUID, Map<ResourceLocation, String>> CACHE = new HashMap<>();
     private static final Map<UUID, Map<ResourceLocation, Integer>> TIMERS = new HashMap<>();
     private static final Map<UUID, Integer> PROXIMITY_SCAN_TIMER = new HashMap<>();
@@ -65,7 +66,7 @@ public class InformationalManager {
 
         // send new results to player
         if (!hasNewData) return;
-        Tide.NETWORK.sendToPlayer(new SurveyDataMsg(results), player);
+        Tide.NETWORK.sendToPlayer(new InfoDataMsg(results), player);
     }
 
     private static List<Item> getActiveInformationalItems(ServerPlayer player) {
@@ -74,8 +75,8 @@ public class InformationalManager {
         Item mainhand = player.getMainHandItem().getItem();
         Item offhand = player.getOffhandItem().getItem();
 
-        if (mainhand instanceof InformationalItem) items.add(mainhand);
-        if (offhand instanceof InformationalItem && !items.contains(offhand)) items.add(offhand);
+        if (hasInfo(mainhand)) addInfoItem(items, mainhand);
+        if (hasInfo(offhand)) addInfoItem(items, offhand);
 
         CompatHelper.addInformationItemsFromAccessories(player, items);
         addNearbyPlacedItems(player, items);
@@ -83,7 +84,20 @@ public class InformationalManager {
         return items;
     }
 
-    private static void addNearbyPlacedItems(ServerPlayer player, List<Item> items) {
+    @SuppressWarnings("deprecation")
+    public static boolean hasInfo(Item item) {
+        return item.builtInRegistryHolder().is(TideTags.Items.INFORMATIONAL);
+    }
+
+    public static void addInfoItem(ArrayList<Item> items, Item item) {
+        if (item instanceof InfoItemContainer container) {
+            container.getContainedInfoItems().forEach(c -> addInfoItem(items, c));
+            return;
+        }
+        if (!items.contains(item)) items.add(item);
+    }
+
+    private static void addNearbyPlacedItems(ServerPlayer player, ArrayList<Item> items) {
         UUID id = player.getUUID();
 
         int timer = PROXIMITY_SCAN_TIMER.getOrDefault(id, 0);
@@ -96,9 +110,7 @@ public class InformationalManager {
 
         Set<Item> nearby = NEARBY_BLOCK_ITEMS.get(id);
         if (nearby == null || nearby.isEmpty()) return;
-        for (Item item : nearby) {
-            if (!items.contains(item)) items.add(item);
-        }
+        for (Item item : nearby) addInfoItem(items, item);
     }
 
     private static Set<Item> scanForNearbyInformationalBlocks(ServerPlayer player) {

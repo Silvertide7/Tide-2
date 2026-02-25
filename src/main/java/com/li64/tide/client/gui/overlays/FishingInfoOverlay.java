@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.Map;
 
-public class SurveyResultsOverlay {
+public class FishingInfoOverlay {
     public static Map<ResourceLocation, Component> CLIENT_SURVEY_DATA = Map.of();
 
     private static final int PADDING = 5;

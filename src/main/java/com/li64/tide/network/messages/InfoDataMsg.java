@@ -1,7 +1,7 @@
 package com.li64.tide.network.messages;
 
 import com.li64.tide.Tide;
-import com.li64.tide.client.gui.overlays.SurveyResultsOverlay;
+import com.li64.tide.client.gui.overlays.FishingInfoOverlay;
 import com.li64.tide.registries.items.InformationalItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -13,11 +13,11 @@ import net.minecraft.world.item.Item;
 import java.util.HashMap;
 import java.util.Map;
 
-public record SurveyDataMsg(Map<ResourceLocation, String> data) implements TidePacketPayload {
+public record InfoDataMsg(Map<ResourceLocation, String> data) implements TidePacketPayload {
     public static final ResourceLocation ID = Tide.resource("survey_data");
     @Override public ResourceLocation id() { return ID; }
 
-    public SurveyDataMsg(RegistryFriendlyByteBuf buf) {
+    public InfoDataMsg(RegistryFriendlyByteBuf buf) {
         this(fromBuffer(buf));
     }
 
@@ -30,7 +30,7 @@ public record SurveyDataMsg(Map<ResourceLocation, String> data) implements TideP
         return data;
     }
 
-    public static void encode(SurveyDataMsg message, RegistryFriendlyByteBuf buf) {
+    public static void encode(InfoDataMsg message, RegistryFriendlyByteBuf buf) {
         buf.writeInt(message.data.size());
         message.data.forEach((item, data) -> {
             buf.writeResourceLocation(item);
@@ -38,12 +38,12 @@ public record SurveyDataMsg(Map<ResourceLocation, String> data) implements TideP
         });
     }
 
-    public static void handle(SurveyDataMsg message, Player player) {
+    public static void handle(InfoDataMsg message, Player player) {
         Map<ResourceLocation, Component> results = new HashMap<>();
         message.data().forEach((key, data) -> {
             Item item = BuiltInRegistries.ITEM.get(key);
             results.put(key, ((InformationalItem)item).parseResult(data));
         });
-        SurveyResultsOverlay.CLIENT_SURVEY_DATA = results;
+        FishingInfoOverlay.CLIENT_SURVEY_DATA = results;
     }
 }

@@ -4,6 +4,7 @@
     "tide:lunar_calendar",
     "tide:depth_meter",
     "tide:climate_gauge",
-    "tide:weather_radio"
+    "tide:weather_radio",
+    "tide:fish_finder"
   ]
 }

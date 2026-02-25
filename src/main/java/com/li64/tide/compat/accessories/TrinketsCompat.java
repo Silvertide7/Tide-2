@@ -2,6 +2,7 @@
 package com.li64.tide.compat.accessories;
 
 import com.li64.tide.data.TideTags;
+import com.li64.tide.data.informational.FishingInfoManager;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -15,7 +16,7 @@ public class TrinketsCompat {
         component.get().getEquipped(stack -> stack.is(TideTags.Items.INFORMATIONAL))
                 .forEach(tuple -> {
                     Item item = tuple.getB().getItem();
-                    if (!items.contains(item)) items.add(item);
+                    FishingInfoManager.addInfoItem(items, item);
                 });
     }
 }

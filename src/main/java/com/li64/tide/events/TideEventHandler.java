@@ -2,8 +2,8 @@ package com.li64.tide.events;
 
 import com.li64.tide.Tide;
 import com.li64.tide.data.TideFishingManager;
+import com.li64.tide.data.informational.FishingInfoManager;
 import com.li64.tide.data.player.TidePlayerData;
-import com.li64.tide.data.informational.InformationalManager;
 import com.li64.tide.network.messages.SyncDataMsg;
 import com.li64.tide.registries.TideItems;
 import net.minecraft.server.MinecraftServer;
@@ -26,6 +26,6 @@ public class TideEventHandler {
     }
 
     public static void endServerTick(MinecraftServer server) {
-        server.getPlayerList().getPlayers().forEach(InformationalManager::tick);
+        server.getPlayerList().getPlayers().forEach(FishingInfoManager::tick);
     }
 }
