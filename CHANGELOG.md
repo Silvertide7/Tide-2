@@ -45,13 +45,13 @@
   - Copper Line
   - Iron Line
   - Diamond Line
-- Added 8 new themed fishing rods:
+- Added 8 new themed fishing rods: (TODO on neo)
   - Rod of Resonance
   - Prismarine Fishing Rod
   - The Suncatcher
   - Rod of the Hero
   - Beeline
-  - Gale Fishing Rod
+  - Gale Fishing Rod (TODO)
   - Shiny Fishing Rod
 - Added 3 new bait items:
   - Incandescent Bait
