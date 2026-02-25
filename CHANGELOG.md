@@ -71,6 +71,7 @@
 - The Midas Fishing Rod can now reel in a bonus golden apple, golden carrot, and _very rarely_ an enchanted golden apple or totem of undying (in addition to the regular gold ingots and blocks)
 - Lowered Midas Fish luck requirement from 7 to 6
 - Removed the temperature condition from the Sand Tiger Shark, now only requiring a desert biome
+- Fish Displays will now scale the fish up or down depending on its length
 
 ---
 ### Fixes

@@ -1,7 +1,6 @@
 package com.li64.tide.client;
 
 import com.li64.tide.compat.CompatHelper;
-import com.li64.tide.data.FishLengthHolder;
 import com.li64.tide.data.fishing.DisplayData;
 import com.li64.tide.registries.blocks.FishDisplayBlock;
 import com.li64.tide.registries.blocks.entities.FishDisplayBlockEntity;
@@ -49,8 +48,8 @@ public record FishDisplayRenderer(EntityRenderDispatcher entityRenderer) impleme
             return;
         }
         Entity entity = display.getRenderedEntity();
-        if (entity == null || entity.getType() != entityType) {
-            assert Minecraft.getInstance().level != null;
+        if (entity == null || entity.getType() != entityType
+                && Minecraft.getInstance().level != null) {
             entity = entityType.create(Minecraft.getInstance().level);
             if (entity != null) {
                 if (displayData.nbt().isPresent()) entity.load(displayData.nbt().get());
@@ -64,15 +63,10 @@ public record FishDisplayRenderer(EntityRenderDispatcher entityRenderer) impleme
         if (entity != null) {
             poseStack.pushPose();
 
-            double lengthMeters = 1.0; // default 1 meter
-            if (displayData.lengthCm() > 0) {
-                lengthMeters = displayData.lengthCm() / 150.0; // convert cm to meters
-            }
+            double lengthCm = display.getFishLength();
+            double baseLengthCm = display.getBaseLength();
 
-            double baseSize = Math.max(entity.getBbWidth(), entity.getBbHeight());
-            if (baseSize <= 0.0) baseSize = 1.0;
-
-            float scale = (float)(lengthMeters / baseSize);
+            float scale = (float)(lengthCm / baseLengthCm);
             poseStack.scale(scale, scale, scale);
 
             this.entityRenderer.render(entity,
@@ -81,12 +75,6 @@ public record FishDisplayRenderer(EntityRenderDispatcher entityRenderer) impleme
                     poseStack, buffer, packedLight
             );
             poseStack.popPose();
-        } else {
-            this.entityRenderer.render(entity,
-                    0, 0, 0,
-                    0, 0,
-                    poseStack, buffer, packedLight
-            );
         }
 
         poseStack.popPose();
