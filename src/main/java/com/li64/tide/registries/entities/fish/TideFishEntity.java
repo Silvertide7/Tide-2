@@ -87,7 +87,6 @@ public class TideFishEntity extends AbstractSchoolingFish implements ShinyFish {
     @Override
     public void tide$setIsShiny(boolean isShiny) {
         ShinyFish.super.tide$setIsShiny(isShiny);
-        if (this.level().isClientSide()) return;
         if (isShiny) this.getEntityData().set(IS_SHINY, true);
     }
 

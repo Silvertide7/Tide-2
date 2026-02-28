@@ -38,7 +38,6 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
 
     private final Item bucketItem;
     private double length;
-
     private boolean isShiny = false;
 
     public AbstractTideFish(EntityType<? extends WaterAnimal> entityType, Level level) {
@@ -201,7 +200,6 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
     @Override
     public void tide$setIsShiny(boolean isShiny) {
         this.isShiny = isShiny;
-        if (this.level().isClientSide()) return;
         if (isShiny) this.getEntityData().set(IS_SHINY, true);
     }
 }
