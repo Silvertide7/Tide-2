@@ -147,6 +147,8 @@ public class TideEntityModels {
         registerSimpleFish("snatcher_squid", SnatcherSquidModel::new, SnatcherSquidModel.MODEL_LOCATION, SnatcherSquidModel::createBodyLayer);
         registerCustomFish("voidseeker", VoidseekerModel::new, VoidseekerModel.MODEL_LOCATION, VoidseekerModel::createBodyLayer, GlowingEyesFishRenderer::new);
         registerCustomFish("dragon_fish", DragonFishModel::new, DragonFishModel.MODEL_LOCATION, DragonFishModel::createBodyLayer, GlowingEyesFishRenderer::new);
+
+        registerSimpleFish("zombie_fish", LargemouthBassModel::new, LargemouthBassModel.MODEL_LOCATION, LargemouthBassModel::createBodyLayer);
     }
 
     public static void registerSimpleFish(String key, Function<EntityRendererProvider.Context, FishModel> modelSupplier,

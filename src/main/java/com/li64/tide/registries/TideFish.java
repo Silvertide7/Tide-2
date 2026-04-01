@@ -510,7 +510,17 @@ public class TideFish {
                     .journalGroup(JournalGroup.FRESHWATER)
                     .journalRarity(FishRarity.RARE)
                     .customShinySprite()
+                    .displayData(display -> display.offsets(-0.05f, -0.1f, 0f))
             )
+            .entityData(FishEntityData.of(
+                    TideFishEntity::new,
+                    builder -> builder
+                            .sized(0.65f, 0.4f)
+                            .clientTrackingRange(4),
+                    Mob.createMobAttributes()
+                            .add(Attributes.MAX_HEALTH, 4.0)
+                            .add(Attributes.MOVEMENT_SPEED, 1.0f)
+            ))
             .build();
     
     public static final Item ARAPAIMA = new Builder("arapaima")

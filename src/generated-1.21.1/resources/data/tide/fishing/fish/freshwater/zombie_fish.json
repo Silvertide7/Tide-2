@@ -1,4 +1,5 @@
 {
+  "bucket": "tide:zombie_fish_bucket",
   "conditions": [
     {
       "type": "tide:time_of_day",
@@ -27,6 +28,11 @@
       "y": 40
     }
   ],
+  "display_data": {
+    "entity": "tide:zombie_fish",
+    "x": -0.05,
+    "y": -0.1
+  },
   "fish": "tide:zombie_fish",
   "journal_profile": {
     "description": "journal.description.tide.zombie_fish",
