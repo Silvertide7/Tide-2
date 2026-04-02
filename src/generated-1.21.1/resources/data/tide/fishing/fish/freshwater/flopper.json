@@ -1,4 +1,5 @@
 {
+  "bucket": "tide:flopper_bucket",
   "conditions": [
     {
       "type": "tide:found_in",
@@ -24,6 +25,11 @@
       "y": 40
     }
   ],
+  "display_data": {
+    "entity": "tide:flopper",
+    "x": -0.05,
+    "y": -0.05
+  },
   "fish": "tide:flopper",
   "journal_profile": {
     "description": "journal.description.tide.flopper",

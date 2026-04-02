@@ -150,6 +150,7 @@ public class TideEntityModels {
 
         registerSimpleFish("zombie_fish", LargemouthBassModel::new, LargemouthBassModel.MODEL_LOCATION, LargemouthBassModel::createBodyLayer);
         registerSimpleFish("rock_stonefish", StonefishModel::new, StonefishModel.MODEL_LOCATION, StonefishModel::createBodyLayer);
+        registerSimpleFish("flopper", FlopperModel::new, FlopperModel.MODEL_LOCATION, FlopperModel::createBodyLayer);
     }
 
     public static void registerSimpleFish(String key, Function<EntityRendererProvider.Context, FishModel> modelSupplier,
