@@ -19,15 +19,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:lionfish",
+    "entity": "hybrid_aquatic:lionfish",
     "roll": -90.0,
     "x": 0.1,
     "y": -0.2,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:lionfish",
+  "fish": "hybrid_aquatic:lionfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.lionfish",
+    "description": "journal.description.hybrid_aquatic.lionfish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"

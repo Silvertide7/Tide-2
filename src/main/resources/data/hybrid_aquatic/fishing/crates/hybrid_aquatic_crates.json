@@ -1,6 +1,6 @@
 {
    "associated_mods": [
-      "hybrid-aquatic"
+      "hybrid_aquatic"
    ],
    "weight": 1.0,
    "block": {
@@ -9,67 +9,67 @@
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:crab_pot"
+               "Name": "hybrid_aquatic:crab_pot"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:hybrid_crate"
+               "Name": "hybrid_aquatic:hybrid_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:oak_crate"
+               "Name": "hybrid_aquatic:oak_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:spruce_crate"
+               "Name": "hybrid_aquatic:spruce_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:birch_crate"
+               "Name": "hybrid_aquatic:birch_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:dark_oak_crate"
+               "Name": "hybrid_aquatic:dark_oak_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:acacia_crate"
+               "Name": "hybrid_aquatic:acacia_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:jungle_crate"
+               "Name": "hybrid_aquatic:jungle_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:bamboo_crate"
+               "Name": "hybrid_aquatic:bamboo_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:mangrove_crate"
+               "Name": "hybrid_aquatic:mangrove_crate"
             }
          },
          {
             "weight": 1,
             "data": {
-               "Name": "hybrid-aquatic:cherry_crate"
+               "Name": "hybrid_aquatic:cherry_crate"
             }
          }
       ]

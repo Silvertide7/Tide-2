@@ -19,12 +19,12 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:stingray",
+    "entity": "hybrid_aquatic:stingray",
     "yaw": 90.0
   },
-  "fish": "hybrid-aquatic:blue_spotted_stingray",
+  "fish": "hybrid_aquatic:blue_spotted_stingray",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.blue_spotted_stingray",
+    "description": "journal.description.hybrid_aquatic.blue_spotted_stingray",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "rare"

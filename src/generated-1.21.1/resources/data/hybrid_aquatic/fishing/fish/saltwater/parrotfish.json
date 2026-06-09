@@ -19,14 +19,14 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:parrotfish",
+    "entity": "hybrid_aquatic:parrotfish",
     "roll": -90.0,
     "y": -0.2,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:parrotfish",
+  "fish": "hybrid_aquatic:parrotfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.parrotfish",
+    "description": "journal.description.hybrid_aquatic.parrotfish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater"
   },

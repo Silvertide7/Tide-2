@@ -23,14 +23,14 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:gourami",
+    "entity": "hybrid_aquatic:gourami",
     "roll": -90.0,
     "y": -0.15,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:gourami",
+  "fish": "hybrid_aquatic:gourami",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.gourami",
+    "description": "journal.description.hybrid_aquatic.gourami",
     "group": "freshwater",
     "location": "journal.info.location.jungle",
     "rarity": "uncommon"

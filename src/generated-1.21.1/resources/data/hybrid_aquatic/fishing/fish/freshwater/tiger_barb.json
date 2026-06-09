@@ -23,15 +23,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:tiger_barb",
+    "entity": "hybrid_aquatic:tiger_barb",
     "roll": -90.0,
     "x": 0.1,
     "y": -0.18,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:tiger_barb",
+  "fish": "hybrid_aquatic:tiger_barb",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.tiger_barb",
+    "description": "journal.description.hybrid_aquatic.tiger_barb",
     "group": "freshwater",
     "location": "journal.info.location.jungle",
     "rarity": "uncommon"

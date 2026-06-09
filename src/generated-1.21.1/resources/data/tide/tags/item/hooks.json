@@ -7,23 +7,23 @@
     "tide:lavaproof_hook",
     "tide:void_hook",
     {
-      "id": "hybrid-aquatic:barbed_hook",
+      "id": "hybrid_aquatic:barbed_hook",
       "required": false
     },
     {
-      "id": "hybrid-aquatic:glowing_hook",
+      "id": "hybrid_aquatic:glowing_hook",
       "required": false
     },
     {
-      "id": "hybrid-aquatic:magnetic_hook",
+      "id": "hybrid_aquatic:magnetic_hook",
       "required": false
     },
     {
-      "id": "hybrid-aquatic:creepermagnet_hook",
+      "id": "hybrid_aquatic:creepermagnet_hook",
       "required": false
     },
     {
-      "id": "hybrid-aquatic:ominous_hook",
+      "id": "hybrid_aquatic:ominous_hook",
       "required": false
     }
   ]

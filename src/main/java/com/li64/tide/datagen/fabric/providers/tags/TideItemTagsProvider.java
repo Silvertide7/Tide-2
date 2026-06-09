@@ -100,11 +100,11 @@ public class TideItemTagsProvider extends FabricTagProvider<Item> {
                 .add(TideItems.TWILIGHT_HOOK)
                 .add(TideItems.LAVAPROOF_HOOK)
                 .add(TideItems.VOID_HOOK)
-                .addOptional(Tide.resource("hybrid-aquatic", "barbed_hook"))
-                .addOptional(Tide.resource("hybrid-aquatic", "glowing_hook"))
-                .addOptional(Tide.resource("hybrid-aquatic", "magnetic_hook"))
-                .addOptional(Tide.resource("hybrid-aquatic", "creepermagnet_hook"))
-                .addOptional(Tide.resource("hybrid-aquatic", "ominous_hook"));
+                .addOptional(Tide.resource("hybrid_aquatic", "barbed_hook"))
+                .addOptional(Tide.resource("hybrid_aquatic", "glowing_hook"))
+                .addOptional(Tide.resource("hybrid_aquatic", "magnetic_hook"))
+                .addOptional(Tide.resource("hybrid_aquatic", "creepermagnet_hook"))
+                .addOptional(Tide.resource("hybrid_aquatic", "ominous_hook"));
 
         getOrCreateTagBuilder(TideTags.Items.BAIT_ITEMS)
                 .add(TideItems.BAIT)

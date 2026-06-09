@@ -22,15 +22,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:betta",
+    "entity": "hybrid_aquatic:betta",
     "roll": -90.0,
     "x": 0.04,
     "y": -0.1,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:betta",
+  "fish": "hybrid_aquatic:betta",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.betta",
+    "description": "journal.description.hybrid_aquatic.betta",
     "group": "freshwater",
     "location": "journal.info.location.swamp",
     "rarity": "uncommon"

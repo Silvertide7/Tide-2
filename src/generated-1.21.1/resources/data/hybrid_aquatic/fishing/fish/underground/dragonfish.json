@@ -16,16 +16,16 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:dragonfish",
+    "entity": "hybrid_aquatic:dragonfish",
     "roll": -90.0,
     "shape": "2x1",
     "x": 0.3,
     "y": -0.1,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:dragonfish",
+  "fish": "hybrid_aquatic:dragonfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.dragonfish",
+    "description": "journal.description.hybrid_aquatic.dragonfish",
     "group": "underground",
     "location": "journal.info.location.underground",
     "rarity": "rare"

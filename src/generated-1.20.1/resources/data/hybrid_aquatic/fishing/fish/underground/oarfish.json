@@ -16,15 +16,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:oarfish",
+    "entity": "hybrid_aquatic:oarfish",
     "roll": -90.0,
     "shape": "3x1",
     "y": -0.3,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:oarfish",
+  "fish": "hybrid_aquatic:oarfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.oarfish",
+    "description": "journal.description.hybrid_aquatic.oarfish",
     "group": "underground",
     "location": "journal.info.location.underground",
     "rarity": "very_rare"

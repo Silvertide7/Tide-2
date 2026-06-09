@@ -20,15 +20,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:flying_fish",
+    "entity": "hybrid_aquatic:flying_fish",
     "roll": -90.0,
     "x": 0.02,
     "y": -0.14,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:flying_fish",
+  "fish": "hybrid_aquatic:flying_fish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.flying_fish",
+    "description": "journal.description.hybrid_aquatic.flying_fish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater"
   },

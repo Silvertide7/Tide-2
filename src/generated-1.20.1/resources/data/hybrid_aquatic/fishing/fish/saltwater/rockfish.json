@@ -19,15 +19,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:rockfish",
+    "entity": "hybrid_aquatic:rockfish",
     "roll": -90.0,
     "x": 0.05,
     "y": -0.18,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:rockfish",
+  "fish": "hybrid_aquatic:rockfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.rockfish",
+    "description": "journal.description.hybrid_aquatic.rockfish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"

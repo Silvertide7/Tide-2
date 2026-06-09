@@ -19,14 +19,14 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:squirrelfish",
+    "entity": "hybrid_aquatic:squirrelfish",
     "roll": -90.0,
     "y": -0.18,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:squirrelfish",
+  "fish": "hybrid_aquatic:squirrelfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.squirrelfish",
+    "description": "journal.description.hybrid_aquatic.squirrelfish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"

@@ -23,14 +23,14 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:danio",
+    "entity": "hybrid_aquatic:danio",
     "roll": -90.0,
     "y": -0.15,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:danio",
+  "fish": "hybrid_aquatic:danio",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.danio",
+    "description": "journal.description.hybrid_aquatic.danio",
     "group": "freshwater",
     "location": "journal.info.location.jungle",
     "rarity": "uncommon"

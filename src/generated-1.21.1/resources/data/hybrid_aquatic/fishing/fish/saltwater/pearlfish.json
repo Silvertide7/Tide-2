@@ -19,15 +19,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:pearlfish",
+    "entity": "hybrid_aquatic:pearlfish",
     "roll": -90.0,
     "x": 0.02,
     "y": -0.08,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:pearlfish",
+  "fish": "hybrid_aquatic:pearlfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.pearlfish",
+    "description": "journal.description.hybrid_aquatic.pearlfish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "very_rare"

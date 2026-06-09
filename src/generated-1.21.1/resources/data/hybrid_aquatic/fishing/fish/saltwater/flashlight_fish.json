@@ -19,15 +19,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:flashlight_fish",
+    "entity": "hybrid_aquatic:flashlight_fish",
     "roll": -90.0,
     "x": 0.02,
     "y": -0.1,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:flashlight_fish",
+  "fish": "hybrid_aquatic:flashlight_fish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.flashlight_fish",
+    "description": "journal.description.hybrid_aquatic.flashlight_fish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"

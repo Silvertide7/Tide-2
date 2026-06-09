@@ -19,13 +19,13 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:stingray",
+    "entity": "hybrid_aquatic:stingray",
     "y": 0.1,
     "yaw": 90.0
   },
-  "fish": "hybrid-aquatic:spotted_eagle_ray",
+  "fish": "hybrid_aquatic:spotted_eagle_ray",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.spotted_eagle_ray",
+    "description": "journal.description.hybrid_aquatic.spotted_eagle_ray",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "rare"

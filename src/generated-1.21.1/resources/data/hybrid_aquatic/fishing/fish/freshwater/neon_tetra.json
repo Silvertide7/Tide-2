@@ -23,14 +23,14 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:tetra",
+    "entity": "hybrid_aquatic:tetra",
     "roll": -90.0,
     "y": -0.1,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:neon_tetra",
+  "fish": "hybrid_aquatic:neon_tetra",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.neon_tetra",
+    "description": "journal.description.hybrid_aquatic.neon_tetra",
     "group": "freshwater",
     "location": "journal.info.location.jungle",
     "rarity": "uncommon"

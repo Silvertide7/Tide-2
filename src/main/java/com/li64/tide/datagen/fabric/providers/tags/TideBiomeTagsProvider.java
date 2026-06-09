@@ -104,9 +104,9 @@ public class TideBiomeTagsProvider extends FabricTagProvider<Biome> {
 
         getOrCreateTagBuilder(TideTags.Biomes.HAS_SWAMP_FISH)
                 .forceAddTag(TideTags.Convention.IS_SWAMP)
-                .addOptional(Tide.resource("hybrid-aquatic", "swamp"))
-                .addOptional(Tide.resource("hybrid-aquatic", "mangroves"))
-                .addOptional(Tide.resource("hybrid-aquatic", "marshes"))
+                .addOptional(Tide.resource("hybrid_aquatic", "swamp"))
+                .addOptional(Tide.resource("hybrid_aquatic", "mangroves"))
+                .addOptional(Tide.resource("hybrid_aquatic", "marshes"))
                 .addOptional(Tide.resource("biomesoplenty", "bayou"))
                 .addOptional(Tide.resource("biomesoplenty", "bog"))
                 .addOptional(Tide.resource("biomesoplenty", "marsh"));

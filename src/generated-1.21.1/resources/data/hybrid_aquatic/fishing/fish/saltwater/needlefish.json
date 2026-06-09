@@ -19,14 +19,14 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:needlefish",
+    "entity": "hybrid_aquatic:needlefish",
     "roll": -90.0,
     "y": -0.15,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:needlefish",
+  "fish": "hybrid_aquatic:needlefish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.needlefish",
+    "description": "journal.description.hybrid_aquatic.needlefish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"

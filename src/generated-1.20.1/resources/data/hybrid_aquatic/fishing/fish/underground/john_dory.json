@@ -16,16 +16,16 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:john_dory",
+    "entity": "hybrid_aquatic:john_dory",
     "roll": -90.0,
     "shape": "2x1",
     "x": 0.1,
     "y": -0.25,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:john_dory",
+  "fish": "hybrid_aquatic:john_dory",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.john_dory",
+    "description": "journal.description.hybrid_aquatic.john_dory",
     "group": "underground",
     "location": "journal.info.location.underground",
     "rarity": "uncommon"

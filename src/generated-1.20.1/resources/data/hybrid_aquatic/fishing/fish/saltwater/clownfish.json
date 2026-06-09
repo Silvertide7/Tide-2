@@ -19,15 +19,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:clownfish",
+    "entity": "hybrid_aquatic:clownfish",
     "roll": -90.0,
     "x": 0.1,
     "y": -0.15,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:clownfish",
+  "fish": "hybrid_aquatic:clownfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.clownfish",
+    "description": "journal.description.hybrid_aquatic.clownfish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"

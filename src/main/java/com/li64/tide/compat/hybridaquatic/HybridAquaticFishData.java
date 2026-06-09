@@ -14,7 +14,7 @@ import com.li64.tide.registries.blocks.FishDisplayShape;
 import java.util.List;
 
 public class HybridAquaticFishData {
-    public static final String MOD_ID = "hybrid-aquatic";
+    public static final String MOD_ID = "hybrid_aquatic";
 
     public static void generate(SimpleDataOutput<FishData> output) {
         FishData.builder().fish(MOD_ID, "anglerfish")
@@ -53,6 +53,20 @@ public class HybridAquaticFishData {
                         .rotation(-90f, 0f, 0f))
                 .build(output);
 
+        FishData.builder().fish(MOD_ID, "blobfish")
+                .size(10, 20, 35)
+                .strength(0.4f)
+                .speed(1.3f)
+                .selectionWeight(12)
+                .overworld().water().below(15)
+                .journalLocation("journal.info.location.underground")
+                .journalGroup(JournalGroup.UNDERGROUND)
+                .journalRarity(FishRarity.RARE)
+                .displayData(display -> display
+                        .offsets(0.04f, -0.1f, 0.08f)
+                        .rotation(-90f, 0f, 0f))
+                .build(output);
+
         FishData.builder().fish(MOD_ID, "blowfish")
                 .size(12, 22, 60)
                 .strength(0.45f)
@@ -66,21 +80,6 @@ public class HybridAquaticFishData {
                 .displayData(display -> display
                         .offsets(0.1f, -0.2f, 0.08f)
                         .rotation(-90f, 0f, 0f))
-                .build(output);
-
-        FishData.builder().fish(MOD_ID, "blue_spotted_stingray")
-                .size(55, 75, 130)
-                .strength(0.65f)
-                .speed(1.1f)
-                .selectionWeight(12)
-                .temperature(0.55f, 0.4f)
-                .overworld().water().surface().saltwater()
-                .journalLocation("journal.info.location.saltwater")
-                .journalGroup(JournalGroup.SALTWATER)
-                .journalRarity(FishRarity.RARE)
-                .displayData(display -> display
-                        .entityType(Tide.resource(MOD_ID, "stingray"))
-                        .rotation(0f, 0f, 90f))
                 .build(output);
 
         FishData.builder().fish(MOD_ID, "boxfish")
@@ -360,7 +359,22 @@ public class HybridAquaticFishData {
                         .rotation(-90f, 0f, 0f))
                 .build(output);
 
-        FishData.builder().fish(MOD_ID, "neon_tetra")
+        FishData.builder().fish(MOD_ID, "trevally")
+                .size(30, 90, 200)
+                .strength(0.4f)
+                .speed(1.25f)
+                .selectionWeight(24)
+                .temperature(0.7f, 0.7f)
+                .overworld().water().surface().saltwater()
+                .journalLocation("journal.info.location.saltwater")
+                .journalGroup(JournalGroup.SALTWATER)
+                .journalRarity(FishRarity.UNCOMMON)
+                .displayData(display -> display
+                        .offsets(0f, -0.15f, 0.08f)
+                        .rotation(-90f, 0f, 0f))
+                .build(output);
+
+        FishData.builder().fish(MOD_ID, "tetra")
                 .size(4, 7, 15)
                 .strength(0.4f)
                 .speed(1.0f)
@@ -374,7 +388,6 @@ public class HybridAquaticFishData {
                 .journalGroup(JournalGroup.FRESHWATER)
                 .journalRarity(FishRarity.UNCOMMON)
                 .displayData(display -> display
-                        .entityType(Tide.resource(MOD_ID, "tetra"))
                         .offsets(0f, -0.1f, 0.08f)
                         .rotation(-90f, 0f, 0f))
                 .build(output);
@@ -409,7 +422,7 @@ public class HybridAquaticFishData {
                         .rotation(-90f, 0f, 0f))
                 .build(output);
 
-        FishData.builder().fish(MOD_ID, "oscar")
+        FishData.builder().fish(MOD_ID, "cichlid")
                 .size(25, 35, 70)
                 .strength(0.4f)
                 .speed(0.9f)
@@ -557,7 +570,7 @@ public class HybridAquaticFishData {
                         .rotation(-90f, 0f, 0f))
                 .build(output);
 
-        FishData.builder().fish(MOD_ID, "spotted_eagle_ray")
+        FishData.builder().fish(MOD_ID, "stingray")
                 .size(160, 200, 300)
                 .strength(0.65f)
                 .speed(1.1f)
@@ -603,7 +616,7 @@ public class HybridAquaticFishData {
                         .rotation(-90f, 0f, 0f))
                 .build(output);
 
-        FishData.builder().fish(MOD_ID, "sunfish")
+        FishData.builder().fish(MOD_ID, "ocean_sunfish")
                 .size(75, 90, 135)
                 .strength(0.85f)
                 .speed(0.65f)
@@ -616,6 +629,38 @@ public class HybridAquaticFishData {
                 .displayData(display -> display
                         .shape(FishDisplayShape.SHAPE_3x1)
                         .offsets(0.35f, -1.0f, 0.08f)
+                        .rotation(-90f, 0f, 0f))
+                .build(output);
+
+        FishData.builder().fish(MOD_ID, "pleco")
+                .size(8, 12, 20)
+                .strength(0.4f)
+                .speed(0.9f)
+                .selectionWeight(18)
+                .overworld().water().surface()
+                .inBiomes(List.of(
+                        TideTags.Biomes.HAS_JUNGLE_FISH,
+                        TideTags.Biomes.HAS_SWAMP_FISH
+                ))
+                .journalLocation("journal.info.location.jungle")
+                .journalGroup(JournalGroup.FRESHWATER)
+                .journalRarity(FishRarity.UNCOMMON)
+                .displayData(display -> display
+                        .offsets(0.1f, -0.18f, 0.08f)
+                        .rotation(-90f, 0f, 0f))
+                .build(output);
+
+        FishData.builder().fish(MOD_ID, "sunfish")
+                .size(20, 35, 60)
+                .strength(0.5f)
+                .speed(1.0f)
+                .selectionWeight(40)
+                .temperature(0f, 0.5f)
+                .overworld().water().surface().freshwater()
+                .journalLocation("journal.info.location.freshwater")
+                .journalGroup(JournalGroup.FRESHWATER)
+                .displayData(display -> display
+                        .offsets(0.02f, -0.1f, 0.08f)
                         .rotation(-90f, 0f, 0f))
                 .build(output);
 

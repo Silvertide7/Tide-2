@@ -56,6 +56,7 @@ public class HybridAquaticCompat {
         return null;
     }
 
+    // Im not sure how to change this appropriately but its probably not needed anymore -Mystic
     public static void applyVariant(Entity entity, ItemStack stack) {
         if (entity instanceof StingrayEntity stingray) {
             if (BuiltInRegistries.ITEM.getKey(stack.getItem())

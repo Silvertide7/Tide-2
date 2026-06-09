@@ -19,16 +19,16 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:wrasse",
+    "entity": "hybrid_aquatic:wrasse",
     "roll": -90.0,
     "shape": "2x1",
     "x": 0.05,
     "y": -0.2,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:sheepshead_wrasse",
+  "fish": "hybrid_aquatic:sheepshead_wrasse",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.sheepshead_wrasse",
+    "description": "journal.description.hybrid_aquatic.sheepshead_wrasse",
     "group": "saltwater",
     "location": "journal.info.location.saltwater"
   },

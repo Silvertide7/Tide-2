@@ -22,14 +22,14 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:goldfish",
+    "entity": "hybrid_aquatic:goldfish",
     "roll": -90.0,
     "y": -0.25,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:goldfish",
+  "fish": "hybrid_aquatic:goldfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.goldfish",
+    "description": "journal.description.hybrid_aquatic.goldfish",
     "group": "freshwater",
     "location": "journal.info.location.cherry_grove",
     "rarity": "uncommon"

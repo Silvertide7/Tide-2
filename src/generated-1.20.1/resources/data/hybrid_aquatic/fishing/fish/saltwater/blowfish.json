@@ -19,15 +19,15 @@
     }
   ],
   "display_data": {
-    "entity": "hybrid-aquatic:blowfish",
+    "entity": "hybrid_aquatic:blowfish",
     "roll": -90.0,
     "x": 0.1,
     "y": -0.2,
     "z": 0.08
   },
-  "fish": "hybrid-aquatic:blowfish",
+  "fish": "hybrid_aquatic:blowfish",
   "journal_profile": {
-    "description": "journal.description.hybrid-aquatic.blowfish",
+    "description": "journal.description.hybrid_aquatic.blowfish",
     "group": "saltwater",
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"
