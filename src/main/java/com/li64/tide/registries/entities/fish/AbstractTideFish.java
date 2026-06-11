@@ -32,13 +32,11 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.component.CustomData;
 //?}
 
-public abstract class AbstractTideFish extends WaterAnimal implements Bucketable, FishLengthHolder, ShinyFish {
+public abstract class AbstractTideFish extends WaterAnimal implements Bucketable, FishLengthHolder {
     private static final EntityDataAccessor<Boolean> FROM_BUCKET = SynchedEntityData.defineId(AbstractTideFish.class, EntityDataSerializers.BOOLEAN);
-    private static final EntityDataAccessor<Boolean> IS_SHINY = SynchedEntityData.defineId(AbstractTideFish.class, EntityDataSerializers.BOOLEAN);
 
     private final Item bucketItem;
     private double length;
-    private boolean isShiny = false;
 
     public AbstractTideFish(EntityType<? extends WaterAnimal> entityType, Level level) {
         super(entityType, level);
@@ -123,14 +121,12 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
     protected void defineSynchedData(SynchedEntityData.@NotNull Builder builder) {
         super.defineSynchedData(builder);
         builder.define(FROM_BUCKET, false);
-        builder.define(IS_SHINY, false);
     }
     //?} else {
     /*@Override
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(FROM_BUCKET, false);
-        this.entityData.define(IS_SHINY, false);
     }
     *///?}
 
@@ -149,7 +145,6 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
         super.addAdditionalSaveData(compound);
         compound.putBoolean("FromBucket", this.fromBucket());
         compound.putDouble(tide$LENGTH_KEY, this.length);
-        compound.putBoolean(tide$SHINY_KEY, this.isShiny);
     }
 
     @Override
@@ -157,7 +152,6 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
         super.readAdditionalSaveData(tag);
         this.setFromBucket(tag.contains("FromBucket") && tag.getBoolean("FromBucket"));
         this.length = tag.contains(tide$LENGTH_KEY) ? tag.getDouble(tide$LENGTH_KEY) : this.length;
-        this.tide$setIsShiny(tag.contains(tide$SHINY_KEY) && tag.getBoolean(tide$SHINY_KEY));
     }
 
     @Override @SuppressWarnings("deprecation")
@@ -166,7 +160,6 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
         //? if >=1.21 {
         CustomData.update(DataComponents.BUCKET_ENTITY_DATA, stack, tag -> {
             tag.putDouble(tide$LENGTH_KEY, this.tide$getLength());
-            tag.putBoolean(tide$SHINY_KEY, this.tide$isShiny());
         });
         //?} else {
         /*CompoundTag tag = stack.getOrCreateTag();
@@ -178,7 +171,6 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
     public void loadFromBucketTag(@NotNull CompoundTag tag) {
         Bucketable.loadDefaultDataFromBucketTag(this, tag);
         this.length = tag.contains(tide$LENGTH_KEY) ? tag.getDouble(tide$LENGTH_KEY) : this.tide$getLength();
-        this.tide$setIsShiny(tag.contains(tide$SHINY_KEY) && tag.getBoolean(tide$SHINY_KEY));
     }
 
     @Override
@@ -189,17 +181,5 @@ public abstract class AbstractTideFish extends WaterAnimal implements Bucketable
     @Override
     public void tide$setLength(double length) {
         this.length = length;
-    }
-
-    @Override
-    public boolean tide$isShiny() {
-        if (this.level().isClientSide()) return this.getEntityData().get(IS_SHINY);
-        return this.isShiny;
-    }
-
-    @Override
-    public void tide$setIsShiny(boolean isShiny) {
-        this.isShiny = isShiny;
-        if (isShiny) this.getEntityData().set(IS_SHINY, true);
     }
 }

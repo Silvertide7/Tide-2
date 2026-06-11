@@ -4,7 +4,6 @@ import com.li64.tide.Tide;
 import com.li64.tide.TideConfig;
 import com.li64.tide.data.TideTags;
 import com.li64.tide.data.item.TideItemData;
-import com.li64.tide.registries.entities.fish.ShinyFish;
 import com.li64.tide.registries.items.TideFishingRodItem;
 import com.li64.tide.util.BaitUtils;
 import com.li64.tide.util.TideUtils;
@@ -25,14 +24,6 @@ public class TideClientEventHandler {
         if (TideItemData.IS_SHINY.getOrDefault(stack, false)) {
             lines.add(Component.translatable("text.tide.fish.shiny")
                     .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
-        }
-        else if (stack.has(DataComponents.BUCKET_ENTITY_DATA)) {
-            CustomData data = stack.getOrDefault(DataComponents.BUCKET_ENTITY_DATA, CustomData.EMPTY);
-            if (data.contains(ShinyFish.tide$SHINY_KEY)
-                    && data.copyTag().getBoolean(ShinyFish.tide$SHINY_KEY)) {
-                lines.add(Component.translatable("text.tide.fish.shiny")
-                        .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
-            }
         }
 
         if (BaitUtils.isBait(stack)) lines.addAll(BaitUtils.getDescriptionLines(stack));

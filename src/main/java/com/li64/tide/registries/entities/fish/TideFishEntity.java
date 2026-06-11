@@ -1,6 +1,5 @@
 package com.li64.tide.registries.entities.fish;
 
-import com.li64.tide.Tide;
 import com.li64.tide.compat.seasons.SeasonsCompat;
 import com.li64.tide.data.fishing.FishData;
 import com.li64.tide.data.fishing.FishingContext;
@@ -11,9 +10,6 @@ import com.li64.tide.util.TideUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -34,10 +30,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("unused")
-public class TideFishEntity extends AbstractSchoolingFish implements ShinyFish {
-    private static final EntityDataAccessor<Boolean> IS_SHINY =
-            SynchedEntityData.defineId(TideFishEntity.class, EntityDataSerializers.BOOLEAN);
-
+public class TideFishEntity extends AbstractSchoolingFish {
     private final Item bucketItem;
 
     public TideFishEntity(EntityType<? extends AbstractSchoolingFish> entityType, Level level) {
@@ -70,24 +63,6 @@ public class TideFishEntity extends AbstractSchoolingFish implements ShinyFish {
     public @NotNull AbstractSchoolingFish startFollowing(AbstractSchoolingFish leader) {
         if (leader.getType() == this.getType()) return super.startFollowing(leader);
         return this;
-    }
-
-    @Override
-    protected void defineSynchedData(SynchedEntityData.Builder builder) {
-        super.defineSynchedData(builder);
-        builder.define(IS_SHINY, false);
-    }
-
-    @Override
-    public boolean tide$isShiny() {
-        if (this.level().isClientSide()) return this.getEntityData().get(IS_SHINY);
-        return ShinyFish.super.tide$isShiny();
-    }
-
-    @Override
-    public void tide$setIsShiny(boolean isShiny) {
-        ShinyFish.super.tide$setIsShiny(isShiny);
-        if (isShiny) this.getEntityData().set(IS_SHINY, true);
     }
 
     @SuppressWarnings("deprecation")

@@ -3,7 +3,6 @@ package com.li64.tide.registries.entities.fish.lava;
 import com.li64.tide.data.FishLengthHolder;
 import com.li64.tide.data.TideTags;
 import com.li64.tide.data.fishing.FishData;
-import com.li64.tide.registries.entities.fish.ShinyFish;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -46,13 +45,12 @@ import net.minecraft.world.item.component.CustomData;
 
 import java.util.Optional;
 
-public class TideLavaFish extends LavaAnimal implements Bucketable, FishLengthHolder, ShinyFish {
+public class TideLavaFish extends LavaAnimal implements Bucketable, FishLengthHolder {
     private static final EntityDataAccessor<Boolean> FROM_BUCKET = SynchedEntityData.defineId(TideLavaFish.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> IS_SHINY = SynchedEntityData.defineId(TideLavaFish.class, EntityDataSerializers.BOOLEAN);
 
     private final Item bucketItem;
     private double length;
-    private boolean isShiny = false;
 
     public TideLavaFish(EntityType<? extends LavaAnimal> entityType, Level level) {
         super(entityType, level);
@@ -205,18 +203,6 @@ public class TideLavaFish extends LavaAnimal implements Bucketable, FishLengthHo
     @Override
     public void tide$setLength(double length) {
         this.length = length;
-    }
-
-    @Override
-    public boolean tide$isShiny() {
-        if (this.level().isClientSide()) return this.getEntityData().get(IS_SHINY);
-        return this.isShiny;
-    }
-
-    @Override
-    public void tide$setIsShiny(boolean isShiny) {
-        this.isShiny = isShiny;
-        if (isShiny) this.getEntityData().set(IS_SHINY, true);
     }
 
     static class LavaFishMoveControl extends MoveControl {
