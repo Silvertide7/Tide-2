@@ -165,7 +165,7 @@ dependencies {
             modstitchModCompileOnly("curse.maven:fabric-seasons-413523:5789846")
             modstitchModCompileOnly("curse.maven:serene-seasons-291874:6182595")
             modstitchModCompileOnly("curse.maven:fishing-real-348834:6465669")
-            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:7204573")
+            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:7694020")
             modstitchModCompileOnly("software.bernie.geckolib:geckolib-fabric-1.21.1:4.8.2")
         }
         if (minecraft == "1.20.1") {
@@ -176,7 +176,7 @@ dependencies {
             modstitchModCompileOnly("curse.maven:fabric-seasons-413523:5788996")
             modstitchModCompileOnly("curse.maven:serene-seasons-291874:6398228")
             modstitchModCompileOnly("curse.maven:fishing-real-348834:6475356")
-            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:7204569")
+            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:8216583")
             modstitchModCompileOnly("software.bernie.geckolib:geckolib-fabric-1.20.1:4.8.2")
             modstitchCompileOnly("com.eliotlash.mclib:mclib:20")
         }
@@ -193,7 +193,7 @@ dependencies {
             modstitchModCompileOnly("curse.maven:stardew-fishing-1066037:7266308")
             modstitchModImplementation("curse.maven:starcatcher-1357603:7582900")
             modstitchModCompileOnly("curse.maven:fishing-real-348834:6465668")
-            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:7204570")
+            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:7694018")
             modstitchModCompileOnly("software.bernie.geckolib:geckolib-neoforge-1.21.1:4.8.2")
         }
         if (minecraft == "1.20.1") {
@@ -203,7 +203,7 @@ dependencies {
             modstitchModCompileOnly("curse.maven:ecliptic-seasons-1118306:7304569")
             modstitchModCompileOnly("curse.maven:stardew-fishing-1066037:7266346")
             modstitchModCompileOnly("curse.maven:fishing-real-348834:6475355")
-            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:7204568")
+            modstitchModCompileOnly("curse.maven:hybrid-aquatic-834427:8216589")
             modstitchModCompileOnly("software.bernie.geckolib:geckolib-forge-1.20.1:4.8.2")
             modstitchCompileOnly("com.eliotlash.mclib:mclib:20")
             modstitchCompileOnly("org.jetbrains:annotations:24.0.0")
