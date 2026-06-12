@@ -8,6 +8,7 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
 @Config(name = Tide.MOD_ID + "_client")
 public final class TideClientConfig implements ConfigData {
+    @Comment("These settings can also be changed via Cloth Config's config screen")
     @ConfigEntry.Category("general")
     @ConfigEntry.Gui.TransitiveObject
     public General general;
@@ -27,7 +28,6 @@ public final class TideClientConfig implements ConfigData {
     }
 
     public static class General {
-        @Comment("this is a test")
         @ConfigEntry.Gui.Tooltip
         public boolean defaultLineColor = false;
 

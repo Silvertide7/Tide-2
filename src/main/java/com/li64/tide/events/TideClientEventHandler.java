@@ -26,7 +26,7 @@ public class TideClientEventHandler {
         if (stack.is(TideTags.Items.FISHING_RODS)) lines.addAll(TideFishingRodItem.getDescriptionLines(stack));
 
         if (Minecraft.getInstance().level != null
-                && TideUtils.isFishAlive(stack, Minecraft.getInstance().level.getDayTime())
+                && TideItemData.IS_BUCKETABLE.getOrDefault(stack, false)
                 && Tide.CONFIG.items.bucketableFishItems == TideConfig.Items.BucketableMode.WHEN_LIVING)
             lines.add(Component.translatable("text.tide.fish.alive").withStyle(ChatFormatting.GRAY));
 

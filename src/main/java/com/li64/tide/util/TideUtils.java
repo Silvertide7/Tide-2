@@ -149,11 +149,6 @@ public class TideUtils {
         return Component.literal(formatted);
     }
 
-    public static boolean isFishAlive(ItemStack stack, long currentTime) {
-        long timestamp = TideItemData.CATCH_TIMESTAMP.getOrDefault(stack, -1L);
-        return timestamp >= 0L && currentTime - timestamp < Tide.CONFIG.items.fishItemLifespan * 20;
-    }
-
     public static float mcTempToRealTemp(float mcTemp) {
         float celsius = (float)(11 * Math.pow(mcTemp - 0.23, 3) + 30 * mcTemp + 15);
         if (Tide.CLIENT_CONFIG.journal.useFahrenheit) return celsius * 1.8f + 32f;

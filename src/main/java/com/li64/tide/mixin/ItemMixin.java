@@ -5,7 +5,6 @@ import com.li64.tide.config.TideConfig;
 import com.li64.tide.data.FishLengthHolder;
 import com.li64.tide.data.fishing.FishData;
 import com.li64.tide.data.item.TideItemData;
-import com.li64.tide.util.TideUtils;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.SlotAccess;
 import net.minecraft.world.entity.player.Player;
@@ -55,8 +54,8 @@ ItemMixin {
 
         FishData data = dataOp.get();
         if (data.bucket().isEmpty()
-                || (Tide.CONFIG.items.bucketableFishItems == TideConfig.Items.BucketableMode.WHEN_LIVING)
-                        && !TideUtils.isFishAlive(fish, player.level().getDayTime())
+                || (Tide.CONFIG.items.bucketableFishItems == TideConfig.Items.BucketableMode.WHEN_LIVING
+                        && !TideItemData.IS_BUCKETABLE.getOrDefault(fish, false))
                 || !(data.bucket().get().value() instanceof BucketItem fishBucketItem))
             return false;
 

@@ -90,13 +90,8 @@ public final class TideConfig implements ConfigData {
                 this.height = height;
             }
 
-            public enum Type implements SelectionListEntry.Translatable {
+            public enum Type {
                 RELATIVE_TO_BOTTOM, RELATIVE_TO_TOP, ABSOLUTE;
-
-                @Override
-                public @NotNull String getKey() {
-                    return "text.autoconfig.tide.option.VoidHeightEntry.Type." + name().toLowerCase();
-                }
             }
         }
 
@@ -152,20 +147,9 @@ public final class TideConfig implements ConfigData {
         @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
         public BucketableMode bucketableFishItems = BucketableMode.WHEN_LIVING;
 
-        public enum BucketableMode implements SelectionListEntry.Translatable {
+        public enum BucketableMode {
             ALWAYS, WHEN_LIVING, NEVER;
-
-            @Override
-            public @NotNull String getKey() {
-                return "text.autoconfig.tide.option.items.bucketableFishItems." + name().toLowerCase();
-            }
         }
-
-        @Comment("""
-                The duration, in seconds, of how long a fish item is bucketable via the inventory after being caught.
-                Only applies if Bucketable Fish Items is set to "Only When Living"
-                """)
-        public long fishItemLifespan = 180;
 
         @Comment("Enables the bedrock eating functionality of the Chasm Eel item")
         public boolean enableBedrockBreakingItems = true;
@@ -178,7 +162,6 @@ public final class TideConfig implements ConfigData {
             return "Items{" +
                     "fishItemSizes=" + fishItemSizes +
                     ", bucketableFishItems=" + bucketableFishItems +
-                    ", fishItemLifespan=" + fishItemLifespan +
                     ", enableBedrockBreakingItems=" + enableBedrockBreakingItems +
                     ", pocketWatchBlacklist=" + pocketWatchBlacklist +
                     '}';

@@ -22,10 +22,10 @@ public class TideDataComponents {
                     .persistent(Codec.DOUBLE)
                     .networkSynchronized(ByteBufCodecs.DOUBLE).build());
 
-    public static final DataComponentType<Long> CATCH_TIMESTAMP = register(
-            "catch_timestamp", DataComponentType.<Long>builder()
-                    .persistent(Codec.LONG)
-                    .networkSynchronized(ByteBufCodecs.VAR_LONG).build());
+    public static final DataComponentType<Boolean> IS_BUCKETABLE = register(
+            "is_bucketable", DataComponentType.<Boolean>builder()
+                    .persistent(Codec.BOOL)
+                    .networkSynchronized(ByteBufCodecs.BOOL).build());
 
     public static final DataComponentType<CompoundTag> FISHING_LINE = register(
             "fishing_line", DataComponentType.<CompoundTag>builder()
