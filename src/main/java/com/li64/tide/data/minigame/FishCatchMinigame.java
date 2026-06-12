@@ -66,7 +66,7 @@ public class FishCatchMinigame {
         if (hook.getLine().is(TideItems.DIAMOND_LINE)) fishStrength *= 0.75f;
 
         float area = Mth.clamp(1 - fishStrength, 0.05f, 1.0f);
-        float speed = Math.max(fishSpeed / 20f * Tide.CONFIG.minigame.minigameDifficulty, 0.05f);
+        float speed = Math.max(fishSpeed / 20f * Tide.CONFIG.minigame.minigameDifficultyMultiplier, 0.05f);
 
         // Start client minigame gui
         int type = 0;

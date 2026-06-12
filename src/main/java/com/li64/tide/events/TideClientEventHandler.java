@@ -1,7 +1,7 @@
 package com.li64.tide.events;
 
 import com.li64.tide.Tide;
-import com.li64.tide.TideConfig;
+import com.li64.tide.config.TideConfig;
 import com.li64.tide.data.TideTags;
 import com.li64.tide.data.item.TideItemData;
 import com.li64.tide.registries.items.TideFishingRodItem;

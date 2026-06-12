@@ -136,7 +136,7 @@ public class CatchMinigameOverlay {
         ResourceLocation markerTexture = timer % 4 < 2 ? MARKER : SELECT;
         graphics.blit(markerTexture, markerX, y - 1, 0, 0, 4, 9, 4, 9);
 
-        if (Tide.CONFIG.minigame.doFeedback && accuracyText != null) {
+        if (Tide.CLIENT_CONFIG.minigame.doFeedback && accuracyText != null) {
             Font font = Minecraft.getInstance().font;
             if (alpha >= 0.03f) {
                 graphics.drawString(font,

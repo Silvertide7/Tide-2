@@ -322,7 +322,7 @@ public class FishingJournal extends Screen {
                         RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
                         drawOutline(graphics, stack, x, y);
                     }
-                    else if (Tide.CONFIG.journal.showUnread && (isUnlocked || hasNote) && isUnread) {
+                    else if (Tide.CLIENT_CONFIG.journal.showUnread && (isUnlocked || hasNote) && isUnread) {
                         graphics.flush();
                         RenderSystem.enableBlend();
                         RenderSystem.setShaderColor(1f, 0.88f, 0f, 1f);

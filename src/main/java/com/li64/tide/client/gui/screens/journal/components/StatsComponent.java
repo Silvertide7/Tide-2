@@ -34,7 +34,7 @@ public class StatsComponent extends ProfileComponent {
                 CatchTimestamp timestamp = stats.getInitialCatchDate().get();
                 Component formatted;
 
-                if (Tide.CONFIG.journal.useRealDate) {
+                if (Tide.CLIENT_CONFIG.journal.useRealDate) {
                     Instant instant = timestamp.date();
                     ZonedDateTime localTime = instant.atZone(ZoneId.systemDefault());
                     formatted = Component.literal(localTime.format(DATE_FORMAT));

@@ -18,7 +18,7 @@ public class PocketWatchItem extends AbstractInformationalItem {
 
     @Override
     public Component parseResult(String result) {
-        return Component.literal(TideUtils.ticksToRealTime(Long.parseLong(result), Tide.CONFIG.journal.useAmPm));
+        return Component.literal(TideUtils.ticksToRealTime(Long.parseLong(result), Tide.CLIENT_CONFIG.journal.useAmPm));
     }
 
     @Override

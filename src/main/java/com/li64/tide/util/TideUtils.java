@@ -5,7 +5,6 @@ import com.li64.tide.data.TideLootTables;
 import com.li64.tide.data.TideTags;
 import com.li64.tide.data.fishing.FishData;
 import com.li64.tide.data.item.TideItemData;
-import com.li64.tide.data.journal.FishRarity;
 import com.li64.tide.data.player.TidePlayerData;
 import com.li64.tide.network.messages.ShowToastMsg;
 import net.minecraft.core.*;
@@ -157,7 +156,7 @@ public class TideUtils {
 
     public static float mcTempToRealTemp(float mcTemp) {
         float celsius = (float)(11 * Math.pow(mcTemp - 0.23, 3) + 30 * mcTemp + 15);
-        if (Tide.CONFIG.journal.useFahrenheit) return celsius * 1.8f + 32f;
+        if (Tide.CLIENT_CONFIG.journal.useFahrenheit) return celsius * 1.8f + 32f;
         return celsius;
     }
 

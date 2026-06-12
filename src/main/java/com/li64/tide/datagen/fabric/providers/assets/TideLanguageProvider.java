@@ -23,87 +23,27 @@ public class TideLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(/*? if >=1.21 {*/HolderLookup.Provider tex, /*?}*/TranslationBuilder builder) {
         // Config
 
-        builder.add("text.autoconfig.tide.title", "Tide Config");
-        builder.add("text.autoconfig.tide.category.general", "General");
-        builder.add("text.autoconfig.tide.category.items", "Items");
-        builder.add("text.autoconfig.tide.category.journal", "Journal");
-        builder.add("text.autoconfig.tide.category.minigame", "Minigame");
-        builder.add("text.autoconfig.tide.category.worldgen", "World Generation");
+        builder.add("text.autoconfig.tide_client.title", "Tide Client Config");
+        builder.add("text.autoconfig.tide_client.category.general", "General");
+        builder.add("text.autoconfig.tide_client.category.journal", "Journal");
+        builder.add("text.autoconfig.tide_client.category.minigame", "Minigame");
 
-        builder.add("text.autoconfig.tide.option.general.overrideVanillaRod", "Override Vanilla Fishing Rod");
-        builder.add("text.autoconfig.tide.option.general.overrideVanillaRod.@Tooltip", "When enabled, the vanilla fishing rod will use Tide's fishing loot system");
-        builder.add("text.autoconfig.tide.option.general.holdToCast", "Hold to Cast");
-        builder.add("text.autoconfig.tide.option.general.holdToCast.@Tooltip", "When enabled, you can hold right-click to cast the bobber farther");
-        builder.add("text.autoconfig.tide.option.general.rodDurabilityMultiplier", "Rod Durability Multiplier");
-        builder.add("text.autoconfig.tide.option.general.rodDurabilityMultiplier.@Tooltip", "Multiplier applied to the durability of fishing rods");
-        builder.add("text.autoconfig.tide.option.general.defaultLineColor", "Use Vanilla Line Color");
-        builder.add("text.autoconfig.tide.option.general.defaultLineColor.@Tooltip", "Enable this to use the default black fishing line color");
-        builder.add("text.autoconfig.tide.option.general.ambientVoidParticles", "Ambient Void Particles");
-        builder.add("text.autoconfig.tide.option.general.ambientVoidParticles.@Tooltip", "Enables the ripple effects on the fishable void surface");
-        builder.add("text.autoconfig.tide.option.general.fishableVoidHeights", "Fishable Void Heights");
-        builder.add("text.autoconfig.tide.option.general.fishableVoidHeights.@Tooltip", "A list that defines the fishable void heights for each dimension");
-        builder.add("text.autoconfig.tide.option.VoidHeightEntry", "Entry");
-        builder.add("text.autoconfig.tide.option.VoidHeightEntry.dimension", "Dimension");
-        builder.add("text.autoconfig.tide.option.VoidHeightEntry.type", "Type");
-        builder.add("text.autoconfig.tide.option.VoidHeightEntry.height", "Height");
-        builder.add("text.autoconfig.tide.option.VoidHeightEntry.Type.relative_to_bottom", "Relative to Bottom");
-        builder.add("text.autoconfig.tide.option.VoidHeightEntry.Type.relative_to_top", "Relative to Top");
-        builder.add("text.autoconfig.tide.option.VoidHeightEntry.Type.absolute", "Absolute Y");
-        builder.add("text.autoconfig.tide.option.general.autoFishDataBlacklist", "Auto Fish Data Blacklist");
-        builder.add("text.autoconfig.tide.option.general.autoFishDataBlacklist.@Tooltip", "Item IDs added to this list will never have their fish data auto-generated");
-        builder.add("text.autoconfig.tide.option.general.crateWeight", "Crate Selection Weight");
-        builder.add("text.autoconfig.tide.option.general.crateWeight.@Tooltip", "The chance of a crate being selected from the fishing loot table (not a percent, see wiki for more info)");
-        builder.add("text.autoconfig.tide.option.general.crateQuality", "Crate Luck Scaling");
-        builder.add("text.autoconfig.tide.option.general.crateQuality.@Tooltip", "The amount that the crate chance is scaled with higher fishing luck (see wiki for more info)");
-        builder.add("text.autoconfig.tide.option.general.logDataErrors", "Log Data Loading Errors");
-        builder.add("text.autoconfig.tide.option.general.logDataErrors.@Tooltip", "For datapackers: enable to show Tide data loading errors in the logs");
+        builder.add("text.autoconfig.tide_client.option.general.defaultLineColor", "Use Vanilla Line Color");
+        builder.add("text.autoconfig.tide_client.option.general.defaultLineColor.@Tooltip", "Enable this to use the default black fishing line color");
+        builder.add("text.autoconfig.tide_client.option.general.ambientVoidParticles", "Ambient Void Particles");
+        builder.add("text.autoconfig.tide_client.option.general.ambientVoidParticles.@Tooltip", "Enables the ripple effects on the fishable void surface");
 
-        builder.add("text.autoconfig.tide.option.items.fishItemSizes.@PrefixText",
-                "Note: If Fish Item Sizes is set to \"Always\" or Bucketable Fish Items is set to \"While Living\", extra data will be added to fish item stacks that make them unstackable." +
-                        "\nTo make fish stackable, simply change both settings to something other than their defaults.");
-        builder.add("text.autoconfig.tide.option.items.fishItemSizes", "Fish Item Sizes");
-        builder.add("text.autoconfig.tide.option.items.fishItemSizes.@Tooltip", "Controls when/where fish should be assigned a length");
-        builder.add("text.autoconfig.tide.option.items.fishItemSizes.always", "Always");
-        builder.add("text.autoconfig.tide.option.items.fishItemSizes.in_journal", "Only In Journal");
-        builder.add("text.autoconfig.tide.option.items.fishItemSizes.never", "Never");
-        builder.add("text.autoconfig.tide.option.items.bucketableFishItems", "Bucketable Fish Items");
-        builder.add("text.autoconfig.tide.option.items.bucketableFishItems.@Tooltip", "Controls when fish items should be bucketable via menus");
-        builder.add("text.autoconfig.tide.option.items.bucketableFishItems.always", "Always");
-        builder.add("text.autoconfig.tide.option.items.bucketableFishItems.when_living", "Only When Living");
-        builder.add("text.autoconfig.tide.option.items.bucketableFishItems.never", "Never");
-        builder.add("text.autoconfig.tide.option.items.fishItemLifespan.@PrefixText", "The following only applies if Bucketable Fish Items is set to \"Only When Living\"");
-        builder.add("text.autoconfig.tide.option.items.fishItemLifespan", "Fish Item Lifespan");
-        builder.add("text.autoconfig.tide.option.items.fishItemLifespan.@Tooltip", "The duration, in seconds, of how long a fish item is bucketable after being caught");
-        builder.add("text.autoconfig.tide.option.items.enableBedrockBreakingItems", "Enable Bedrock-Breaking Items");
-        builder.add("text.autoconfig.tide.option.items.enableBedrockBreakingItems.@Tooltip", "Enables the bedrock eating functionality of the Chasm Eel item");
-        builder.add("text.autoconfig.tide.option.items.pocketWatchBlacklist", "Pocket Watch Blacklist");
-        builder.add("text.autoconfig.tide.option.items.pocketWatchBlacklist.@Tooltip", "Entity IDs added to this list are unaffected by the Enchanted Pocket Watch");
+        builder.add("text.autoconfig.tide_client.option.journal.showUnread", "Highlight Unread Profiles");
+        builder.add("text.autoconfig.tide_client.option.journal.showUnread.@Tooltip", "Highlight fish icons in yellow until you click on them for the first time");
+        builder.add("text.autoconfig.tide_client.option.journal.useAmPm", "Use AM/PM");
+        builder.add("text.autoconfig.tide_client.option.journal.useAmPm.@Tooltip", "Disable to use 24-hour time in the journal and pocket watches (ex. 21:00 vs 9:00 PM)");
+        builder.add("text.autoconfig.tide_client.option.journal.useFahrenheit", "Use Fahrenheit");
+        builder.add("text.autoconfig.tide_client.option.journal.useFahrenheit.@Tooltip", "Enable to use Fahrenheit instead of Celsius in the journal and climate gauge (ex. 0°C vs 32°F)");
+        builder.add("text.autoconfig.tide_client.option.journal.useRealDate", "Use Real Date");
+        builder.add("text.autoconfig.tide_client.option.journal.useRealDate.@Tooltip", "If enabled, the real date is used in the fishing journal as opposed to the local world day");
 
-        builder.add("text.autoconfig.tide.option.journal.giveJournal", "Give Journal");
-        builder.add("text.autoconfig.tide.option.journal.giveJournal.@Tooltip", "Give players a fishing journal upon joining a world for the first time");
-        builder.add("text.autoconfig.tide.option.journal.showToasts", "Show Toasts");
-        builder.add("text.autoconfig.tide.option.journal.showToasts.@Tooltip", "Shows a notification (toast) that appears when a new fish is discovered");
-        builder.add("text.autoconfig.tide.option.journal.showUnread", "Highlight Unread Profiles");
-        builder.add("text.autoconfig.tide.option.journal.showUnread.@Tooltip", "Highlight fish icons in yellow until you click on them for the first time");
-        builder.add("text.autoconfig.tide.option.journal.useAmPm", "Use AM/PM");
-        builder.add("text.autoconfig.tide.option.journal.useAmPm.@Tooltip", "Disable to use 24-hour time in the journal and pocket watches (ex. 21:00 vs 9:00 PM)");
-        builder.add("text.autoconfig.tide.option.journal.useFahrenheit", "Use Fahrenheit");
-        builder.add("text.autoconfig.tide.option.journal.useFahrenheit.@Tooltip", "Enable to use Fahrenheit instead of Celsius in the journal and climate gauge (ex. 0°C vs 32°F)");
-        builder.add("text.autoconfig.tide.option.journal.useRealDate", "Use Real Date");
-        builder.add("text.autoconfig.tide.option.journal.useRealDate.@Tooltip", "If enabled, the real date is used in the fishing journal as opposed to the local world day");
-
-        builder.add("text.autoconfig.tide.option.minigame.doMinigame", "Do Minigame");
-        builder.add("text.autoconfig.tide.option.minigame.doMinigame.@Tooltip", "Enables the fishing minigame");
-        builder.add("text.autoconfig.tide.option.minigame.doFeedback", "Do Feedback");
-        builder.add("text.autoconfig.tide.option.minigame.doFeedback.@Tooltip", "Enables scoring messages after a minigame (ex. Perfect Catch!)");
-        builder.add("text.autoconfig.tide.option.minigame.doSuccessSound", "Do Success Sound");
-        builder.add("text.autoconfig.tide.option.minigame.doSuccessSound.@Tooltip", "Enables the sound played when you win the minigame");
-        builder.add("text.autoconfig.tide.option.minigame.doFailSound", "Do Fail Sound");
-        builder.add("text.autoconfig.tide.option.minigame.doFailSound.@Tooltip", "Enables the sound played when you lose the minigame");
-        builder.add("text.autoconfig.tide.option.minigame.minigameDifficulty", "Minigame Difficulty");
-        builder.add("text.autoconfig.tide.option.minigame.minigameDifficulty.@Tooltip", "A multiplier that increases or decreases the speed of the minigame");
-        builder.add("text.autoconfig.tide.option.minigame.useThirdPartyMinigames", "Use Third-Party Minigames");
-        builder.add("text.autoconfig.tide.option.minigame.useThirdPartyMinigames.@Tooltip", "If enabled, minigames from other mods like starcatcher or stardew fishing will be used");
+        builder.add("text.autoconfig.tide_client.option.minigame.doFeedback", "Do Feedback");
+        builder.add("text.autoconfig.tide_client.option.minigame.doFeedback.@Tooltip", "Enables scoring messages after a minigame (ex. Perfect Catch!)");
 
         // Items
 

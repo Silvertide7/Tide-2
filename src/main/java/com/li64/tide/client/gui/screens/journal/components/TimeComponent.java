@@ -41,7 +41,7 @@ public class TimeComponent extends BarComponent {
         if (mouseX >= x + BAR_X && mouseX <= x + BAR_X + BAR_WIDTH
                 && mouseY >= y + BAR_Y && mouseY <= y + BAR_Y + BAR_HEIGHT) {
             long time = (long) (Mth.clamp((float) (mouseX - (x + BAR_X)) / BAR_WIDTH, 0f, 1f) * 24000L);
-            graphics.renderTooltip(font, Component.literal(TideUtils.ticksToRealTime(time, Tide.CONFIG.journal.useAmPm)), mouseX, y + BAR_Y);
+            graphics.renderTooltip(font, Component.literal(TideUtils.ticksToRealTime(time, Tide.CLIENT_CONFIG.journal.useAmPm)), mouseX, y + BAR_Y);
             graphics.blit(CURSOR, mouseX - 1, y + BAR_Y, 0, 0, 3, 9, 3, 9);
         }
     }

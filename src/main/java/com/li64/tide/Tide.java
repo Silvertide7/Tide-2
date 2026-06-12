@@ -1,10 +1,13 @@
 package com.li64.tide;
 
+import com.li64.tide.config.TideClientConfig;
+import com.li64.tide.config.TideConfig;
 import com.li64.tide.data.TideFishingManager;
 import com.li64.tide.loaders.LoaderPlatform;
 import com.li64.tide.loaders.NetworkPlatform;
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +48,9 @@ public class Tide {
         *///?}
     }
 
+    public static TideClientConfig CLIENT_CONFIG;
     public static TideConfig CONFIG;
+
     public static TideFishingManager FISHING_MANAGER;
 
     public static ResourceLocation resource(String path) {
@@ -58,11 +63,12 @@ public class Tide {
     }
 
     public static void initialize() {
-        if (CONFIG == null) setupConfig();
+        Tide.setupConfigs();
         LOG.info("Initialized Tide on {} {}", PLATFORM.getPlatformName(), PLATFORM.getMCVersion());
     }
 
-    public static void setupConfig() {
-        CONFIG = AutoConfig.register(TideConfig.class, GsonConfigSerializer::new).getConfig();
+    public static void setupConfigs() {
+        if (CLIENT_CONFIG == null) CLIENT_CONFIG = AutoConfig.register(TideClientConfig.class, JanksonConfigSerializer::new).getConfig();
+        if (CONFIG == null) CONFIG = AutoConfig.register(TideConfig.class, JanksonConfigSerializer::new).getConfig();
     }
 }

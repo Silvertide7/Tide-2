@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class VoidParticleSpawner {
     public static void spawnParticles(Player player, int amount) {
-        if (!Tide.CONFIG.general.ambientVoidParticles) return;
+        if (!Tide.CLIENT_CONFIG.general.ambientVoidParticles) return;
         BlockPos playerPos = player.getOnPos();
         Random random = new Random();
         Level level = player.level();

@@ -1,7 +1,7 @@
 package com.li64.tide.data.player;
 
 import com.li64.tide.Tide;
-import com.li64.tide.TideConfig;
+import com.li64.tide.config.TideConfig;
 import com.li64.tide.data.TideCriteriaTriggers;
 import com.li64.tide.data.TideData;
 import com.li64.tide.data.fishing.FishData;

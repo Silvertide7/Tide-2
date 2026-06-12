@@ -1,7 +1,7 @@
 package com.li64.tide.data.fishing.mediums;
 
 import com.li64.tide.Tide;
-import com.li64.tide.TideConfig;
+import com.li64.tide.config.TideConfig;
 import com.li64.tide.registries.TideParticleTypes;
 import com.li64.tide.registries.entities.misc.fishing.TideFishingHook;
 import net.minecraft.core.BlockPos;

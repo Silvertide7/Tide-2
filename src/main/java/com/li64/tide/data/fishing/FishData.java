@@ -2,8 +2,8 @@ package com.li64.tide.data.fishing;
 
 import com.google.common.collect.ImmutableList;
 import com.li64.tide.Tide;
-import com.li64.tide.TideConfig;
 import com.li64.tide.compat.seasons.Season;
+import com.li64.tide.config.TideConfig;
 import com.li64.tide.data.ModAssociatedEntry;
 import com.li64.tide.data.commands.TestType;
 import com.li64.tide.data.item.TideItemData;

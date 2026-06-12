@@ -171,7 +171,7 @@ public class TideFishingHookRenderer extends EntityRenderer<TideFishingHook> imp
         float blockBrightness = player.level().getBrightness(LightLayer.BLOCK, samplePos);
         float skyBrightness = player.level().getBrightness(LightLayer.SKY, samplePos) - skyDarken + 1;
 
-        float colorBrightness = Tide.CONFIG.general.defaultLineColor ? 0.0f : Mth.clamp(
+        float colorBrightness = Tide.CLIENT_CONFIG.general.defaultLineColor ? 0.0f : Mth.clamp(
                 Math.max(blockBrightness, skyBrightness) / 15f,
                 player.level().dimensionType().ambientLight(), 1f);
 

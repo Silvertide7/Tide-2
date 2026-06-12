@@ -1,7 +1,7 @@
 package com.li64.tide.mixin;
 
 import com.li64.tide.Tide;
-import com.li64.tide.TideConfig;
+import com.li64.tide.config.TideConfig;
 import com.li64.tide.data.FishLengthHolder;
 import com.li64.tide.data.fishing.FishData;
 import com.li64.tide.data.item.TideItemData;
