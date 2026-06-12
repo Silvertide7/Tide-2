@@ -445,92 +445,6 @@ public class TideFish {
                             .add(Attributes.MOVEMENT_SPEED, 1.0f)
             ))
             .build();
-
-    public static final Item STONE_ROCKFISH = new Builder("stone_rockfish")
-            .food(TideFoods.BIG_RAW_FISH)
-            .cookedItem(TideItems.LARGE_COOKED_FISH)
-            .fishData(builder -> builder
-                    .size(150.0, 200.0, 300.0)
-                    .strength(0.7f)
-                    .speed(1.55f)
-                    .selectionWeight(20)
-                    .inBiomes(List.of(TideTags.Biomes.HAS_MOUNTAIN_FISH))
-                    .condition(MoonPhaseCondition.anyOf(
-                            MoonPhases.WAXING_CRESCENT, MoonPhases.FIRST_QUARTER,
-                            MoonPhases.WAXING_GIBBOUS, MoonPhases.FULL_MOON
-                    ))
-                    .freshwater()
-                    .overworld()
-                    .water()
-                    .surface()
-                    .journalLocation("journal.info.location.mountain")
-                    .journalAltSprite(32)
-                    .journalGroup(JournalGroup.FRESHWATER)
-                    .journalRarity(FishRarity.UNCOMMON)
-            )
-            .build();
-
-    public static final Item ROCK_STONEFISH = new Builder("rock_stonefish")
-            .food(TideFoods.RAW_FISH)
-            .cookedItem(TideItems.COOKED_FISH)
-            .fishData(builder -> builder
-                    .size(25.0, 40.0, 80.0)
-                    .strength(0.65f)
-                    .speed(1.62f)
-                    .selectionWeight(20)
-                    .inBiomes(List.of(TideTags.Biomes.HAS_MOUNTAIN_FISH))
-                    .condition(MoonPhaseCondition.anyOf(
-                            MoonPhases.WANING_GIBBOUS, MoonPhases.THIRD_QUARTER,
-                            MoonPhases.WANING_CRESCENT, MoonPhases.NEW_MOON
-                    ))
-                    .freshwater()
-                    .overworld()
-                    .water()
-                    .surface()
-                    .journalLocation("journal.info.location.mountain")
-                    .journalGroup(JournalGroup.FRESHWATER)
-                    .journalRarity(FishRarity.UNCOMMON)
-                    .displayData(display -> display.offsets(-0.05f, -0.05f, 0f))
-            )
-            .entityData(FishEntityData.of(
-                    TideFishEntity::new,
-                    builder -> builder
-                            .sized(0.65f, 0.4f)
-                            .clientTrackingRange(4),
-                    Mob.createMobAttributes()
-                            .add(Attributes.MAX_HEALTH, 6.0)
-                            .add(Attributes.MOVEMENT_SPEED, 1.1f)
-            ))
-            .build();
-
-    public static final Item ZOMBIE_FISH = new Builder("zombie_fish")
-            .food(TideFoods.RAW_FISH)
-            .cookedItem(TideItems.COOKED_FISH)
-            .fishData(builder -> builder
-                    .size(40.0, 80.0, 140.0)
-                    .strength(0.7f)
-                    .speed(0.7f)
-                    .selectionWeight(9)
-                    .timeOfDay(new TimeRange(TimeConstants.NIGHT, TimeConstants.DAY_ALT))
-                    .freshwater()
-                    .overworld()
-                    .water()
-                    .surface()
-                    .journalLocation("journal.info.location.freshwater")
-                    .journalGroup(JournalGroup.FRESHWATER)
-                    .journalRarity(FishRarity.RARE)
-                    .displayData(display -> display.offsets(-0.05f, -0.1f, 0f))
-            )
-            .entityData(FishEntityData.of(
-                    TideFishEntity::new,
-                    builder -> builder
-                            .sized(0.65f, 0.4f)
-                            .clientTrackingRange(4),
-                    Mob.createMobAttributes()
-                            .add(Attributes.MAX_HEALTH, 4.0)
-                            .add(Attributes.MOVEMENT_SPEED, 1.0f)
-            ))
-            .build();
     
     public static final Item ARAPAIMA = new Builder("arapaima")
             .food(TideFoods.BIG_RAW_FISH)
@@ -562,56 +476,6 @@ public class TideFish {
                             .add(Attributes.MAX_HEALTH, 20.0)
                             .add(Attributes.MOVEMENT_SPEED, 1.15f)
             ))
-            .build();
-
-    public static final Item FLOPPER = new Builder("flopper")
-            .food(TideFoods.RAW_FISH)
-            .cookedItem(TideItems.COOKED_FISH)
-            .fishData(builder -> builder
-                    .size(40.0, 80.0, 140.0)
-                    .strength(0.7f)
-                    .speed(0.7f)
-                    .selectionWeight(8)
-                    .inBiomes(List.of(TideTags.Biomes.HAS_PLAINS_FISH))
-                    .freshwater()
-                    .overworld()
-                    .water()
-                    .surface()
-                    .journalLocation("journal.info.location.plains")
-                    .journalGroup(JournalGroup.FRESHWATER)
-                    .journalRarity(FishRarity.RARE)
-                    .displayData(display -> display.offsets(-0.05f, -0.05f, 0f))
-            )
-            .entityData(FishEntityData.of(
-                    TideFishEntity::new,
-                    builder -> builder
-                            .sized(0.45f, 0.4f)
-                            .clientTrackingRange(4),
-                    Mob.createMobAttributes()
-                            .add(Attributes.MAX_HEALTH, 2.0)
-                            .add(Attributes.MOVEMENT_SPEED, 1.1f)
-            ))
-            .build();
-
-    public static final Item DOG_FISH = new Builder("dog_fish")
-            .food(TideFoods.BIG_RAW_FISH)
-            .cookedItem(TideItems.LARGE_COOKED_FISH)
-            .fishData(builder -> builder
-                    .size(140.0, 185.0, 280.0)
-                    .strength(0.55f)
-                    .speed(1.7f)
-                    .selectionWeight(8)
-                    .temperature(-0.25f, 0.3f)
-                    .timeOfDay(new TimeRange(TimeConstants.DAY, TimeConstants.NIGHT))
-                    .freshwater()
-                    .overworld()
-                    .water()
-                    .surface()
-                    .journalLocation("journal.info.location.freshwater")
-                    .journalAltSprite(32)
-                    .journalGroup(JournalGroup.FRESHWATER)
-                    .journalRarity(FishRarity.RARE)
-            )
             .build();
 
     public static final Item MIRAGE_CATFISH = new Builder("mirage_catfish")
@@ -868,37 +732,6 @@ public class TideFish {
                             .add(Attributes.MOVEMENT_SPEED, 1.0f)
             ))
             .build();
-
-    public static final Item JEWELBACK = new Builder("jewelback")
-            .food(TideFoods.RAW_FISH)
-            .cookedItem(TideItems.COOKED_FISH)
-            .fishData(builder -> builder
-                    .size(45.0, 65.0, 100.0)
-                    .strength(0.75f)
-                    .speed(1.7f)
-                    .behavior(MinigameBehavior.DARTS)
-                    .condition(BlockNearbyCondition.inRadius(TideTags.Blocks.DESERT_WELL_LOOT, 3))
-                    .selectionWeight(10)
-                    .selectionQuality(0.5)
-                    .freshwater()
-                    .overworld()
-                    .water()
-                    .surface()
-                    .journalLocation("journal.info.location.desert_well")
-                    .journalGroup(JournalGroup.FRESHWATER)
-                    .journalRarity(FishRarity.VERY_RARE)
-//                    .displayData(display -> display.offsets(-0.07f, 0f, 0f))
-            )
-//            .entityData(FishEntityData.of(
-//                    TideFishEntity::new,
-//                    builder -> builder
-//                            .sized(0.5f, 0.35f)
-//                            .clientTrackingRange(4),
-//                    Mob.createMobAttributes()
-//                            .add(Attributes.MAX_HEALTH, 2.0)
-//                            .add(Attributes.MOVEMENT_SPEED, 1.0f)
-//            ))
-            .build();
     
     public static final Item BULL_SHARK = new Builder("bull_shark")
             .food(TideFoods.BIG_RAW_FISH)
@@ -937,28 +770,6 @@ public class TideFish {
                             .add(Attributes.MAX_HEALTH, 25.0f)
                             .add(Attributes.MOVEMENT_SPEED, 1.0f)
             ))
-            .build();
-
-    public static final Item MAGIC_CARP = new Builder("magic_carp")
-            .food(TideFoods.RAW_FISH)
-            .cookedItem(TideItems.COOKED_FISH)
-            .properties(p -> p.rarity(Rarity.RARE))
-            .fishData(builder -> builder
-                    .size(60.0, 85.0, 125.0)
-                    .strength(0.85f)
-                    .speed(2.0f)
-                    .selectionWeight(1.2)
-                    .selectionQuality(0.5)
-                    .freshwater()
-                    .overworld()
-                    .water()
-                    .surface()
-                    .condition(new OpenWaterCondition(true))
-                    .weather(WeatherType.RAIN, WeatherType.STORM)
-                    .journalLocation("journal.info.location.big_lake")
-                    .journalGroup(JournalGroup.FRESHWATER)
-                    .journalRarity(FishRarity.LEGENDARY)
-            )
             .build();
 
     // Saltwater fish
@@ -2079,34 +1890,6 @@ public class TideFish {
                     Mob.createMobAttributes()
                             .add(Attributes.MAX_HEALTH, 10.0)
                             .add(Attributes.MOVEMENT_SPEED, 1.6f)
-            ))
-            .build();
-
-    public static final Item RADIANT_GUPPY = new Builder("radiant_guppy")
-            .food(TideFoods.TINY_RAW_FISH.withEffects(List.of(new TideFoods.FoodEffect(
-                    new MobEffectInstance(MobEffects.POISON, 100), 1f))))
-            .cookedItem(TideItems.SMALL_COOKED_FISH)
-            .fishData(builder -> builder
-                    .size(5.0, 8.0, 10.0)
-                    .strength(0.8f)
-                    .speed(1.45f)
-                    .selectionWeight(8)
-                    .below(-32)
-                    .overworld()
-                    .water()
-                    .journalLocation("journal.info.location.underground")
-                    .journalGroup(JournalGroup.UNDERGROUND)
-                    .journalRarity(FishRarity.VERY_RARE)
-                    .displayData(display -> display.offsets(-0.15f, -0.1f, 0f))
-            )
-            .entityData(FishEntityData.of(
-                    TideFishEntity::new,
-                    builder -> builder
-                            .sized(0.45f, 0.375f)
-                            .clientTrackingRange(4),
-                    Mob.createMobAttributes()
-                            .add(Attributes.MAX_HEALTH, 3.0)
-                            .add(Attributes.MOVEMENT_SPEED, 1.0f)
             ))
             .build();
 

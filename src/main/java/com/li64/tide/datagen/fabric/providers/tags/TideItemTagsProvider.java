@@ -137,7 +137,6 @@ public class TideItemTagsProvider extends FabricTagProvider<Item> {
                 .add(Items.PUFFERFISH);
 
         getOrCreateTagBuilder(TideTags.Items.LEGENDARY_FISH)
-                .add(TideFish.MAGIC_CARP)
                 .add(TideFish.SHOOTING_STARFISH)
                 .add(TideFish.COELACANTH)
                 .add(TideFish.DEVILS_HOLE_PUPFISH)

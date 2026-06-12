@@ -2,17 +2,6 @@
 
 ---
 ### Changes
-**Fish**
-- Added 8 new fish and their corresponding entities:
-  - Zombie Fish
-  - Flopper
-  - Dog Fish
-  - Stone Rockfish
-  - Rock Stonefish
-  - Radiant Guppy
-  - Jewelback
-  - Magic Carp
-
 **Accessories**
 - Accessories and other items that modify fishing have been reworked to fill designated categories. The general rule of thumb is that hooks modify fish availability, lines modify the minigame, bobbers are cosmetic, bait modifies fishing stats, and fishing rods apply miscellaneous bonuses.
 - Hooks, lines, and bobbers no longer have the text "Fishing" in their name. For example, the "Lavaproof Fishing Hook" is now called "Lavaproof Hook". This is also reflected in item IDs.
