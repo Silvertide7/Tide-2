@@ -10,12 +10,6 @@
       ]
     },
     {
-      "type": "tide:found_in_structures",
-      "structures": [
-        "minecraft:monument"
-      ]
-    },
-    {
       "type": "tide:dimension",
       "dimensions": [
         "minecraft:overworld"

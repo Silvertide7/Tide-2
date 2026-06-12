@@ -1149,7 +1149,6 @@ public class TideFish {
                             ResourceKey.create(Registries.STRUCTURE, Tide.resource(
                                     "betteroceanmonuments", "ocean_monument"))
                     )))
-                    .inStructure(BuiltinStructures.OCEAN_MONUMENT)
                     .overworld()
                     .water()
                     .journalLocation("journal.info.location.ocean_monument")

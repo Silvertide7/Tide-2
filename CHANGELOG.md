@@ -65,6 +65,7 @@
 - Items crafted from netherite will no longer be destroyed when dropped in fire or lava [(#18)](https://github.com/Lightning-64/Tide-2/issues/18)
 - Fixed a bug where removing a fish from a fish display wouldn't update for other players in the world [(#25)](https://github.com/Lightning-64/Tide-2/issues/25)
 - Fixed a bug where certain fish would despawn even if they were released from a bucket or given a custom name
+- Fixed a bug where ocean monument themed loot could not be obtained with YUNG's Better Ocean Monuments installed
 - Fixed many bugs related to the Fish Satchel
 
 ---
