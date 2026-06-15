@@ -3,7 +3,7 @@
 
 import com.li64.tide.Tide;
 import com.li64.tide.compat.starcatcher.TideStarcatcherMinigameScreen;
-import com.wdiscute.starcatcher.storage.FishProperties;
+import com.wdiscute.starcatcher.registry.FishProperties;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;

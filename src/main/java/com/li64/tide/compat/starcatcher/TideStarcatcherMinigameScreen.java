@@ -4,7 +4,7 @@
 import com.li64.tide.Tide;
 import com.li64.tide.network.messages.MinigameServerMsg;
 import com.wdiscute.starcatcher.minigame.FishingMinigameScreen;
-import com.wdiscute.starcatcher.storage.FishProperties;
+import com.wdiscute.starcatcher.registry.FishProperties;
 import net.minecraft.world.item.ItemStack;
 
 public class TideStarcatcherMinigameScreen extends FishingMinigameScreen {

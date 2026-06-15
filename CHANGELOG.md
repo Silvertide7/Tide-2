@@ -33,7 +33,7 @@
   - The Suncatcher (rare catch in plains biomes)
   - Rod of the Hero (purchased from master fishermen villagers)
   - Beeline (rare drop from shearing beehives)
-- Added 3 new bait items:
+- Added 2 new bait items:
   - Incandescent Bait
   - Abyss Bait
 - Added Fish Finder (see below)
@@ -56,7 +56,6 @@
 - The Midas Fishing Rod can now reel in a bonus golden apple, golden carrot, and _very rarely_ an enchanted golden apple or totem of undying (in addition to the regular gold ingots and blocks)
 - Caught fish will no longer become "unbucketable" after a certain amount of time
 - Lowered Midas Fish luck requirement from 7 to 5
-- Removed the temperature condition from the Sand Tiger Shark, now only requiring a desert biome
 - Fish Displays will scale the fish up or down depending on its length
 
 ---
@@ -65,6 +64,7 @@
 - Fixed a bug where removing a fish from a fish display wouldn't update for other players in the world [(#25)](https://github.com/Lightning-64/Tide-2/issues/25)
 - Fixed a bug where ocean monument themed loot could not be obtained with YUNG's Better Ocean Monuments installed [(#47)](https://github.com/Lightning-64/Tide-2/issues/47)
 - Fixed a bug where certain fish would despawn even if they were released from a bucket or given a custom name
+- Fixed some conflicting conditions for the Sand Tiger Shark, it now only requires a desert biome
 - Fixed many bugs related to the Fish Satchel
 
 ---

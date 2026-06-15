@@ -87,4 +87,10 @@ public class BaitUtils {
         builder.add(0, Component.empty());
         return ImmutableList.copyOf(builder);
     }
+
+    public static Optional<ItemStack> getFirstBaitItem(ItemStack rod) {
+        List<ItemStack> baitItems = getBaitItems(rod);
+        if (baitItems.isEmpty()) return Optional.empty();
+        return Optional.ofNullable(baitItems.get(0));
+    }
 }
