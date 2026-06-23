@@ -194,6 +194,17 @@ public final class TideConfig implements ConfigData {
         @Comment("If enabled, minigames from other mods like starcatcher or stardew fishing will be used")
         public boolean useThirdPartyMinigames = true;
 
+        @Comment("""
+                When Starcatcher is your fishing minigame, controls which mod's data a caught fish carries.
+                TIDE keeps Tide's data (length); STARCATCHER uses Starcatcher's data (size, weight, golden).
+                Either way, catches still update Starcatcher's guide and tournaments.""")
+        @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
+        public FishDataSource fishDataSource = FishDataSource.TIDE;
+
+        public enum FishDataSource {
+            TIDE, STARCATCHER;
+        }
+
         @Comment("Enables the sound played when you win the minigame")
         public boolean doSuccessSound = true;
 
@@ -206,6 +217,7 @@ public final class TideConfig implements ConfigData {
                     "doMinigame=" + doMinigame +
                     ", minigameDifficulty=" + minigameDifficultyMultiplier +
                     ", useThirdPartyMinigames=" + useThirdPartyMinigames +
+                    ", fishDataSource=" + fishDataSource +
                     ", doSuccessSound=" + doSuccessSound +
                     ", doFailSound=" + doFailSound +
                     '}';

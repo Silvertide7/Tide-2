@@ -18,14 +18,14 @@ public record StarcatcherStartMinigameMsg(FishProperties properties, ItemStack r
 
     public StarcatcherStartMinigameMsg(RegistryFriendlyByteBuf buf) {
         this(
-            ByteBufCodecs.fromCodec(FishProperties.CODEC).decode(buf),
+            FishProperties.STREAM_CODEC.decode(buf),
             ItemStack.STREAM_CODEC.decode(buf),
             ByteBufCodecs.fromCodec(ResourceLocation.CODEC.listOf()).decode(buf)
         );
     }
 
     public static void encode(StarcatcherStartMinigameMsg message, RegistryFriendlyByteBuf buf) {
-        ByteBufCodecs.fromCodec(FishProperties.CODEC).encode(buf, message.properties);
+        FishProperties.STREAM_CODEC.encode(buf, message.properties);
         ItemStack.STREAM_CODEC.encode(buf, message.rod);
         ByteBufCodecs.fromCodec(ResourceLocation.CODEC.listOf()).encode(buf, message.modifiers);
     }
